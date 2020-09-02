@@ -1,3 +1,7 @@
+---
+Hoge: Fuga
+---
+
 # Title
 
 ## Head 1
