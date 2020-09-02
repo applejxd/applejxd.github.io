@@ -48,4 +48,4 @@
 	- [Ridge 回帰](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html)
 - [statsmodels](https://www.statsmodels.org/stable/index.html)
 - lightGBM
-	-[Parameters](https://lightgbm.readthedocs.io/en/latest/Parameters.html)
+	- [Parameters](https://lightgbm.readthedocs.io/en/latest/Parameters.html)
