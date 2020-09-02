@@ -6,7 +6,7 @@
 
 ### コマンド操作関連
 
-- fzf (fuzzy finder)
+- [fzf (fuzzy finder)](https://wonderwall.hatenablog.com/entry/2017/10/06/063000)
 	- C-t：カレントディレクトリ以下検索
 	- C-r：コマンド履歴検索
 	- M-c：検索しながら移動
@@ -33,7 +33,8 @@
 	- 現在のスタック一覧を表示
 - $ popd
 	- +n: n 番目のスタックを削除
-リダイレクト
+
+### [リダイレクト](https://qiita.com/laikuaut/items/e1cc312ffc7ec2c872fc)
 
 - ファイル・ディスクリプター
 	- stdin（入力のデフォルト）：0

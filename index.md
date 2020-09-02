@@ -5,6 +5,7 @@ site.title: トップページ
 # 一覧
 
 - [GitHub リポジトリ](https://github.com/appleJXD)
-- [Git メモ](notes/GitMemo.md)
-- [CLI メモ](notes/CLIMemo.md)
-- [C++ コーディングメモ](notes/CppMemo.md)
+- [Git メモ](notes/Git.md)
+- [CLI メモ](notes/CLI.md)
+- [C++ コーディングメモ](notes/Cpp.md)
+- [Python コーディングメモ](notes/Python.md)
