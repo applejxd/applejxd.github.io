@@ -5,4 +5,4 @@ site.title: トップページ
 # 一覧
 
 - [GitHub リポジトリ](https://github.com/appleJXD)
-- C++ コーディングメモ
+- [C++ コーディングメモ](notes/CppMemo.md)
