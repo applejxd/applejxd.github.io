@@ -2,10 +2,7 @@
 site.title: トップページ
 ---
 
-# Title
+# 一覧
 
-## Head 1
-
-Contents
-
-## Head 2
+- [GitHub リポジトリ](https://github.com/appleJXD)
+- C++ コーディングメモ
