@@ -26,3 +26,26 @@
 	- [Sphinxの使い方．docstringを読み込んで仕様書を生成](https://qiita.com/futakuchi0117/items/4d3997c1ca1323259844)
 		- 入門記事
 	- [sphinxでpythonのクラスや関数のドキュメントを自動生成する](https://joppot.info/2018/03/30/4156)
+
+## データ処理
+
+- [スライス](https://qiita.com/okkn/items/54e81346d8f35733ab5e)
+- pandas (Dataframe)
+	- [先頭と末尾](https://note.nkmk.me/python-pandas-head-tail/)
+	- [特定の列を落とす](https://note.nkmk.me/python-pandas-drop/)
+- numpy (ndarray)
+	- [Dataframe に変換](https://note.nkmk.me/python-pandas-numpy-conversion/)
+- [pyplot](https://qiita.com/KntKnk0328/items/5ef40d9e77308dd0d0a4)
+
+## 機械学習
+
+- [「Kaggleで勝つ」のサンプルコード](https://github.com/gnkm/kagglebook)
+	- ch03: 前処理
+	- ch04: モデル
+	- ch05: バリデーション
+	- ch06: ハイパーパラメータの調整
+- sklearn.liner_model
+	- [Ridge 回帰](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html)
+- [statsmodels](https://www.statsmodels.org/stable/index.html)
+- lightGBM
+	-[Parameters](https://lightgbm.readthedocs.io/en/latest/Parameters.html)
