@@ -1,5 +1,5 @@
 ---
-title: トップページ
+site.title: トップページ
 ---
 
 # Title
