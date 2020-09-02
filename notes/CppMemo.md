@@ -53,3 +53,12 @@ site.title: トップページ
 - OpenCV
 
 ## メモ
+
+- [生ポインタは避ける？](https://qiita.com/hmito/items/44925fca9fca74e78f61)
+    - STL は参照渡し
+    - 配列は std::array にして参照渡し
+    - 生ポインタの代わりにスマートポインタ
+- 巨大なコピーを避ける？
+    - [RVO, NRVO 任せでも大丈夫？](https://theolizer.com/cpp-school1/cpp-school1-37/)
+    - スマートポインタ？ムーブセマンティクス？
+    - 巨大なメンバ変数は値？（スマート）ポインタ？参照？
