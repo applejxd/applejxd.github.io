@@ -1,5 +1,5 @@
 ---
-Hoge: Fuga
+title: トップページ
 ---
 
 # Title
