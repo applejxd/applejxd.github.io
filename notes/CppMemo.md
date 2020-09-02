@@ -24,12 +24,12 @@ site.title: トップページ
 - [const 修飾子(読み取り専用)](http://www.s-cradle.com/developer/sophiaframework/tutorial/Cpp/const.html)
     - const メンバ変数は読み取り専用変数
     - const メンバ関数はメンバ変数を書き換えないメソッド
-- [右辺値参照と左辺値参照](https://cpprefjp.github.io/lang/cpp11/rvalue_ref_and_move_semantics.html)
-    - 右辺値は名前無し一時オブジェクト
-    - 左辺値は名前有り実態のあるオブジェクト
 - [constexpr(コンパイル時定数)](http://tinyurl.com/y556prhr)
     - 機械的な置換を行うプリプロセッサよりも constexpr
     - const は読み取り専用で初期化するまでは未定.厳密な定数ではない.
+- [右辺値参照と左辺値参照](https://cpprefjp.github.io/lang/cpp11/rvalue_ref_and_move_semantics.html)
+    - 右辺値は名前無し一時オブジェクト
+    - 左辺値は名前有り実態のあるオブジェクト
 
 ## ユースケース参考
 
