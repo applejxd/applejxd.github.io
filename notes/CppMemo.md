@@ -13,6 +13,8 @@ site.title: トップページ
 - 学習
     - [一週間で身につくC++言語の基本](http://cpp-lang.sevendays-study.com/)
     - [さくさく理解する C言語/C++ プログラミング 入門](http://vivi.dyndns.org/tech/cpp/cpp.html)
+- Tips
+    - [C/C++迷信集](http://www.kijineko.co.jp/tech/superstitions)
 
 ## ややこしいものの区別
 
@@ -41,5 +43,13 @@ site.title: トップページ
     - 宣言順での初期化に注意
 
 ## ライブラリ
+
+- cmake
+    - [現代的な cmake スクリプト](https://qiita.com/shohirose/items/5b406f060cd5557814e9)
+    - [CMake の使い方](https://qiita.com/shohirose/items/45fb49c6b429e8b204ac)
+    - [cmake-variables](https://cmake.org/cmake/help/v3.13/manual/cmake-variables.7.html)
+- [GoogleTest](https://github.com/google/googletest)
+    - [Google Test ドキュメント日本語訳 上級ガイド](http://opencv.jp/googletestdocs/advancedguide.html)
+- OpenCV
 
 ## メモ
