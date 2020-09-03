@@ -32,7 +32,7 @@
 ## データ処理
 
 - [スライス](https://note.nkmk.me/python-numpy-ndarray-slice/)
-	```Python
+	```python
 	a[-5:-1]	# 最後から5個目から最後までの要素
 	a[:, 3]		# 3列目
 	```
