@@ -80,13 +80,13 @@ $ source <(curl -L https://raw.githubusercontent.com/applejxd/dotfiles/master/de
 
 - データ処理関連は Pandasを使うて手も
 
-### grep
+### [grep](https://webkaru.net/linux/grep-command/)
 
 検索処理。パイプでand検索。
 ```bash
-$ grep [RegExp]
-$ grep -rl [RegExp]	# pwd 以下のファイルを再帰的に検索
-$ grep [RegExp] [Filename]	# [RegExp]を含む行を表示
+$ grep RegExp
+$ grep -rl RegExp	# pwd 以下のファイルを再帰的に検索
+$ grep RegExp Filename	# RegExp を含む行を表示
 ```
 - 検索オプション
 	- -r: カレントディレクトリ以下を再帰的に検索
@@ -98,16 +98,20 @@ $ grep [RegExp] [Filename]	# [RegExp]を含む行を表示
 	- -h: マッチしたファイル名も表示
 	- -v: 文字列を除く行をすべて表示
 
-### sed (Stream EDitor)
+### [sed (Stream EDitor)](https://qiita.com/muran001/items/472abcfc353d5df7b77a)
 
 置換処理
-- $ sed -e "s/置換条件/置換文字/g"
-- Tips
+```bash
+$ sed -e "s/置換条件/置換文字/g"
+```
+[ユースケース一覧](https://qiita.com/hirohiro77/items/7fe2f68781c41777e507)
 
-### awk
+### [awk](https://qiita.com/yamazon/items/563af1b485ff413d381f)
 
 抽出処理
-- 使用例: $ awk -F'[,]' -v 'OFS=,' '{print $1, $NF}'
+```bash
+$ awk -F'[,]' -v 'OFS=,' '{print $1, $NF}'
+```
 - -F: 読み込みデータの区切り文字（複数指定可）
 - -v: 変数指定
 	- OFS: 区切り文字（書き出し）
@@ -119,47 +123,62 @@ $ grep [RegExp] [Filename]	# [RegExp]を含む行を表示
 	- $NF: 最後のデータ
 	- $NF-1: 最後から二番目のデータ
 
-### その他データ処理
+### [find](https://webkaru.net/linux/find-command/)
+ファイル・ディレクトリの検索
+```
+$ find [検索ディレクトリ] -name [名前]
+```
+- -delete: 削除もする
+- xargs で渡す
+	```bash
+	find . -name "*.dat" -type f | xargs wc -l
+	```
+	- [findとxargsの基本的な使い方](https://webkaru.net/linux/find-command/)
+	- [xargs コマンド|コマンドの使い方](https://hydrocul.github.io/wiki/commands/xargs.html)
 
-- join: データ結合（複数フィールドは awk で[:]区切りで1フィールド目に結合して使う）
-- sort: データの並び替え
+## その他データ処理
+
+- [join](https://eng-entrance.com/linux-command-join)
+: データ結合（複数フィールドは awk で[:]区切りで1フィールド目に結合して使う）
+- [sort](https://eng-entrance.com/linux-command-sort)
+: データの並び替え
 - cat, paste: 単純に縦・横にデータ結合
 
 ### chmod
 
 - 基本
-	1. ディレクトリ:755[drwxr-xr-x]
-	2. 通常のファイル:644[-rw-r--r--]
-	3. secureなファイル:444 [-r--r--r--]
+	1. ディレクトリ：755[drwxr-xr-x]
+	2. 通常のファイル：644[-rw-r--r--]
+	3. secureなファイル：444 [-r--r--r--]
 - 一括変更
-	1. $ sudo find . -type d -print | xargs sudo chmod 755
-	2. $ sudo find . -type f -print | xargs sudo chmod 644
-	3. $ sudo find . -type f -print | xargs sudo chmod 444
+```bash
+$ sudo find . -type d -print | xargs sudo chmod 755
+$ sudo find . -type f -print | xargs sudo chmod 644
+$ sudo find . -type f -print | xargs sudo chmod 444
+```
 
-### nkf
+### [nkf](https://webkaru.net/linux/nkf-command/)
 
 文字コードを変換して標準出力。
-- $ nkf -w before.dat > after.dat
+```bash
+$ nkf -w before.dat > after.dat
+```
+- 文字コード指定
 	- -w: UTF-8
 	- -s: Shift_JIS
 	- -e: EUC-JP
-- —overwrite: 上書き
-	- $ nkf -w —overwrite hoge.dat
-- --guess: 文字コード判定
-	- $ nkf --guess hoge.dat
+- —overwrite：上書き
+	```
+	$ nkf -w —overwrite hoge.dat
+	```
+- --guess：文字コード判定
+	```bash
+	$ nkf --guess hoge.dat
+	```
 
 ### convert
 
-- 画像・pdfファイルの相互変換
-- $ convert [変換前ファイル] [変換後ファイル]
-
-### その他
-
-- which: コマンドの有無・絶対パスの確認
-- find: ファイル・ディレクトリの検索
-    - $ find [検索ディレクトリ] -name [名前]
-    - -delete: 削除もする
-    - xargs で渡す
-	    - findとxargsの基本的な使い方
-	    - xargs コマンド|コマンドの使い方
-- jman: 日本語マニュアルの表示(要インストール)
+画像・pdfファイルの相互変換
+```
+$ convert [変換前ファイル] [変換後ファイル]
+```
