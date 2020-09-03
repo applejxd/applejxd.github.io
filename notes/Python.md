@@ -3,9 +3,9 @@
 ## ライブラリ管理
 
 - [Python環境構築ベストプラクティス2019](https://www.natsukium.com/blog/2019-02-18/python/)
-	- pipenv でプロジェクト固有のライブラリ空間を作れ
+: pipenv でプロジェクト固有のライブラリ空間を作れ
 - [ライブラリ管理の比較](https://qiita.com/KRiver1/items/c1788e616b77a9bad4dd)
-	- pipenv がベストっぽい
+: pipenv がベストっぽい
 - Windows で機械学習やるなら anaconda 以外は使えない様子
     - $ choco install anaconda
     - $ conda install -c conda-forge lightgbm
@@ -18,13 +18,13 @@
 - docstring
 	- [可読性を上げるための、docstringの書き方](https://qiita.com/simonritchie/items/49e0813508cad4876b5a)
 	- [docstringのstyle3種の例](https://qiita.com/yokoc1322/items/ebf25c9cb779ff5ebc9c)
-		- Type Hints 付きなら reStructuredText で
+	: Type Hints 付きなら reStructuredText で
 	- [チームメイトのためにdocstringを書こう！](https://www.slideshare.net/cocodrips/docstring-pyconjp2019)
 - Sphinx
 	- [sphinx-apidoc](https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html)
-		- 公式マニュアル
+	: 公式マニュアル
 	- [Sphinxの使い方．docstringを読み込んで仕様書を生成](https://qiita.com/futakuchi0117/items/4d3997c1ca1323259844)
-		- 入門記事
+	: 入門記事
 	- [sphinxでpythonのクラスや関数のドキュメントを自動生成する](https://joppot.info/2018/03/30/4156)
 
 ## データ処理
@@ -47,5 +47,7 @@
 - sklearn.liner_model
 	- [Ridge 回帰](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html)
 - [statsmodels](https://www.statsmodels.org/stable/index.html)
-- lightGBM
-	- [Parameters](https://lightgbm.readthedocs.io/en/latest/Parameters.html)
+- [LightGBM](https://lightgbm.readthedocs.io/en/latest/)
+	- [パラメータの説明](https://lightgbm.readthedocs.io/en/latest/Parameters.html)
+	- [原論文](https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree.pdf),
+	[GBDTの解説](https://copypaste-ds.hatenablog.com/entry/2019/09/05/184947)
