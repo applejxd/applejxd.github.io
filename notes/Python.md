@@ -3,9 +3,9 @@
 ## ライブラリ管理
 
 - [Python環境構築ベストプラクティス2019](https://www.natsukium.com/blog/2019-02-18/python/)
-: pipenv でプロジェクト固有のライブラリ空間を作れ
+：pipenv でプロジェクト固有のライブラリ空間を作る
 - [ライブラリ管理の比較](https://qiita.com/KRiver1/items/c1788e616b77a9bad4dd)
-: pipenv がベストっぽい
+：pipenv がベストっぽい
 - Windows で機械学習やるなら anaconda 以外は使えない様子
 	```PowerShell
 	$ choco install anaconda
