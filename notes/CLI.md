@@ -43,29 +43,29 @@ $ popd +n	# n 番目のスタックを削除
 
 ### [リダイレクト](https://qiita.com/laikuaut/items/e1cc312ffc7ec2c872fc)
 
-- ファイル・ディスクリプター
+- ファイル・ディスクリプター(FD)
 	- stdin（入力のデフォルト）：0
 	- stdout（出力のデフォルト）：1
 	- stderr：2
 	- その他：3, 4, ...
 - 演算子
 	- [n]<word：n に入力（word を n で読み込み・参照）
-	- [n]>word：n を出力（word を n で書き込み・参照）
-	- [n]>>word：n を追加出力（word を n で書き込み・参照）
-	- [n]>&word：出力の複製（word の複製を n で書き込み・参照）
+	- [n]\>word：n を出力（word を n で書き込み・参照）
+	- [n]\>\>word：n を追加出力（word を n で書き込み・参照）
+	- [n]\>&word：出力の複製（word の複製を n で書き込み・参照）
 - ケーススタディ
 	- stdout と stderr の両方を file に書き出し
 		```bash
 		$ command > file 2>&1
 		```
-		- command \> file：1 → file
-		- 2 \>&1：2 := (1 → file のコピー)
+		- command \> file (FD1 := file)
+		- 2 \>&1 (FD2 := FD1 のコピー = file)
 	- stdout を file に. stderr を stdout に.
 		```bash
 		$ command 2>&1 > file
 		```
-		- command 2\>&1：2 → (1 → stdout のコピー)
-		- \> file：1 → file
+		- command 2\>&1 (FD2 := FD1のコピー = stdout)
+		- \> file (FD1 := file)
 
 ### 置換
 
@@ -83,11 +83,11 @@ $ source <(curl -L https://raw.githubusercontent.com/applejxd/dotfiles/master/de
 ### grep
 
 検索処理。パイプでand検索。
-- $ grep [RegExp]
-- pwd 以下のファイルを再帰的に検索
-	- $ grep -rl [RegExp]
-- [RegExp]を含む行を表示
-	- $ grep [RegExp] [Filename]
+```bash
+$ grep [RegExp]
+$ grep -rl [RegExp]	# pwd 以下のファイルを再帰的に検索
+$ grep [RegExp] [Filename]	# [RegExp]を含む行を表示
+```
 - 検索オプション
 	- -r: カレントディレクトリ以下を再帰的に検索
 	- -i: 大文字と小文字の区別をしない
