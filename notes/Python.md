@@ -20,13 +20,13 @@
 - docstring：コメントスタイル
 	- [可読性を上げるための、docstringの書き方](https://qiita.com/simonritchie/items/49e0813508cad4876b5a)
 	- [docstringのstyle3種の例](https://qiita.com/yokoc1322/items/ebf25c9cb779ff5ebc9c)
-	: Type Hints 付きなら reStructuredText で
+	：Type Hints 付きなら reStructuredText で
 	- [チームメイトのためにdocstringを書こう！](https://www.slideshare.net/cocodrips/docstring-pyconjp2019)
 - Sphinx：docstringを読み込んで仕様書を生成
 	- [sphinx-apidoc](https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html)
-	: 公式マニュアル
+	：公式マニュアル
 	- [Sphinxの使い方](https://qiita.com/futakuchi0117/items/4d3997c1ca1323259844)
-	: 入門記事
+	：入門記事
 	- [sphinxでpythonのクラスや関数のドキュメントを自動生成する](https://joppot.info/2018/03/30/4156)
 
 ## データ処理
