@@ -2,7 +2,7 @@
 
 ## CSV ファイルの読み込み
 
-```Python
+```python
 import pandas as pd
 
 # 学習・バリデーションデータの読み込み
@@ -21,7 +21,7 @@ test_x = pd.read_csv('/path/to/est/data.csv')
 数値変数は欠損値処理・標準化等行わないでそのままでOK.
 カテゴリ変数は label encoding する.
 
-```Python
+```python
 from sklearn.preprocessing import LabelEncoder
 
 # カテゴリ変数のカラム名
@@ -38,7 +38,7 @@ for c in cat_cols:
 ## バリデーションデータの用意
 
 1例として時期を4分割してクロスバリデーションする場合
-```Python
+```python
 import numpy as np
 
 # 時間に沿って変数periodを設定
@@ -66,7 +66,7 @@ for va_period in va_period_list:
 
 時系列データ分析は回帰タスク.
 
-```Python
+```python
 import lightgbm as lgb
 from sklearn.metrics import mean_absolute_error
 
