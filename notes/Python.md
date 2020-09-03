@@ -32,6 +32,7 @@
 ## オブジェクト指向プログラミング
 
 - [Python におけるデザインパターン](https://pydp.info/)
+- [継承よりも委譲](https://qiita.com/kotetsu75/items/4b903023001f157554a4)
 - [抽象基底クラス](https://docs.python.org/ja/3/library/abc.html)
 	- [抽象クラスとダック・タイピング](https://qiita.com/kaneshin/items/269bc5f156d86f8a91c4)
 - [クラスメソッドとスタティックメソッド](https://qiita.com/1plus4/items/b37ec6ea90569ffdebfe)
