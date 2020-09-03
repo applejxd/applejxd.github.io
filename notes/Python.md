@@ -31,9 +31,13 @@
 
 ## オブジェクト指向プログラミング
 
+- [Python におけるデザインパターン](https://pydp.info/)
 - [抽象基底クラス](https://docs.python.org/ja/3/library/abc.html)
-	-[抽象クラスとダック・タイピング](https://qiita.com/kaneshin/items/269bc5f156d86f8a91c4)
+	- [抽象クラスとダック・タイピング](https://qiita.com/kaneshin/items/269bc5f156d86f8a91c4)
 - [クラスメソッドとスタティックメソッド](https://qiita.com/1plus4/items/b37ec6ea90569ffdebfe)
+- アクセス制限
+	- [プライベートメンバの命名規則](https://www.python.ambitious-engineer.com/archives/323)
+	- [プロパティによるアクセサ](https://qiita.com/okuhiiro/items/6a2378215f7160291da6)
 
 ## データ処理
 
