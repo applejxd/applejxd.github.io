@@ -1,5 +1,7 @@
 # Git メモ
 
+
+## 基本
 - [図解Git](https://marklodato.github.io/visual-git-guide/index-ja.html)
 - [HEAD の指定](https://qiita.com/chihiro/items/d551c14cb9764454e0b9)
 	- alias として @ が使える
@@ -7,16 +9,21 @@
 	- @^[n] : n番目の親をたどる
 	- (ex.) @~~ と @^^ は同じ。@^2は違う。
 	- (ex.) @^2~3：最初は2番目の親を1回たどり、その後毎回1番目の親を3回たどる
-- [間違って別のブランチで実装を始めちゃった時にgit stashで別ブランチに編集中のソースを移動する](https://gist.github.com/koudaiii/526707492ebc5915596e)
+
+## [リセットしたいとき](http://tinyurl.com/yyl8ltp7)
+
+### やり直し
+
+- [現在のブランチでの実装を別ブランチに移動](https://gist.github.com/koudaiii/526707492ebc5915596e)
 	- ローカルの変更を退避 : $ git stash
 	- ブランチ変更
 	- ローカルの変更を戻す : $ git stash apply
 
-## [リセットしたいとき](http://tinyurl.com/yyl8ltp7)
-
 - [どうしようもないとき→ミッシングリンクを発見](https://qiita.com/tbaba/items/af563deac65d1b12de49)
 	1. $ git reflog で HEAD 履歴確認
 	2. 直前の状態に戻るなら : $ git reset —hard HEAD@{1}
+
+### リセットのオプション
 - HEAD だけ削除（reset --soft）
 	- コミットを削除・コミット候補は維持
 	- 最新のコミットをキャンセル : $ git reset --soft @~
@@ -27,14 +34,9 @@
 	- ローカルの変更も削除
 	- ローカルの変更をキャンセル : $ git reset --hard @
 
-## [ブランチの切り方](https://havelog.ayumusato.com/develop/git/e513-git_branch_model.html)
+## ツール
 
-- git flow コマンドを使う
-- feature ブランチ
-- release ブランチ
-	- develop の内容を master に適用
-	- develop から切る
-	- リリースバージョンの tag をつける
-- hotfix ブランチ
-	- master から一時的に修正
-	- master から切る
+- [gitflow-avh](https://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html)
+- [tig](https://qiita.com/suino/items/b0dae7e00bd7165f79ea)
+- Vscode 向け
+	- GitLens, Git Graph, Git History
