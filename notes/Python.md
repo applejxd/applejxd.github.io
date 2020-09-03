@@ -29,6 +29,12 @@
 	：入門記事
 	- [sphinxでpythonのクラスや関数のドキュメントを自動生成する](https://joppot.info/2018/03/30/4156)
 
+## オブジェクト指向プログラミング
+
+- [抽象基底クラス](https://docs.python.org/ja/3/library/abc.html)
+	-[抽象クラスとダック・タイピング](https://qiita.com/kaneshin/items/269bc5f156d86f8a91c4)
+- [クラスメソッドとスタティックメソッド](https://qiita.com/1plus4/items/b37ec6ea90569ffdebfe)
+
 ## データ処理
 
 - [スライス](https://note.nkmk.me/python-numpy-ndarray-slice/)
