@@ -2,8 +2,6 @@
 site.title: トップページ
 ---
 
-# 一覧
-
 - [GitHub リポジトリ](https://github.com/appleJXD)
 - [Git メモ](notes/Git.md)
 - [CLI メモ](notes/CLI.md)
