@@ -36,7 +36,7 @@ title: Python まとめノート
 - [Python におけるデザインパターン](https://pydp.info/)
 - [継承よりも委譲](https://qiita.com/kotetsu75/items/4b903023001f157554a4)
 - [抽象基底クラス](https://docs.python.org/ja/3/library/abc.html)
-	- [抽象クラスとダック・タイピング](https://qiita.com/kaneshin/items/269bc5f156d86f8a91c4)
+：[抽象クラスとダック・タイピング](https://qiita.com/kaneshin/items/269bc5f156d86f8a91c4)
 - [クラスメソッドとスタティックメソッド](https://qiita.com/1plus4/items/b37ec6ea90569ffdebfe)
 - アクセス制限
 	- [プライベートメンバの命名規則](https://www.python.ambitious-engineer.com/archives/323)
@@ -44,12 +44,27 @@ title: Python まとめノート
 
 ## データ処理
 
+- [全要素に関数を適用](https://qiita.com/ysk24ok/items/6736c8d8cc6eb06c6aa1)
+	```python
+	import numpy as np
+
+	list(map(lambda_func, like_var))		# 一番よく見かける
+	[lambda_func(x) for x in list_var]		# リスト内包表記
+
+	np.fromiter((lambda_func(x) for x in l), np.float32, count=len(l))
+	np.vectorize(lambda_func)(list_var)		# 次点?
+	np.frompyfunc(lambda_func, 1, 1)(list_var)	# ufunc 化（一番早い?）
+
+	series.map(lambda_func)		# pd.Series に適用
+	```
 - [スライス](https://note.nkmk.me/python-numpy-ndarray-slice/)
 	```python
 	a[-5:-1]	# 最後から5個目から最後までの要素
 	a[:, 3]		# 3列目
 	```
 - pandas (Dataframe)
+	- [pandasでよく使う文法まとめ](https://qiita.com/okadate/items/7b9620a5e64b4e906c42)
+	- [Python pandas 図でみる データ連結 / 結合処理](http://sinhrks.hatenablog.com/entry/2015/01/28/073327)
 	- [先頭と末尾](https://note.nkmk.me/python-pandas-head-tail/)
 	- [特定の列を落とす](https://note.nkmk.me/python-pandas-drop/)
 - numpy (ndarray)
