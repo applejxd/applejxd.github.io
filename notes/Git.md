@@ -16,9 +16,11 @@ title: Git メモ
 ### やり直し
 
 - [現在のブランチでの実装を別ブランチに移動](https://gist.github.com/koudaiii/526707492ebc5915596e)
-	- ローカルの変更を退避 : $ git stash
-	- ブランチ変更
-	- ローカルの変更を戻す : $ git stash apply
+	```bash
+	$ git stash		# ローカルの変更を退避
+	$ git checkout another_branch	# ブランチ変更
+	$ git stash apply	# ローカルの変更を戻す	
+	```
 
 - [どうしようもないとき→ミッシングリンクを発見](https://qiita.com/tbaba/items/af563deac65d1b12de49)
 	1. $ git reflog で HEAD 履歴確認
@@ -38,6 +40,12 @@ title: Git メモ
 ## ツール
 
 - [gitflow-avh](https://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html)
+	```bash
+	$ git flow init	# 初期化
+	$ git flow feature start test	# feature ブランチ開始
+	$ ...
+	$ git flow feature finish test	# feature ブランチ終了
+	```
 - [tig](https://qiita.com/suino/items/b0dae7e00bd7165f79ea)
 - Vscode 向け
 	- GitLens, Git Graph, Git History
