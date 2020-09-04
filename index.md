@@ -1,6 +1,6 @@
 ---
 layout: top
-site.title: トップページ
+title: トップページ
 ---
 
 ## 開発一般

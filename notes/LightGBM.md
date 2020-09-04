@@ -1,4 +1,6 @@
-# LightGBM で時系列データ分析
+--- 
+title: LightGBM で時系列データ分析
+---
 
 ## CSV ファイルの読み込み
 

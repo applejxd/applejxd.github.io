@@ -1,5 +1,6 @@
-# Git メモ
-
+---
+title: Git メモ
+---
 
 ## 基本
 - [図解Git](https://marklodato.github.io/visual-git-guide/index-ja.html)
