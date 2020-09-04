@@ -40,7 +40,7 @@ title: C++ コーディングメモ
     - 右辺値は名前無し一時オブジェクト
     - 左辺値は名前有り実態のあるオブジェクト
 
-## ユースケース参考
+## Tips・ユースケース
 
 - [STLの型の使い分け](https://qiita.com/h_hiro_/items/a83a8fd2391d4a3f0e1c)
 - [配列よりも std::array](http://tinyurl.com/y3uqd7s5)：std::array の方が書きやすい
@@ -51,6 +51,7 @@ title: C++ コーディングメモ
 - [メンバイニシャライザを有効活用](http://jagabeeinitialize.hatenablog.com/entry/2018/01/21/192043)
     - コンストラクタによる初期化よりも速い
     - 宣言順での初期化に注意
+- デフォルト引数の設定はヘッダで行う
 
 ## ライブラリ
 
