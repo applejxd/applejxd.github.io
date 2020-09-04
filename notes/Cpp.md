@@ -3,14 +3,13 @@ title: C++ コーディングメモ
 ---
 
 ## サイトリンク
-- コーディングスタイル
-    - [Google C++ スタイルガイド 日本語全訳](https://ttsuki.github.io/styleguide/cppguide.ja.html)
+- [Google C++ スタイルガイド 日本語全訳](https://ttsuki.github.io/styleguide/cppguide.ja.html)
     - [出力の参照渡しとポインタ渡しの比較](http://orycha.hatenablog.com/entry/2017/02/19/115015)
     - [namespace の賢い使い方](https://qiita.com/_EnumHack/items/430da105a541f9ecd774),
     [無名名前空間](https://kaworu.jpn.org/cpp/%E7%84%A1%E5%90%8D%E5%90%8D%E5%89%8D%E7%A9%BA%E9%96%93)
-- コメントスタイル
-    - [Doxygen 公式](http://www.doxygen.jp/docblocks.html)
-    - [JavaDoc](https://www.aiosl-tec.co.jp/java/247/)
+- [Doxygen](http://www.doxygen.jp/docblocks.html)：コメントスタイル
+    - [Doxygen 書き方メモ（C, C++）](https://qiita.com/inabe49/items/23e615649e8539d857a8),
+    [JavaDoc](https://www.aiosl-tec.co.jp/java/247/)
 - リファレンス
     - [cppreference.com](https://ja.cppreference.com/w/)
     - [cpprefjp - C++日本語リファレンス](https://cpprefjp.github.io/)
@@ -27,11 +26,14 @@ title: C++ コーディングメモ
     - 静的メンバ変数はいわゆるクラス変数
     - 静的メソッドはいわゆるクラスメソッド
 - [const 修飾子(読み取り専用)](http://www.s-cradle.com/developer/sophiaframework/tutorial/Cpp/const.html)
-    - const メンバ変数は読み取り専用変数
-    - const メソッドはメンバ変数を書き換えないメソッド.
-    const ではないメソッドを呼ぶとエラー.
+    - const メンバ変数
+        - 初期化時のみ書き込み可能
+        - 以降は読み取り専用変数
+    - const メソッド
+        - メンバ変数を書き換えないメソッド
+        - const ではないメソッドを呼ぶとエラー.
 - [constexpr(コンパイル時定数)](http://tinyurl.com/y556prhr)
-    - コンパイル時に定数として評価できることを保証. 以下と比較.
+    - コンパイル時に定数として評価できることを保証
     - const は読み取り専用でコンパイル時に未定でもOK（定数ではない）
     - プリプロセッサは大域字句的置換. rvalue でも置換してしまう（不適切）.
 - [右辺値参照と左辺値参照](https://cpprefjp.github.io/lang/cpp11/rvalue_ref_and_move_semantics.html)
@@ -58,6 +60,7 @@ title: C++ コーディングメモ
     - [cmake-variables](https://cmake.org/cmake/help/v3.13/manual/cmake-variables.7.html)
 - [GoogleTest](https://github.com/google/googletest)：
 [Google Test ドキュメント日本語訳 上級ガイド](http://opencv.jp/googletestdocs/advancedguide.html)
+- Eigen
 - OpenCV
 
 ## 疑問点
