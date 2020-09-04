@@ -34,8 +34,11 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>目次</h1>
+        <h1>{{ title }}</h1>
+
+        <h2>目次</h2>
         {% include toc.html html=content sanitize=true %}
+        
       	{{ content }}
       </section>
     </div>
