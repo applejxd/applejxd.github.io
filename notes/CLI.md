@@ -1,5 +1,5 @@
 ---
-site.title: CLI メモ
+page.title: CLI メモ
 ---
 
 ## ターミナル操作
