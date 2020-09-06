@@ -98,7 +98,7 @@ $ sudo find . -type f -print | xargs sudo chmod 444
 
 ### [find](https://webkaru.net/linux/find-command/)
 ファイル名検索
-```
+```bash
 $ find [検索ディレクトリ] -name [名前]
 ```
 - -delete: 削除もする
@@ -176,7 +176,7 @@ $ nkf -w before.dat > after.dat
 	- -s: Shift_JIS
 	- -e: EUC-JP
 - —overwrite：上書き
-	```
+	```bash
 	$ nkf -w —overwrite hoge.dat
 	```
 - --guess：文字コード判定
@@ -187,6 +187,6 @@ $ nkf -w before.dat > after.dat
 ### convert
 
 画像・pdfファイルの相互変換
-```
+```bash
 $ convert [変換前ファイル] [変換後ファイル]
 ```
