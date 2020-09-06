@@ -78,13 +78,39 @@ $ bash -c "$(curl -L https://raw.githubusercontent.com/applejxd/dotfiles/master/
 $ source <(curl -L https://raw.githubusercontent.com/applejxd/dotfiles/master/deploy.sh)	# プロセス置換
 ```
 
-## コマンド編
+### chmod
 
-- データ処理関連は Pandasを使うて手も
+- 基本
+	1. ディレクトリ：755[drwxr-xr-x]
+	2. 通常のファイル：644[-rw-r--r--]
+	3. secureなファイル：444 [-r--r--r--]
+- 一括変更
+```bash
+$ sudo find . -type d -print | xargs sudo chmod 755
+$ sudo find . -type f -print | xargs sudo chmod 644
+$ sudo find . -type f -print | xargs sudo chmod 444
+```
+
+## ファイル検索
+
+ファイル名検索は find で.
+ファイル内容検索は grep で.
+
+### [find](https://webkaru.net/linux/find-command/)
+ファイル名検索
+```
+$ find [検索ディレクトリ] -name [名前]
+```
+- -delete: 削除もする
+- xargs で渡す
+	```bash
+	find . -name "*.dat" -type f | xargs wc -l
+	```
+	- [findとxargsの基本的な使い方](https://webkaru.net/linux/find-command/)
+	- [xargs コマンド|コマンドの使い方](https://hydrocul.github.io/wiki/commands/xargs.html)
 
 ### [grep](https://webkaru.net/linux/grep-command/)
-
-検索処理。パイプでand検索。
+ファイル内容検索. パイプでand検索.
 ```bash
 $ grep RegExp
 $ grep -rl RegExp	# pwd 以下のファイルを再帰的に検索
@@ -100,13 +126,17 @@ $ grep RegExp Filename	# RegExp を含む行を表示
 	- -h: マッチしたファイル名も表示
 	- -v: 文字列を除く行をすべて表示
 
+## ファイル編集
+
+- データ処理関連は Pandasを使うて手も
+
 ### [sed (Stream EDitor)](https://qiita.com/muran001/items/472abcfc353d5df7b77a)
 
 置換処理
 ```bash
 $ sed -e "s/置換条件/置換文字/g"
 ```
-[ユースケース一覧](https://qiita.com/hirohiro77/items/7fe2f68781c41777e507)
+- [ユースケース一覧](https://qiita.com/hirohiro77/items/7fe2f68781c41777e507)
 
 ### [awk](https://qiita.com/yamazon/items/563af1b485ff413d381f)
 
@@ -125,39 +155,15 @@ $ awk -F'[,]' -v 'OFS=,' '{print $1, $NF}'
 	- $NF: 最後のデータ
 	- $NF-1: 最後から二番目のデータ
 
-### [find](https://webkaru.net/linux/find-command/)
-ファイル・ディレクトリの検索
-```
-$ find [検索ディレクトリ] -name [名前]
-```
-- -delete: 削除もする
-- xargs で渡す
-	```bash
-	find . -name "*.dat" -type f | xargs wc -l
-	```
-	- [findとxargsの基本的な使い方](https://webkaru.net/linux/find-command/)
-	- [xargs コマンド|コマンドの使い方](https://hydrocul.github.io/wiki/commands/xargs.html)
-
-## その他データ処理
+### その他データ処理
 
 - [join](https://eng-entrance.com/linux-command-join)
 : データ結合（複数フィールドは awk で[:]区切りで1フィールド目に結合して使う）
+- cat, paste: 単純に縦・横にデータ結合
 - [sort](https://eng-entrance.com/linux-command-sort)
 : データの並び替え
-- cat, paste: 単純に縦・横にデータ結合
 
-### chmod
-
-- 基本
-	1. ディレクトリ：755[drwxr-xr-x]
-	2. 通常のファイル：644[-rw-r--r--]
-	3. secureなファイル：444 [-r--r--r--]
-- 一括変更
-```bash
-$ sudo find . -type d -print | xargs sudo chmod 755
-$ sudo find . -type f -print | xargs sudo chmod 644
-$ sudo find . -type f -print | xargs sudo chmod 444
-```
+## ファイル変換
 
 ### [nkf](https://webkaru.net/linux/nkf-command/)
 

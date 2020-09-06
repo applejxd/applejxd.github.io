@@ -4,6 +4,13 @@ title: Git メモ
 
 ## 基本
 - [図解Git](https://marklodato.github.io/visual-git-guide/index-ja.html)
+- リモートリポジトリの作成
+	```bash
+	$ cd /path/to/remote/repo
+	$ git init --bare --shared
+	$ cd /path/to/local/repo
+	$ git remote add origin /path/to/remote/repo
+	```
 - [HEAD の指定](https://qiita.com/chihiro/items/d551c14cb9764454e0b9)
 	- alias として @ が使える
 	- @~[n] : n回、1番目の親をたどる
