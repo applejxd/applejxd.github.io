@@ -43,15 +43,18 @@ for c in cat_cols:
 ```python
 import numpy as np
 
+# 分割数
+n_fold = 4
+
 # 時間に沿って変数periodを設定
 # 学習・バリデーションデータ：0~3, 予測データ：4
-train_x['period'] = np.arange(0, len(train_x)) // (len(train_x) // 4)
-train_x['period'] = np.clip(train_x['period'], 0, 3)
-test_x['period'] = 4
+train_x['period'] = np.arange(0, len(train_x)) // (len(train_x) // n_fold)
+train_x['period'] = np.clip(train_x['period'], 0, n_fold-1)
+test_x['period'] = n_fold
 
 # 1 のバリデーションに 0を
 # 2 のバリデーションに 0,1 を, ...
-va_period_list = [1, 2, 3]
+va_period_list = list(range(1, n_fold))
 for va_period in va_period_list:
     # bool：学習データかどうか
     is_tr = train_x['period'] < va_period
