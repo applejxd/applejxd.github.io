@@ -9,9 +9,10 @@ title: Python まとめノート
 - [ライブラリ管理の比較](https://qiita.com/KRiver1/items/c1788e616b77a9bad4dd)
 ：pipenv がベストっぽい
 - Windows で機械学習やるなら anaconda 以外は使えない様子
-	```PowerShell
+	```Shell
 	$ choco install anaconda
-	$ conda install -c conda-forge lightgbm
+	$ conda config --append channels conda-forge
+	$ conda install lightgbm
 	```
 
 ## ドキュメント作成
@@ -48,14 +49,19 @@ title: Python まとめノート
 	```python
 	import numpy as np
 
-	list(map(lambda_func, like_var))		# 一番よく見かける
-	[lambda_func(x) for x in list_var]		# リスト内包表記
+	# 一番よく見かける方法
+	list(map(lambda_func, like_var))
+	# リスト内包表記
+	[lambda_func(x) for x in list_var]
 
+	# ufunc 化（一番高速らしい）
+	np.frompyfunc(lambda_func, 1, 1)(list_var)
+	# 次点?
+	np.vectorize(lambda_func)(list_var)
+	# iteratable オブジェクトを利用
 	np.fromiter((lambda_func(x) for x in l), np.float32, count=len(l))
-	np.vectorize(lambda_func)(list_var)		# 次点?
-	np.frompyfunc(lambda_func, 1, 1)(list_var)	# ufunc 化（一番早い?）
-
-	series.map(lambda_func)		# pd.Series に適用
+	# pd.Series に適用
+	series.map(lambda_func)
 	```
 - [スライス](https://note.nkmk.me/python-numpy-ndarray-slice/)
 	```python

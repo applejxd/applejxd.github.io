@@ -98,3 +98,18 @@ print(f'MAE: {score:.4f}')
 # 予測
 pred = model.predict(test_x)
 ```
+
+## ハイパーパラメータの調整
+
+- [LightGBM Tuner](https://tech.preferred.jp/ja/blog/hyperparameter-tuning-with-optuna-integration-lightgbm-tuner/)
+    ```python
+    import optuna.integration.lightgbm as lgb
+
+    # 最適パラメータ・探索履歴を保存
+    best_params, tuning_history = dict(), list()
+    booster = lgb.train(params, dtrain, valid_sets=dval,
+                    verbose_eval=0,
+                    best_params=best_params,
+                    tuning_history=tuning_history)
+    ```
+- [hyperopt](https://amalog.hateblo.jp/entry/data-analysis-snippets)
