@@ -102,6 +102,7 @@ pred = model.predict(test_x)
 ## ハイパーパラメータの調整
 
 - [LightGBM Tuner](https://tech.preferred.jp/ja/blog/hyperparameter-tuning-with-optuna-integration-lightgbm-tuner/)
+：単一のタスクで自動調整
     ```python
     import optuna.integration.lightgbm as lgb
 
@@ -113,3 +114,4 @@ pred = model.predict(test_x)
                     tuning_history=tuning_history)
     ```
 - [hyperopt](https://amalog.hateblo.jp/entry/data-analysis-snippets)
+：複数のタスクを組み合わせて調整
