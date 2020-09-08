@@ -61,46 +61,57 @@ for va_period in va_period_list:
     # bool：バリデーションデータかどうか
     is_va = train_x['period'] == va_period
     # 学習データとバリデーションデータに分離
-    tr_x, va_x = train_x[is_tr], train_x[is_va]
-    tr_y, va_y = train_y[is_tr], train_y[is_va]
+    tr_x, va_x = train_x[is_tr].copy(), train_x[is_va].copy()
+    tr_y, va_y = train_y[is_tr].copy(), train_y[is_va].copy()
 
     # 以降でモデル定義とバリデーションを実施
 ```
 
 ## モデル定義と予測
 
-時系列データ分析は回帰タスク.
+- 基本
+    ```python
+    import lightgbm as lgb
+    from sklearn.metrics import mean_absolute_error
 
-```python
-import lightgbm as lgb
-from sklearn.metrics import mean_absolute_error
+    # 特徴量と目的変数をlightgbmのデータ構造に変換する
+    lgb_train = lgb.Dataset(tr_x, tr_y)
+    lgb_eval = lgb.Dataset(va_x, va_y)
 
-# 特徴量と目的変数をlightgbmのデータ構造に変換する
-lgb_train = lgb.Dataset(tr_x, tr_y)
-lgb_eval = lgb.Dataset(va_x, va_y)
+    # ハイパーパラメータの設定
+    # 回帰タスク, MAE を指標に最適化. 再現性のために seed を指定.
+    params = {'objective': 'regression', 'metrics': 'mae',
+             'seed': 71, 'verbose': 0}
+    num_round = 100
 
-# ハイパーパラメータの設定
-# 回帰タスク, MAE を指標に最適化. 再現性のために seed を指定.
-params = {'objective': 'regression', 'metrics': 'mae',
-         'seed': 71, 'verbose': 0}
-num_round = 100
+    # 学習の実行
+    # カテゴリ変数をパラメータで指定
+    # バリデーションデータもモデルに渡し、スコアがどう変わるかモニタリング
+    model = lgb.train(params, lgb_train, num_boost_round=num_round,
+                      categorical_feature=cat_cols,
+                      valid_names=['train', 'valid'],
+                      valid_sets=[lgb_train, lgb_eval])
 
-# 学習の実行
-# カテゴリ変数をパラメータで指定
-# バリデーションデータもモデルに渡し、スコアがどう変わるかモニタリング
-model = lgb.train(params, lgb_train, num_boost_round=num_round,
-                  categorical_feature=cat_cols,
-                  valid_names=['train', 'valid'],
-                  valid_sets=[lgb_train, lgb_eval])
+    # バリデーションデータでのスコアの確認
+    va_pred = model.predict(va_x)
+    score = mean_absolute_error(va_y, va_pred)
+    print(f'MAE: {score:.4f}')
 
-# バリデーションデータでのスコアの確認
-va_pred = model.predict(va_x)
-score = mean_absolute_error(va_y, va_pred)
-print(f'MAE: {score:.4f}')
+    # 予測
+    pred = model.predict(test_x)
+    ```
+- 複数の目的変数への対応：scikit-learn インターフェイスで [MultiOutputRegressor](https://qiita.com/katsuki104/items/71c7581cce60f0e303f3)
 
-# 予測
-pred = model.predict(test_x)
-```
+## 特徴量エンジニアリング
+
+- 特徴量作成：[featuretools](https://qiita.com/Hyperion13fleet/items/4eaca365f28049fe11c7)
+- 特徴量評価：[feature_importance](https://qiita.com/studio_haneya/items/e70e835c26524d506e19)
+    ```python
+    import pandas as pd
+    imporetance = pd.DataFrame(model.feature_importance, 
+        index=train_x.columns.values, columns=["importance"])
+    print(importance)
+    ```
 
 ## ハイパーパラメータの調整
 
