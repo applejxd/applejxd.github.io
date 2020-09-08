@@ -11,6 +11,7 @@ title: トップページ
 
 ## プログラミング
 - [C++ コーディングメモ](notes/Cpp.md)
+- [OpenCV メモ](notes/OpenCV.md)
 - [Python コーディングメモ](notes/Python.md)
 - [シェルスクリプトメモ](notes/ShellScript.md)
 
