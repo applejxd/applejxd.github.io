@@ -15,5 +15,5 @@ title: トップページ
 - [シェルスクリプトメモ](notes/ShellScript.md)
 
 ## その他
-- [資料作成メモ](Diagram.md)
-- [Windows 環境構築](Windows.md)
+- [資料作成メモ](notes/Diagram.md)
+- [Windows 環境構築](notes/Windows.md)
