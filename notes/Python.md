@@ -9,7 +9,7 @@ title: Python まとめノート
 - [ライブラリ管理の比較](https://qiita.com/KRiver1/items/c1788e616b77a9bad4dd)
 ：pipenv がベストっぽい
 - Windows で機械学習やるなら anaconda 以外は使えない様子
-	```Shell
+	```shell
 	$ choco install anaconda
 	$ conda config --append channels conda-forge
 	$ conda install lightgbm
