@@ -5,7 +5,7 @@ title: トップページ
 
 ## 環境設定
 - [Windows メモ](notes/Windows.md)
-- [開発環境メモ](note/Preferences.md)
+- [開発環境メモ](notes/Preferences.md)
 
 ## 開発
 - [GitHub リポジトリ](https://github.com/appleJXD)
