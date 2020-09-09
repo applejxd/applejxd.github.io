@@ -29,6 +29,7 @@ title: 資料作成メモ
 
 - [マニュアル](https://plantuml.com/ja/)
 - [環境構築](https://qiita.com/couzie/items/9dedb834c5aff09ea7b2)
+    - [Windows 7上にPlantUMLをインストール](http://www.aise.ics.saitama-u.ac.jp/~gotoh/InstallPlantUMLonWindows7.html)
     - [JDK の比較](https://qiita.com/kojiita/items/72e0b88fabb210f6e68f)
     - [AdoptOpenJDK インストール](https://www.javadrive.jp/start/install/index6.html)
     - [Graphviz インストール](http://www.graphviz.org/)

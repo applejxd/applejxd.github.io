@@ -53,12 +53,17 @@ title: C++ コーディングメモ
     - 宣言順での初期化に注意
 - デフォルト引数の設定はヘッダで行う
 
-## ビルド
+## ビルド：CMake
 
-- cmake
-    - [現代的な cmake スクリプト](https://qiita.com/shohirose/items/5b406f060cd5557814e9)
-    - [CMake の使い方](https://qiita.com/shohirose/items/45fb49c6b429e8b204ac)
-    - [cmake-variables](https://cmake.org/cmake/help/v3.13/manual/cmake-variables.7.html)
+- ドキュメント
+  - [cmake-variables](https://cmake.org/cmake/help/v3.13/manual/cmake-variables.7.html)
+  - [CMake チュートリアル](http://opencv.jp/cmake/cmake_tutorial.html)
+- 書き方
+  - [現代的な cmake スクリプト](https://qiita.com/shohirose/items/5b406f060cd5557814e9)
+  - [CMake の使い方](https://qiita.com/shohirose/items/45fb49c6b429e8b204ac)
+  - [プロジェクトの階層化](https://kamino.hatenablog.com/entry/cmake_tutorial2)
+- Tips
+  - [スタティックリンクとダイナミックリンク](http://www.cc.kyoto-su.ac.jp/~kbys/kiso/cpu/dynamic-link.html)
 
 ## ライブラリ
 
