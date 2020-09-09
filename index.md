@@ -3,7 +3,11 @@ layout: top
 title: トップページ
 ---
 
-## 開発一般
+## 環境設定
+- [Windows メモ](notes/Windows.md)
+- [開発環境メモ](note/Preferences.md)
+
+## 開発
 - [GitHub リポジトリ](https://github.com/appleJXD)
 - [Git メモ](notes/Git.md)
 - [GitHub Pages/HP メモ](notes/GitHubPages.md)
@@ -17,4 +21,3 @@ title: トップページ
 
 ## その他
 - [資料作成メモ](notes/Diagram.md)
-- [Windows メモ](notes/Windows.md)
