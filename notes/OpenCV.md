@@ -14,7 +14,7 @@ OpenCV の使い方の基本説明.
 
 - 一部翻訳
 - 2次元座標上の点のためのクラステンプレート [Point_](http://opencv.jp/opencv-2.1/cpp/basic_structures.html) を利用
-    ```C++
+    ```cpp
     typedef Point_<float> Point2f;
     ```
 - ソースコード内容
@@ -132,6 +132,7 @@ OpenCV の使い方の基本説明.
 
 - ソースコード内容
     ```C++
+
     // plot points
     #define drawCross( center, color, d)                  \
         line( img, Point( center.x - d, center.y - d ),   \
