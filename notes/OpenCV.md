@@ -109,8 +109,15 @@ OpenCV の使い方の基本説明.
 
 ### ループ内処理：計算処理
 
+- [KalmanFilter Class](https://docs.opencv.org/trunk/dd/d6a/classcv_1_1KalmanFilter.html)
+：詳細はマニュアル参照
+- [cv::Mat:p:at](http://opencv.jp/opencv-2svn/cpp/basic_structures.html#cv-mat-athttp://opencv.jp/opencv-2svn/cpp/basic_structures.html#cv-mat-at)
+：要素にアクセス
+- [cv::Mat.rows, cols](http://opencv.jp/opencv-2svn/cpp/basic_structures.html#mat)
+：行数・列数
 - ソースコード内容
     ```cpp
+    // 回転中心を設定
     Point2f center(img.cols*0.5f, img.rows*0.5f);
     float R = img.cols/3.f;
     double stateAngle = state.at<float>(0);
@@ -120,7 +127,9 @@ OpenCV の使い方の基本説明.
     double predictAngle = prediction.at<float>(0);
     Point predictPt = calcPoint(center, R, predictAngle);
 
-    randn( measurement, Scalar::all(0), Scalar::all(KF.measurementNoiseCov.at<float>(0)));
+    randn( measurement, Scalar::all(0), 
+        calar::all(KF.measurementNoiseCov.at<float>(0))
+    );
 
     // generate measurement
     measurement += KF.measurementMatrix*state;
@@ -128,31 +137,51 @@ OpenCV の使い方の基本説明.
     Point measPt = calcPoint(center, R, measAngle);
     ```
 
-### ループ内処理：描画
-
+### ループ内処理：マクロ定義
+- [cv::line](http://opencv.jp/opencv-2svn/cpp/drawing_functions.html#cv-line)
+：2点を結ぶ線分を描画
 - ソースコード内容
     ```cpp
-    // plot points
-    #define drawCross( center, color, d)                  \
-        line( img, Point( center.x - d, center.y - d ),   \
-                    Point( center.x + d, center.y + d ), color, 1, LINE_AA, 0); \
-        line( img, Point( center.x + d, center.y - d ),   \
-                    Point( center.x - d, center.y + d ), color, 1, LINE_AA, 0 )
-        
+    #define drawCross( center, color, d)                \
+        line(img, Point( center.x - d, center.y - d ),  \
+                  Point( center.x + d, center.y + d ),  \
+                  color, 1, LINE_AA, 0); \
+        line(img, Point( center.x + d, center.y - d ),  \
+                  Point( center.x - d, center.y + d ),  \
+                  color, 1, LINE_AA, 0 )                 
+    ```
+
+### ループ内処理：描画
+
+- [cv::theRNG](http://opencv.jp/opencv-2svn/cpp/core_operations_on_arrays.html#cv-therng)
+：デフォルトの乱数生成器
+- [cv::imshow](http://opencv.jp/opencv-2.1/cpp/user_interface.html#cv-imshow)
+：指定したウィンドウ内に画像を表示
+- [cv::waitKey](http://opencv.jp/opencv-2.1/cpp/user_interface.html#cv-waitkey)
+：キーが押されるまで待機
+- ソースコード内容
+    ```cpp
+    // 画面クリア
     img = Scalar::all(0);
+    // 点をバツ印で描画
     drawCross( statePt, Scalar(255,255,255), 3 );
     drawCross( measPt, Scalar(0,0,255), 3 );
     drawCross( predictPt, Scalar(0,255,0), 3 );
+    // 点の間に線分を描画
     line( img, statePt, measPt, Scalar(0,0,255), 3, LINE_AA, 0 );
     line( img, statePt, predictPt, Scalar(0,255,255), 3, LINE_AA, 0 );
 
+    // 確率的にフィルタリング実施
     if(theRNG().uniform(0,4) != 0)
         KF.correct(measurement);
 
+    // 確率的な状態遷移
     randn( processNoise, Scalar(0), Scalar::all(sqrt(KF.processNoiseCov.at<float>(0, 0))));
     state = KF.transitionMatrix*state + processNoise;
 
+    // 描画
     imshow( "Kalman", img );
+    // リフレッシュレート設定
     code = (char)waitKey(100);
     if( code > 0 )
         break;
