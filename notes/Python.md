@@ -17,6 +17,7 @@ title: Python まとめノート
 
 ## ドキュメント作成
 
+- Python コーディング規約：[PEP8](https://qiita.com/simonritchie/items/bb06a7521ae6560738a7)
 - Type Hints：型ヒント
 	- [typing -- 型ヒントのサポート](https://docs.python.org/ja/3/library/typing.html)
 	- [Pythonではじまる、型のある世界](https://qiita.com/icoxfog417/items/c17eb042f4735b7924a3)

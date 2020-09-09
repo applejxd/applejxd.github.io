@@ -1,6 +1,38 @@
 ---
-title: Windows 環境構築
+title: Windows メモ
 ---
+
+## [ファイル名を指定して実行（Win+R）](http://www.checkpad.jp/list/show/981136)
+
+- システム系
+	- タスクマネージャ：taskmgr
+	- コマンドプロンプト：cmd
+- 設定系
+	- コントロールパネル：control
+		- プログラムの追加と削除：appwiz.cpl
+	- システム構成：msconfig
+	- システム情報：msinfo32
+		- バージョン情報：winver
+- フォルダ系
+	- ユーダ（プロファイル）フォルダ：%userprofile%
+- ショートカット配置系
+	- スタートメニュー：shell:(common) programs
+		- スタートアップ：shell:(common) startup
+	- 「送る」メニュー：shell:sendto
+
+
+## トラブルシューティング
+
+- セーフモード
+    1. Win+R から msconfig
+    2. 「ブート」を選択
+    3. 「セーフブート」にチェック
+- [システムファイルチェッカーツール（SFC.exe）](https://docs.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)
+- [Windows 回復環境 (Windows RE)](https://docs.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)
+	- [スタートアップ修復（MBR 修復）](https://support.microsoft.com/ja-jp/help/927392/use-bootrec-exe-in-the-windows-re-to-troubleshoot-startup-issues)
+- [工場出荷状態に戻す（HP)](https://support.hp.com/jp-ja/document/c02159559)
+：起動時にF11キー
+- [クリーンインストールする](https://www.ikt-s.com/windows10_clean_install_fmvd77j/)
 
 ## 基本設定
 
@@ -35,19 +67,6 @@ title: Windows 環境構築
     ```shell
     $ wsl -l -v
     ```
-
-## トラブルシューティング
-
-- セーフモード
-    1. Win+R から msconfig
-    2. 「ブート」を選択
-    3. 「セーフブート」にチェック
-- [システムファイルチェッカーツール（SFC.exe）](https://docs.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)
-- [Windows 回復環境 (Windows RE)](https://docs.microsoft.com/ja-jp/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)
-	- [スタートアップ修復（MBR 修復）](https://support.microsoft.com/ja-jp/help/927392/use-bootrec-exe-in-the-windows-re-to-troubleshoot-startup-issues)
-- [工場出荷状態に戻す（HP)](https://support.hp.com/jp-ja/document/c02159559)
-：起動時にF11キー
-- [クリーンインストールする](https://www.ikt-s.com/windows10_clean_install_fmvd77j/)
 
 ## 解決済みの問題
 

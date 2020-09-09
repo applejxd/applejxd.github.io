@@ -53,12 +53,15 @@ title: C++ コーディングメモ
     - 宣言順での初期化に注意
 - デフォルト引数の設定はヘッダで行う
 
-## ライブラリ
+## ビルド
 
 - cmake
     - [現代的な cmake スクリプト](https://qiita.com/shohirose/items/5b406f060cd5557814e9)
     - [CMake の使い方](https://qiita.com/shohirose/items/45fb49c6b429e8b204ac)
     - [cmake-variables](https://cmake.org/cmake/help/v3.13/manual/cmake-variables.7.html)
+
+## ライブラリ
+
 - [GoogleTest](https://github.com/google/googletest)：
 [Google Test ドキュメント日本語訳 上級ガイド](http://opencv.jp/googletestdocs/advancedguide.html)
 - Eigen

@@ -2,6 +2,10 @@
 title: CLI メモ
 ---
 
+## リンク集
+
+- [インフラエンジニアとしてよく使うコマンド集](https://qiita.com/sion_cojp/items/04a2aa76a1021fe77079)
+
 ## ターミナル操作
 
 - (Mac のシェルは.terminalでGUIとして実行)
@@ -157,11 +161,13 @@ $ awk -F'[,]' -v 'OFS=,' '{print $1, $NF}'
 
 ### その他データ処理
 
-- [join](https://eng-entrance.com/linux-command-join)
-: データ結合（複数フィールドは awk で[:]区切りで1フィールド目に結合して使う）
-- cat, paste: 単純に縦・横にデータ結合
+- [Linuxコマンドでテキストデータを自在に操る](https://orangain.hatenablog.com/entry/20100916/1284631280)
+  - cat, paste：単純に縦・横にデータ結合
+  - [join](https://eng-entrance.com/linux-command-join)
+	：データ結合（複数フィールドは awk で[:]区切りで1フィールド目に結合して使う）
 - [sort](https://eng-entrance.com/linux-command-sort)
-: データの並び替え
+：データの並び替え
+- [LinuxでExcelをCSVに変換するコマンドラインツール](https://notchained.hatenablog.com/entry/2014/11/24/105410)
 
 ## ファイル変換
 

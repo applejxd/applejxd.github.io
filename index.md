@@ -17,4 +17,4 @@ title: トップページ
 
 ## その他
 - [資料作成メモ](notes/Diagram.md)
-- [Windows 環境構築](notes/Windows.md)
+- [Windows メモ](notes/Windows.md)
