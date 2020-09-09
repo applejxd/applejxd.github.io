@@ -18,7 +18,7 @@ OpenCV の使い方の基本説明.
     typedef Point_<float> Point2f;
     ```
 - ソースコード内容
-    ```C++
+    ```cpp
     #include "opencv2/video/tracking.hpp"
     #include "opencv2/highgui.hpp"
 
@@ -60,7 +60,7 @@ OpenCV の使い方の基本説明.
     - CV_8UC3：3個の CV_8U カラー画像の初期値
     - CV_32F：浮動小数点数，32ビット
 - ソースコード内容
-    ```C++
+    ```cpp
     int main(int, char**)
     {
         help();
@@ -81,7 +81,7 @@ OpenCV の使い方の基本説明.
 - [cv::setIdentity](http://opencv.jp/opencv-2svn/cpp/operations_on_arrays.html#cv-setidentity)
 ：行列を定数倍した単位行列として初期化
 - ソースコード内容
-    ```C++
+    ```cpp
     for(;;)
     {
         // 乱数で初期化
@@ -110,7 +110,7 @@ OpenCV の使い方の基本説明.
 ### ループ内処理：計算処理
 
 - ソースコード内容
-    ```C++
+    ```cpp
     Point2f center(img.cols*0.5f, img.rows*0.5f);
     float R = img.cols/3.f;
     double stateAngle = state.at<float>(0);
@@ -131,8 +131,7 @@ OpenCV の使い方の基本説明.
 ### ループ内処理：描画
 
 - ソースコード内容
-    ```C++
-
+    ```cpp
     // plot points
     #define drawCross( center, color, d)                  \
         line( img, Point( center.x - d, center.y - d ),   \
