@@ -28,4 +28,4 @@ title: トップページ
 
 ## その他
 - [資料作成メモ](notes/Diagram.md)
-- [リンク集](note/Links.md)
+- [リンク集](notes/Links.md)
