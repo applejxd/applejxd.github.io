@@ -1,5 +1,5 @@
 ---
-title: GitHub Pages/HP メモ
+title: GitHub Pages メモ
 ---
 
 ## GitHub Pages の内容

@@ -20,7 +20,6 @@ title: Windows メモ
 		- スタートアップ：shell:(common) startup
 	- 「送る」メニュー：shell:sendto
 
-
 ## トラブルシューティング
 
 - セーフモード
@@ -44,29 +43,6 @@ title: Windows メモ
     ```
 4. [packages.config](https://gist.github.com/applejxd/e56fef3adf05108bed62ae847cf71bc5) を通じて chocolatey パッケージインストール
 5. フォントインストール：Hack Nerd Font（"Hack Regular Nerd Font Complete Windows Compatible" a.k.a. "Hack NF"）
-
-## WSL
-
-0. [コマンドで有効化](https://docs.microsoft.com/ja-jp/windows/wsl/install-win10), appwiz.cpl (Win+R)
-1. WSL1 有効化
-    ```shell
-    $ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-    ```
-2. WSL2 に必要な設定
-    ```shell
-    $ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-    ```
-3. [Linux カーネルの更新](https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-kernel)
-：[コマンドで実施？](https://news.mynavi.jp/article/20200620-1059833/)
-4. 再起動して ver. 2 をデフォルトに
-    ```shell
-    $ wsl --set-default-version 2
-    ```
-5. 「Ubuntu 18.04」 （安定）をインストール
-6. バージョン確認
-    ```shell
-    $ wsl -l -v
-    ```
 
 ## 解決済みの問題
 
