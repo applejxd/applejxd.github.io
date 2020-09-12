@@ -40,37 +40,50 @@ title: C++ コーディングメモ
     - 右辺値は名前無し一時オブジェクト
     - 左辺値は名前有り実態のあるオブジェクト
 
-## Tips・ユースケース
+## ユースケース
 
 - [STLの型の使い分け](https://qiita.com/h_hiro_/items/a83a8fd2391d4a3f0e1c)
-- [配列よりも std::array](http://tinyurl.com/y3uqd7s5)：std::array の方が書きやすい
+    - （動的に要素数を宣言したい）配列：array
+    - 動的に要素数を変更したい配列：vector
+- [配列よりも std::array](http://tinyurl.com/y3uqd7s5)
+    - std::array の方が書きやすい
+    - ポインタ渡しではなく、const 参照で渡す
 - [vector のループは範囲ベースで](https://cpprefjp.github.io/lang/cpp11/range_based_for.html)
+    ```cpp
+    vector<double> elements;
+    for(const auto& element: elements){ 
+        element++; 
+    }
+    ```
     - イテレータの型は 'const auto&' 推奨（書き換え防止）
     - [速度の比較](http://jagabeeinitialize.hatenablog.com/entry/2018/01/24/001016),
-    インデックスが必要な場合は従来のやり方で
+    インデックスが必要な場合は従来のやり方
+        ```cpp
+        vector<double> elements;
+        for(int index=0; index < elements.size(); index++){
+            elements[index] += static_cast<double>(index);
+        }
+        ```
 - [メンバイニシャライザを有効活用](http://jagabeeinitialize.hatenablog.com/entry/2018/01/21/192043)
     - コンストラクタによる初期化よりも速い
     - 宣言順での初期化に注意
 - デフォルト引数の設定はヘッダで行う
+    ```cpp
+    class hoge{
+        public:
+            double method(double arg = 1.);
+    };
 
-## ビルド：CMake
-
-- ドキュメント
-  - [cmake-variables](https://cmake.org/cmake/help/v3.13/manual/cmake-variables.7.html)
-  - [CMake チュートリアル](http://opencv.jp/cmake/cmake_tutorial.html)
-- 書き方
-  - [現代的な cmake スクリプト](https://qiita.com/shohirose/items/5b406f060cd5557814e9)
-  - [CMake の使い方](https://qiita.com/shohirose/items/45fb49c6b429e8b204ac)
-  - [プロジェクトの階層化](https://kamino.hatenablog.com/entry/cmake_tutorial2)
-- Tips
-  - [スタティックリンクとダイナミックリンク](http://www.cc.kyoto-su.ac.jp/~kbys/kiso/cpu/dynamic-link.html)
+    double method(double arg){
+        ...
+    }
+    ```
 
 ## ライブラリ
 
 - [GoogleTest](https://github.com/google/googletest)：
 [Google Test ドキュメント日本語訳 上級ガイド](http://opencv.jp/googletestdocs/advancedguide.html)
 - Eigen
-- OpenCV
 
 ## 疑問点
 

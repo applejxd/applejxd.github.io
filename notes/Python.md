@@ -19,6 +19,10 @@ title: Python まとめノート
 
 - Python コーディング規約：[PEP8](https://qiita.com/simonritchie/items/bb06a7521ae6560738a7)
 - Type Hints：型ヒント
+	```python
+	def method(arg: float) -> float:
+		pass
+	```
 	- [typing -- 型ヒントのサポート](https://docs.python.org/ja/3/library/typing.html)
 	- [Pythonではじまる、型のある世界](https://qiita.com/icoxfog417/items/c17eb042f4735b7924a3)
 - docstring：コメントスタイル
@@ -39,10 +43,53 @@ title: Python まとめノート
 - [継承よりも委譲](https://qiita.com/kotetsu75/items/4b903023001f157554a4)
 - [抽象基底クラス](https://docs.python.org/ja/3/library/abc.html)
 ：[抽象クラスとダック・タイピング](https://qiita.com/kaneshin/items/269bc5f156d86f8a91c4)
+	```python
+	from abc import ABC, abstructmethod
+
+	class BaseClass(ABC):
+		def __init__(self):
+			pass
+
+		@abstructmethod
+		def method(self):
+			pass
+	
+	class ChildClass(BaseClass):
+		def __init__(self):
+			super().__init__()
+
+		def method(self):
+			printf("Hello World!")
+	```
 - [クラスメソッドとスタティックメソッド](https://qiita.com/1plus4/items/b37ec6ea90569ffdebfe)
+	```python
+	class TestClass:
+		# クラス変数のみ使う処理
+		@classmethod
+		def class_method(cls):
+			pass
+
+		# メンバ・クラス変数に依存しない処理
+		@staticmethod
+		def static_method():
+			pass
+	```
 - アクセス制限
 	- [プライベートメンバの命名規則](https://www.python.ambitious-engineer.com/archives/323)
 	- [プロパティによるアクセサ](https://qiita.com/okuhiiro/items/6a2378215f7160291da6)
+		```python
+		class TestClass:
+			def __init__(self):
+				self._hoge = 3.
+			
+			@property
+			def hoge(self) -> float:
+				return self._hoge
+			
+			@hoge.setter
+			def hoge(self, hoge: float) -> None:
+				self._hoge = hoge
+		```
 
 ## データ処理
 
@@ -66,8 +113,10 @@ title: Python まとめノート
 	```
 - [スライス](https://note.nkmk.me/python-numpy-ndarray-slice/)
 	```python
-	a[-5:-1]	# 最後から5個目から最後までの要素
-	a[:, 3]		# 3列目
+	# 最後から5個目から最後までの要素
+	a[-5:-1]
+	# 3列目
+	a[:, 3]
 	```
 - pandas (Dataframe)
 	- [pandasでよく使う文法まとめ](https://qiita.com/okadate/items/7b9620a5e64b4e906c42)

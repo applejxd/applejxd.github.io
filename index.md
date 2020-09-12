@@ -21,6 +21,7 @@ title: トップページ
 
 ### プログラミング
 - [C++ コーディングメモ](notes/Cpp.md)
+  - [C++ ビルドメモ](notes/CppBuild.md)
   - [OpenCV メモ](notes/OpenCV.md)
 - [Python コーディングメモ](notes/Python.md)
   - [LightGBM で時系列データ分析](notes/LightGBM.md)
