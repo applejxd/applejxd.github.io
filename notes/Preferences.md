@@ -2,6 +2,30 @@
 title: 開発環境メモ
 ---
 
+## エディタ
+
+- VS Code
+  - [マルチカーソル](https://meshikui.com/2018/12/12/1420/)：カーソルを使わないなら「矩形選択 → A-S-I」
+  - [デバッグ機能](https://qiita.com/bigengelt/items/e4c6f08003fe15988b7d)
+    - コールスタック：現在呼び出している関数の一覧
+    - .natvis ファイル：独自形式の変数表示
+  - 拡張機能
+    - Awesome Emacs Keymap
+    - Git 関連：GitLens, GitGraph
+- Vim
+  - [Vim幼稚園からVim小学校へ](https://qiita.com/hachi8833/items/7beeee825c11f7437f54)
+  - [上達したいVim初心者のための設定・プラグインの見つけ方、学び方](https://employment.en-japan.com/engineerhub/entry/2019/01/28/103000)
+  - [iceberg.vim](https://github.com/cocopon/iceberg.vim)
+- Emacs
+  - [Spacemacs](https://www.spacemacs.org/)
+  - [YaTeX](http://hooktail.sub.jp/tex/yatex/)
+
+## IDE
+
+- PyCharm
+  - なんでも検索：Shift Double
+  - [最強のPython統合開発環境PyCharm](https://qiita.com/yamionp/items/f88d50da8d6b548fc44c)
+
 ## ターミナル
 
 - Windows：[Windows Terminal](https://www.microsoft.com/ja-jp/p/windows-terminal/9n0dx20hk701)
@@ -16,24 +40,3 @@ title: 開発環境メモ
   - [プラグイン集](https://qiita.com/yamannnu/items/f40b2cffa85f5250e03e)
   - [hyperterm-overlay](https://qiita.com/yamannnu/items/f40b2cffa85f5250e03e#hyperterm-overlay)
   ：ホットキーで起動
-
-## エディタ
-
-- VS Code
-  - [マルチカーソル](https://meshikui.com/2018/12/12/1420/)：カーソルを使わないなら「矩形選択 → A-S-I」
-  - 拡張機能
-    - Awesome Emacs Keymap
-    - Git 関連：GitLens, GitGraph
-- Emacs
-  - [Spacemacs](https://www.spacemacs.org/)
-  - [YaTeX](http://hooktail.sub.jp/tex/yatex/)
-- Vim
-  - [Vim幼稚園からVim小学校へ](https://qiita.com/hachi8833/items/7beeee825c11f7437f54)
-  - [上達したいVim初心者のための設定・プラグインの見つけ方、学び方](https://employment.en-japan.com/engineerhub/entry/2019/01/28/103000)
-  - [iceberg.vim](https://github.com/cocopon/iceberg.vim)
-
-## IDE
-
-- PyCharm
-  - なんでも検索：Shift Double
-  - [最強のPython統合開発環境PyCharm](https://qiita.com/yamionp/items/f88d50da8d6b548fc44c)

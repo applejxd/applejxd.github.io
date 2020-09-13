@@ -19,6 +19,9 @@ title: C++ コーディングメモ
 - Tips
     - [More C++ Idioms](https://ja.wikibooks.org/wiki/More_C%2B%2B_Idioms)
     - [C/C++迷信集](http://www.kijineko.co.jp/tech/superstitions)
+- コーディングスタイル
+    - [クリーンコーディング](https://qiita.com/elipmoc101/items/01003c82dbd2e464a071)
+
 
 ## ややこしいものの区別
 
@@ -40,30 +43,53 @@ title: C++ コーディングメモ
     - 右辺値は名前無し一時オブジェクト
     - 左辺値は名前有り実態のあるオブジェクト
 
-## ユースケース
+## コンテナ操作
 
-- [STLの型の使い分け](https://qiita.com/h_hiro_/items/a83a8fd2391d4a3f0e1c)
-    - （動的に要素数を宣言したい）配列：array
-    - 動的配列：vector
 - [配列よりも std::array](http://tinyurl.com/y3uqd7s5)
     - std::array の方が書きやすい
     - ポインタ渡しではなく、const 参照で渡す
+- [STLの型の使い分け](https://qiita.com/h_hiro_/items/a83a8fd2391d4a3f0e1c)
+    - （動的に要素数を宣言したい）配列：array
+    - 動的配列：vector
+- 巨大なコンテナは (const) 参照で渡す（値渡しでコピーしない）
+- 検索は find_if で
+    ```cpp
+    double ref = 10;
+    auto judge [double ref](double value) -> bool {
+        return value == ref;
+    };
+
+    vector<double> d_vec;
+    auto result = find_if(d_vec.begin(), d_vec,end(), judge);
+    ```
+
+### ループ処理
+
+- [ループ速度の比較](http://jagabeeinitialize.hatenablog.com/entry/2018/01/24/001016)
 - [vector のループは範囲ベースで](https://cpprefjp.github.io/lang/cpp11/range_based_for.html)
     ```cpp
     vector<double> elements;
+    // 書き換え防止で const auto&
     for(const auto& element: elements){ 
         element++; 
     }
     ```
-    - イテレータの型は 'const auto&' 推奨（書き換え防止）
-    - [速度の比較](http://jagabeeinitialize.hatenablog.com/entry/2018/01/24/001016),
-    インデックスが必要な場合は従来のやり方
-        ```cpp
-        vector<double> elements;
-        for(int index=0; index < elements.size(); index++){
-            elements[index] += static_cast<double>(index);
-        }
-        ```
+- インデックスが必要な場合は従来のやり方
+    ```cpp
+    vector<double> elements;
+    for(int index=0; index < elements.size(); index++){
+        elements[index] += static_cast<double>(index);
+    }
+    ```
+
+## Tips
+
+- キャストは C++ の機能で
+    - static_cast
+    - dynamic_cast
+- 巨大なコピーを避ける
+    - 巨大なメンバ変数の getter は const 参照で
+    - [ある程度 RVO, NRVO 任せで大丈夫](https://theolizer.com/cpp-school1/cpp-school1-37/)
 - [メンバイニシャライザを有効活用](http://jagabeeinitialize.hatenablog.com/entry/2018/01/21/192043)
     - コンストラクタによる初期化よりも速い
     - 宣言順での初期化に注意
@@ -78,20 +104,26 @@ title: C++ コーディングメモ
         ...
     }
     ```
+- ラムダ式：単一の関数内で同一の処理が繰り返される場合など
+    ```cpp
+    void func(double a){
+        auto f = [a](double x){
+            return pow(x,a);
+        };
+
+        auto df = [a](double x){
+            return a*pow(x, a-1);
+        };
+
+        double value = f(10.) + df(10.) * 10.;
+
+        ...
+    }
+    ```
 
 ## ライブラリ
 
 - [GoogleTest](https://github.com/google/googletest)：
 [Google Test ドキュメント日本語訳 上級ガイド](http://opencv.jp/googletestdocs/advancedguide.html)
 - Eigen
-
-## 疑問点
-
-- [生ポインタは避ける？](https://qiita.com/hmito/items/44925fca9fca74e78f61)
-    - STL は参照渡しで OK
-    - 配列は std::array にして参照渡し
-    - 生ポインタの代わりにスマートポインタ
-- 巨大なコピーを避ける？
-    - [RVO, NRVO 任せでも大丈夫？](https://theolizer.com/cpp-school1/cpp-school1-37/)
-    - スマートポインタ？ムーブセマンティクス？
-    - 巨大なメンバ変数は値？（スマート）ポインタ？参照？
+    - [デバッグ](http://wildpie.hatenablog.com/entry/20160206/1454747559)
