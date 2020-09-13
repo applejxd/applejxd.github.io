@@ -74,7 +74,7 @@ title: C++ コーディングメモ
             double method(double arg = 1.);
     };
 
-    double method(double arg){
+    double hoge::method(double arg){
         ...
     }
     ```
