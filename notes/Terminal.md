@@ -9,10 +9,6 @@ title: Terminal 操作メモ
 
 ## コマンド操作
 
-- [fzf (fuzzy finder)](https://wonderwall.hatenablog.com/entry/2017/10/06/063000)
-	- C-t：カレントディレクトリ以下検索
-	- C-r：コマンド履歴検索
-	- M-c：検索しながら移動
 - 事前コマンドを実行
 	```
 	$ !!
@@ -22,6 +18,10 @@ title: Terminal 操作メモ
 	$ ls -a
 	$ ^-a ^-la	# ls -la と同じ
 	```
+- [fzf (fuzzy finder)](https://wonderwall.hatenablog.com/entry/2017/10/06/063000)
+	- C-t：カレントディレクトリ以下検索
+	- C-r：コマンド履歴検索
+	- M-c：検索しながら移動
 
 ## ジョブ管理
 

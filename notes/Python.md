@@ -126,9 +126,27 @@ title: Python まとめノート
 - numpy (ndarray)
 	- [Dataframe に変換](https://note.nkmk.me/python-pandas-numpy-conversion/)
 - [pyplot](https://qiita.com/KntKnk0328/items/5ef40d9e77308dd0d0a4)
-	```python
-	
-	```
+	- インスタンス化しない
+		```python
+		import matplotlib.pyplot as plt
+		import numpy as np
+
+		# array-like (or scalar) object
+		x: np.ndarray = ...
+		y: np.ndarray = ...
+
+		# プロットする内容
+		plt.plot(x, y, label="test")
+		# タイトル
+		plt.title("This is a title for this figure")
+		# 軸にラベル付け
+		plt.xlabel("This is a label for this x axis")
+		plt.ylabel("This is a label for this y axis")
+		# 凡例を表示
+		plt.legend()
+		# プロットを表示
+		plt.show()
+		```
 
 ## 機械学習
 
