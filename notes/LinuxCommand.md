@@ -18,7 +18,7 @@ $ find [検索ディレクトリ] -name [名前]
 	find . -name "*.dat" -type f | xargs wc -l
 	```
 	- [findとxargsの基本的な使い方](https://webkaru.net/linux/find-command/)
-	- [xargs コマンド|コマンドの使い方](https://hydrocul.github.io/wiki/commands/xargs.html)
+	- [xargs コマンド - コマンドの使い方](https://hydrocul.github.io/wiki/commands/xargs.html)
 - chmod を使った例
     ```bash
     # ディレクトリ
