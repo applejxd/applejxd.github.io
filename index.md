@@ -17,7 +17,9 @@ title: トップページ
 ### 開発全般
 - [Git メモ](notes/Git.md)
   - [GitHub Pages メモ](notes/GitHubPages.md)
-- [CLI メモ](notes/CLI.md)
+- [Terminal 操作メモ](notes/Terminal.md)
+  - [シェルスクリプトメモ](notes/ShellScript.md)
+  - [Linux　コマンドメモ](notes/LinuxCommand.md)
 
 ### プログラミング
 - [C++ コーディングメモ](notes/Cpp.md)
@@ -25,7 +27,6 @@ title: トップページ
   - [OpenCV メモ](notes/OpenCV.md)
 - [Python コーディングメモ](notes/Python.md)
   - [LightGBM で時系列データ分析](notes/LightGBM.md)
-- [シェルスクリプトメモ](notes/ShellScript.md)
 
 ## その他
 - [資料作成メモ](notes/Diagram.md)

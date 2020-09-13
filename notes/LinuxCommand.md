@@ -1,99 +1,6 @@
 ---
-title: CLI メモ
+title: Linux コマンドメモ
 ---
-
-## リンク集
-
-- [インフラエンジニアとしてよく使うコマンド集](https://qiita.com/sion_cojp/items/04a2aa76a1021fe77079)
-
-## ターミナル操作
-
-- (Mac のシェルは.terminalでGUIとして実行)
-
-### コマンド操作
-
-- [fzf (fuzzy finder)](https://wonderwall.hatenablog.com/entry/2017/10/06/063000)
-	- C-t：カレントディレクトリ以下検索
-	- C-r：コマンド履歴検索
-	- M-c：検索しながら移動
-- 事前コマンドを実行
-	```
-	$ !!
-	```
-- 事前のコマンドの foo を bar に入れ替えて実行：$ ^foo^bar
-	```bash
-	$ ls -a
-	$ ^-a ^-la	# ls -la と同じ
-	```
-
-### ジョブ管理
-
-```bash
-$ command &	#バックグラウンドジョブとして実行
-$ kill %<Job No.>	# ジョブを停止
-$ jobs	# ジョブ確認
-$ bg %<Job No.>	# バックグラウンド処理
-$ fg %<Job No.>	# フォアグラウンド処理
-```
-- プロセス終了：Ctrl+C
-- プロセス中断：Ctrl+Z
-
-### ディレクトリスタック
-
-```bash
-$ push	# pwd をスタックに積んで引数のディレクトリに移動
-$ push +n	# n 番目のスタックに移動
-$ dirs	# 現在のスタック一覧を表示
-$ popd +n	# n 番目のスタックを削除
-```
-
-### [リダイレクト](https://qiita.com/laikuaut/items/e1cc312ffc7ec2c872fc)
-
-- ファイル・ディスクリプター(FD)
-	- stdin（入力のデフォルト）：0
-	- stdout（出力のデフォルト）：1
-	- stderr：2
-	- その他：3, 4, ...
-- 演算子
-	- [n]<word：n に入力（word を n で読み込み・参照）
-	- [n]\>word：n を出力（word を n で書き込み・参照）
-	- [n]\>\>word：n を追加出力（word を n で書き込み・参照）
-	- [n]\>&word：出力の複製（word の複製を n で書き込み・参照）
-- ケーススタディ
-	- stdout と stderr の両方を file に書き出し
-		```bash
-		$ command > file 2>&1
-		```
-		- command \> file (FD1 := file)
-		- 2 \>&1 (FD2 := FD1 のコピー = file)
-	- stdout を file に. stderr を stdout に.
-		```bash
-		$ command 2>&1 > file
-		```
-		- command 2\>&1 (FD2 := FD1のコピー = stdout)
-		- \> file (FD1 := file)
-
-### 置換
-
-- コマンド置換：コマンドの結果の文字列に置換
-- プロセス置換：コマンドの結果を内容に持つファイルに置換
-```bash
-$ bash -c "$(curl -L https://raw.githubusercontent.com/applejxd/dotfiles/master/install.sh)"	# コマンド置換
-$ source <(curl -L https://raw.githubusercontent.com/applejxd/dotfiles/master/deploy.sh)	# プロセス置換
-```
-
-### chmod
-
-- 基本
-	1. ディレクトリ：755[drwxr-xr-x]
-	2. 通常のファイル：644[-rw-r--r--]
-	3. secureなファイル：444 [-r--r--r--]
-- 一括変更
-```bash
-$ sudo find . -type d -print | xargs sudo chmod 755
-$ sudo find . -type f -print | xargs sudo chmod 644
-$ sudo find . -type f -print | xargs sudo chmod 444
-```
 
 ## ファイル検索
 
@@ -112,6 +19,15 @@ $ find [検索ディレクトリ] -name [名前]
 	```
 	- [findとxargsの基本的な使い方](https://webkaru.net/linux/find-command/)
 	- [xargs コマンド|コマンドの使い方](https://hydrocul.github.io/wiki/commands/xargs.html)
+- chmod を使った例
+    ```bash
+    # ディレクトリ
+    $ sudo find . -type d -print | xargs sudo chmod 755
+    # 通常のファイル
+    $ sudo find . -type f -print | xargs sudo chmod 644
+    # secure なファイル
+    $ sudo find . -type f -print | xargs sudo chmod 444
+    ```
 
 ### [grep](https://webkaru.net/linux/grep-command/)
 ファイル内容検索. パイプでand検索.
@@ -183,7 +99,7 @@ $ nkf -w before.dat > after.dat
 	- -e: EUC-JP
 - —overwrite：上書き
 	```bash
-	$ nkf -w —overwrite hoge.dat
+	$ nkf -w —-overwrite hoge.dat
 	```
 - --guess：文字コード判定
 	```bash
