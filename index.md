@@ -19,7 +19,7 @@ title: トップページ
   - [GitHub Pages メモ](notes/GitHubPages.md)
 - [Terminal 操作メモ](notes/Terminal.md)
   - [シェルスクリプトメモ](notes/ShellScript.md)
-  - [Linux　コマンドメモ](notes/LinuxCommand.md)
+  - [Linux コマンドメモ](notes/LinuxCommand.md)
 
 ### プログラミング
 - [C++ コーディングメモ](notes/Cpp.md)
