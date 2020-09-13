@@ -11,7 +11,10 @@ title: 開発環境メモ
     - .natvis ファイル：独自形式の変数表示
   - 拡張機能
     - Awesome Emacs Keymap
-    - Git 関連：GitLens, GitGraph
+    - GitLens, GitGraph
+    - clang-format: "Google" style
+    - cpplint
+    - jumpy
 - Vim
   - [Vim幼稚園からVim小学校へ](https://qiita.com/hachi8833/items/7beeee825c11f7437f54)
   - [上達したいVim初心者のための設定・プラグインの見つけ方、学び方](https://employment.en-japan.com/engineerhub/entry/2019/01/28/103000)
