@@ -33,16 +33,18 @@ title: Git メモ
 	1. `$ git reflog` で HEAD 履歴確認
 	2. 直前の状態に戻るなら : `$ git reset —hard HEAD@{1}`
 
-### リセットのオプション
-- HEAD だけ削除（reset --soft）
+### リセット
+
+- HEAD だけ削除：`$ git reset --soft @~`
 	- コミットを削除・コミット候補は維持
-	- 最新のコミットをキャンセル : `$ git reset --soft @~`
-- Index も削除（reset [--mixed]）
+	- 最新のコミットをキャンセル : 
+- Index も削除：`$ git reset [--mixed] @`
 	- 次のコミット候補をリセット・ローカルの変更を保持
-	- ステージをキャンセル：`$ git reset [--mixed] @`
-- Working Tree も削除（reset --hard）
+	- ステージをキャンセル
+- Working Tree も削除 : `$ git reset --hard @`
 	- ローカルの変更も削除
-	- ローカルの変更をキャンセル : `$ git reset --hard @`
+	- ローカルの変更をキャンセル
+- 監視対象外の内容も削除：`$ git clean -df`
 
 ## ツール
 

@@ -38,6 +38,17 @@ title: C++ ビルドメモ
 
 ## CMake
 
+### 実行方法
+
+- ビルド・インストール
+  ```shell
+  $ mkdir build && cd build
+  $ cmake ../
+  $ make
+  $ make install
+  ```
+- アンインストール：`xargs sudo rm < install_manifest.txt`
+
 ### 単一ファイルの場合
 
 ```cmake
@@ -73,8 +84,8 @@ project<br>
     project(Main)
 
     add_executable(Main main.cc)
-    target_compile_options(Filtering PUBLIC -O2 -Wall)
-    target_compile_features(Filtering PUBLIC cxx_std_11)
+    target_compile_options(Main PUBLIC -O2 -Wall)
+    target_compile_features(Main PUBLIC cxx_std_11)
 
     # サブディレクトリのプロジェクトを追加してリンク
     add_subdirectory(src)

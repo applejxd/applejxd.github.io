@@ -2,19 +2,30 @@
 title: 開発環境メモ
 ---
 
+## VS Code
+- [マルチカーソル](https://meshikui.com/2018/12/12/1420/)
+  - カーソルを使わない方法：矩形選択 → A-S-I
+- [デバッグ機能](https://qiita.com/bigengelt/items/e4c6f08003fe15988b7d)
+  - コールスタック：現在呼び出している関数の一覧
+  - .natvis ファイル：独自形式の変数表示
+- clang-format
+  - `$ sudo apt install -y clang-format`
+  - "Google style" に設定
+- cpplint
+  - pip3 からインストール
+    ```shell
+    $ sudo apt -y install python3-pip
+    $ pip3 install cpplint
+    $ pip3 show -f cpplint
+    ```
+  - 設定で`$HOME/.local/bin/cpplint`を絶対パスで指定
+- その他拡張機能
+  - Awesome Emacs Keymap
+  - GitLens, GitGraph
+  - jumpy
+
 ## エディタ
 
-- VS Code
-  - [マルチカーソル](https://meshikui.com/2018/12/12/1420/)：カーソルを使わないなら「矩形選択 → A-S-I」
-  - [デバッグ機能](https://qiita.com/bigengelt/items/e4c6f08003fe15988b7d)
-    - コールスタック：現在呼び出している関数の一覧
-    - .natvis ファイル：独自形式の変数表示
-  - 拡張機能
-    - Awesome Emacs Keymap
-    - GitLens, GitGraph
-    - clang-format: "Google" style
-    - cpplint
-    - jumpy
 - Vim
   - [Vim幼稚園からVim小学校へ](https://qiita.com/hachi8833/items/7beeee825c11f7437f54)
   - [上達したいVim初心者のための設定・プラグインの見つけ方、学び方](https://employment.en-japan.com/engineerhub/entry/2019/01/28/103000)
