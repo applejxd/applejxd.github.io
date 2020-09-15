@@ -112,3 +112,21 @@ $ nkf -w before.dat > after.dat
 ```bash
 $ convert [変換前ファイル] [変換後ファイル]
 ```
+
+## パッチ処理
+
+### パッチ作成
+
+- [diff を使う](https://qiita.com/astro_super_nova/items/e30dcaf4d106deebc63c)
+	```shell
+	$ diff -up original_source modified_source > source.patch
+	$ diff -uprN /path/to/original /path/to/modified > folder.patch
+	```
+- [git を使う](https://qiita.com/sea_mountain/items/7d9c812e68a26bd1a292)
+：`$ git diff > diff.patch`
+
+### パッチ適用
+
+
+- diff：`$ patch [option] applied_file < patch_file.patch`
+- git：`$ git apply diff.patch`
