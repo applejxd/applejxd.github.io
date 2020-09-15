@@ -19,9 +19,15 @@ title: 開発環境メモ
     $ pip3 show -f cpplint
     ```
   - 設定で`$HOME/.local/bin/cpplint`を絶対パスで指定
+- [Draw.io integration](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
+  - ファイル形式：.png.drawio ならそのまま編集・閲覧・利用が可能
+  - 数式組版はタブから設定
 - その他拡張機能
   - Awesome Emacs Keymap
   - GitLens, GitGraph
+  - PlantUML
+  - [Polacode](https://www.mitsue.co.jp/knowledge/blog/frontend/201804/02_1600.html)
+  ：ソースコードを画像に
   - jumpy
 
 ## エディタ
