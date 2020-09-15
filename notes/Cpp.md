@@ -90,6 +90,20 @@ title: C++ コーディングメモ
 - 巨大なコピーを避ける
     - 巨大なメンバ変数の getter は const 参照で
     - [ある程度 RVO, NRVO 任せで大丈夫](https://theolizer.com/cpp-school1/cpp-school1-37/)
+- アクセサ
+    - セッター
+        ```cpp
+        ExampleClass& setter(const vector<double>& member){
+            this->member = member;
+            return *this;
+        }
+        ```
+    - ゲッター
+        ```cpp
+        const vector<double>& getter(void) const{
+            return this->member;
+        }
+        ```
 - [メンバイニシャライザを有効活用](http://jagabeeinitialize.hatenablog.com/entry/2018/01/21/192043)
     - コンストラクタによる初期化よりも速い
     - 宣言順での初期化に注意
@@ -120,6 +134,8 @@ title: C++ コーディングメモ
         ...
     }
     ```
+- 例外処理
+- マクロの正しい使い方
 
 ## ライブラリ
 
