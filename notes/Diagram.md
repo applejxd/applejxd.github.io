@@ -19,12 +19,6 @@ title: 資料作成メモ
     - [The Noun Project](https://thenounproject.com/)
     - [Icons - Material Design](https://material.io/resources/icons/?style=baseline)
 
-## Draw.io
-
-- [VS Code 拡張機能版](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
-- ファイル形式：.png.drawio ならそのまま編集・閲覧・利用が可能
-- 数式組版はタブから設定
-
 ## PlantUML
 
 - [マニュアル](https://plantuml.com/ja/)

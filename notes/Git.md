@@ -54,6 +54,11 @@ title: Git メモ
 	$ git flow feature start test	# feature ブランチ開始
 	$ ...
 	$ git flow feature finish test	# feature ブランチ終了
+	$ git flow release start 0.1.0 # リリース開始
+	$ # CHANGELOG.md 編集
+	$ git flow release finish
+	$ # マージのメッセージはそのまま
+	$ # タグ生成時にメッセージを追加
 	```
 - [tig](https://qiita.com/suino/items/b0dae7e00bd7165f79ea)
 - Vscode 向け

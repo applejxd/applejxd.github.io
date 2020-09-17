@@ -13,6 +13,7 @@ title: トップページ
 - [Windows メモ](notes/Windows.md)
   - [WSL メモ](notes/WSL.md)
 - [開発環境メモ](notes/Preferences.md)
+  - [dotfiles (for Mac/Linux/WSL)](https://github.com/applejxd/dotfiles)
 
 ### 開発全般
 - [Git メモ](notes/Git.md)
