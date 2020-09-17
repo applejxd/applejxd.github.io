@@ -143,3 +143,4 @@ title: C++ コーディングメモ
 [Google Test ドキュメント日本語訳 上級ガイド](http://opencv.jp/googletestdocs/advancedguide.html)
 - Eigen
     - [デバッグ](http://wildpie.hatenablog.com/entry/20160206/1454747559)
+- Ceres
