@@ -3,13 +3,6 @@ title: C++ コーディングメモ
 ---
 
 ## サイトリンク
-- [Google C++ スタイルガイド 日本語全訳](https://ttsuki.github.io/styleguide/cppguide.ja.html)
-    - [出力の参照渡しとポインタ渡しの比較](http://orycha.hatenablog.com/entry/2017/02/19/115015)
-    - [namespace の賢い使い方](https://qiita.com/_EnumHack/items/430da105a541f9ecd774),
-    [無名名前空間](https://kaworu.jpn.org/cpp/%E7%84%A1%E5%90%8D%E5%90%8D%E5%89%8D%E7%A9%BA%E9%96%93)
-- [Doxygen](http://www.doxygen.jp/docblocks.html)：コメントスタイル
-    - [Doxygen 書き方メモ（C, C++）](https://qiita.com/inabe49/items/23e615649e8539d857a8),
-    [JavaDoc](https://www.aiosl-tec.co.jp/java/247/)
 - リファレンス
     - [cppreference.com](https://ja.cppreference.com/w/)
     - [cpprefjp - C++日本語リファレンス](https://cpprefjp.github.io/)
@@ -20,8 +13,83 @@ title: C++ コーディングメモ
     - [More C++ Idioms](https://ja.wikibooks.org/wiki/More_C%2B%2B_Idioms)
     - [C/C++迷信集](http://www.kijineko.co.jp/tech/superstitions)
 - コーディングスタイル
-    - [クリーンコーディング](https://qiita.com/elipmoc101/items/01003c82dbd2e464a071)
 
+## コーディング規約
+- [Google C++ スタイルガイド 日本語全訳](https://ttsuki.github.io/styleguide/cppguide.ja.html)
+- [クリーンコーディング](https://qiita.com/elipmoc101/items/01003c82dbd2e464a071)
+- [出力の参照渡しとポインタ渡しの比較](http://orycha.hatenablog.com/entry/2017/02/19/115015)
+- [namespace の賢い使い方](https://qiita.com/_EnumHack/items/430da105a541f9ecd774)
+- [無名名前空間](https://kaworu.jpn.org/cpp/%E7%84%A1%E5%90%8D%E5%90%8D%E5%89%8D%E7%A9%BA%E9%96%93)
+
+### Cpplint
+- [Google C++ スタイルチェッカー：cpplint](https://github.com/cpplint/cpplint)
+- "Single-parameter constructors should be marked explicit."
+    - 暗黙のコンストラクタを呼び出さないように宣言に explicit を付ける
+    - コーディング例
+        ```cpp
+        class Example {
+         public:
+          explicit Example(double arg);
+        };
+        ```
+
+## ドキュメント生成
+- [Doxygen](http://www.doxygen.jp/docblocks.html)
+- インストール方法：`$ sudo apt install doxygen`
+- [使用方法](http://penguinitis.g1.xrea.com/computer/programming/doxygen.html)
+    ```shell
+    $ doxygen -g Doxyfile # 設定ファイル生成
+    $ # Doxyfile を編集
+    $ doxygen Doxyfile # ドキュメント生成
+    ``` 
+- 各種設定
+    - 言語設定：`OUTPUT_LANGUAGE = JAPANESE`
+    - private も表示：`EXTREACT_PRIVATE = YES`
+    - static も表示：`EXTARACT_STATIC = YES`
+    - LaTeX を生成しない：`GENERATE_LATEX = NO`
+    - ソースコードも含める：`INLINE_SOURCES = YES`
+
+### コメントスタイル
+- [Doxygen 書き方メモ（C, C++）](https://qiita.com/inabe49/items/23e615649e8539d857a8),
+- [JavaDoc](https://www.aiosl-tec.co.jp/java/247/) 
+- ヘッダファイル
+    ```cpp
+    /**
+     * @file header.h
+     * @brief ヘッダファイル
+     * Copyright 2020 applejxd
+     */
+    ```
+- 名前空間
+    ```cpp
+    //! hoge に関するクラス群
+    namespace hoge{
+        ...
+    }   // namespace hoge
+    ```
+- クラス
+    ```cpp
+    //! hoge を行うクラス
+    class Hoge{
+        ...
+    };
+    ```
+- 関数・メソッド
+    ```cpp
+    /*
+     * 関数
+     * @param arg 引数
+     * @return 戻り値
+     */
+    double function(int arg){
+        ...
+    }
+    ```
+- 変数
+    ```cpp
+    //! 変数
+    double var;
+    ```
 
 ## ややこしいものの区別
 
@@ -144,3 +212,4 @@ title: C++ コーディングメモ
 - Eigen
     - [デバッグ](http://wildpie.hatenablog.com/entry/20160206/1454747559)
 - Ceres
+- flann
