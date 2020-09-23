@@ -158,8 +158,3 @@ title: Python まとめノート
 - sklearn.liner_model
 	- [Ridge 回帰](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html)
 - [statsmodels](https://www.statsmodels.org/stable/index.html)
-- [LightGBM](https://lightgbm.readthedocs.io/en/latest/)
-	- [LightGBMで時系列データ分析](LightGBM.md)
-	- [パラメータの説明](https://lightgbm.readthedocs.io/en/latest/Parameters.html)
-	- [原論文](https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree.pdf),
-	[GBDTの解説](https://copypaste-ds.hatenablog.com/entry/2019/09/05/184947)

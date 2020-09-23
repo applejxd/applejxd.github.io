@@ -2,6 +2,10 @@
 title: LightGBM で時系列データ分析
 ---
 
+- [LightGBM 公式](https://lightgbm.readthedocs.io/en/latest/)
+- [原論文](https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree.pdf)
+- [GBDTの解説](https://copypaste-ds.hatenablog.com/entry/2019/09/05/184947)
+
 ## CSV ファイルの読み込み
 
 ```python
@@ -115,6 +119,7 @@ for va_period in va_period_list:
 
 ## ハイパーパラメータの調整
 
+- [パラメータの説明](https://lightgbm.readthedocs.io/en/latest/Parameters.html)
 - [LightGBM Tuner](https://tech.preferred.jp/ja/blog/hyperparameter-tuning-with-optuna-integration-lightgbm-tuner/)
 ：単一のタスクで自動調整
     ```python
