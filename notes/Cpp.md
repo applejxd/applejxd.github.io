@@ -33,64 +33,6 @@ title: C++ コーディングメモ
         };
         ```
 
-## ドキュメント生成
-- [Doxygen](http://www.doxygen.jp/docblocks.html)
-- インストール方法：`$ sudo apt install doxygen`
-- [使用方法](http://penguinitis.g1.xrea.com/computer/programming/doxygen.html)
-    ```shell
-    $ doxygen -g Doxyfile # 設定ファイル生成
-    $ # Doxyfile を編集
-    $ doxygen Doxyfile # ドキュメント生成
-    ``` 
-- 各種設定
-    - 言語設定：`OUTPUT_LANGUAGE = JAPANESE`
-    - private も表示：`EXTREACT_PRIVATE = YES`
-    - static も表示：`EXTARACT_STATIC = YES`
-    - LaTeX を生成しない：`GENERATE_LATEX = NO`
-    - ソースコードも含める：`INLINE_SOURCES = YES`
-
-### コメントスタイル
-- [Doxygen 書き方メモ（C, C++）](https://qiita.com/inabe49/items/23e615649e8539d857a8),
-- [JavaDoc](https://www.aiosl-tec.co.jp/java/247/) 
-- ヘッダファイル
-    ```cpp
-    /**
-     * @file header.h
-     * @brief ヘッダファイル
-     * Copyright 2020 applejxd
-     */
-    ```
-- 名前空間
-    ```cpp
-    //! hoge に関するクラス群
-    namespace hoge{
-        ...
-    }   // namespace hoge
-    ```
-- クラス
-    ```cpp
-    //! hoge を行うクラス
-    class Hoge{
-        ...
-    };
-    ```
-- 関数・メソッド
-    ```cpp
-    /*
-     * 関数
-     * @param arg 引数
-     * @return 戻り値
-     */
-    double function(int arg){
-        ...
-    }
-    ```
-- 変数
-    ```cpp
-    //! 変数
-    double var;
-    ```
-
 ## ややこしいものの区別
 
 - [static 修飾子(クラス内グローバル)](http://www.s-cradle.com/developer/sophiaframework/tutorial/Cpp/static.html)
@@ -211,5 +153,6 @@ title: C++ コーディングメモ
 [Google Test ドキュメント日本語訳 上級ガイド](http://opencv.jp/googletestdocs/advancedguide.html)
 - Eigen
     - [デバッグ](http://wildpie.hatenablog.com/entry/20160206/1454747559)
+    - ウォッチ式：`*var.data()@num`
 - Ceres
 - flann
