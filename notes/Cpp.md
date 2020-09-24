@@ -35,20 +35,6 @@ title: C++ コーディングメモ
 
 ## ややこしいものの区別
 
-- [static 修飾子(クラス内グローバル)](http://www.s-cradle.com/developer/sophiaframework/tutorial/Cpp/static.html)
-    - 静的メンバ変数はいわゆるクラス変数
-    - 静的メソッドはいわゆるクラスメソッド
-- [const 修飾子(読み取り専用)](http://www.s-cradle.com/developer/sophiaframework/tutorial/Cpp/const.html)
-    - const メンバ変数
-        - 初期化時のみ書き込み可能
-        - 以降は読み取り専用変数
-    - const メソッド
-        - メンバ変数を書き換えないメソッド
-        - const ではないメソッドを呼ぶとエラー.
-- [constexpr(コンパイル時定数)](http://tinyurl.com/y556prhr)
-    - コンパイル時に定数として評価できることを保証
-    - const は読み取り専用でコンパイル時に未定でもOK（定数ではない）
-    - プリプロセッサは大域字句的置換. rvalue でも置換してしまう（不適切）.
 - [右辺値参照と左辺値参照](https://cpprefjp.github.io/lang/cpp11/rvalue_ref_and_move_semantics.html)
     - 右辺値は名前無し一時オブジェクト
     - 左辺値は名前有り実態のあるオブジェクト
@@ -100,20 +86,6 @@ title: C++ コーディングメモ
 - 巨大なコピーを避ける
     - 巨大なメンバ変数の getter は const 参照で
     - [ある程度 RVO, NRVO 任せで大丈夫](https://theolizer.com/cpp-school1/cpp-school1-37/)
-- アクセサ
-    - セッター
-        ```cpp
-        ExampleClass& setter(const vector<double>& member){
-            this->member = member;
-            return *this;
-        }
-        ```
-    - ゲッター
-        ```cpp
-        const vector<double>& getter(void) const{
-            return this->member;
-        }
-        ```
 - [メンバイニシャライザを有効活用](http://jagabeeinitialize.hatenablog.com/entry/2018/01/21/192043)
     - コンストラクタによる初期化よりも速い
     - 宣言順での初期化に注意

@@ -24,6 +24,7 @@ title: トップページ
 
 ### プログラミング
 - [C++ コーディングメモ](notes/Cpp.md)
+  - [C++ オブジェクト指向メモ](notes/CppObject.md)
   - [C++ ビルドメモ](notes/CppBuild.md)
   - [Doxygen メモ](notes/Doxygen.md)
   - [OpenCV メモ](notes/OpenCV.md)
@@ -33,4 +34,5 @@ title: トップページ
 
 ## その他
 - [資料作成メモ](notes/Diagram.md)
+- [英語リンク集](notes/English.md)
 - [リンク集](notes/Links.md)

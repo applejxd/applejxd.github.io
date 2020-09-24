@@ -30,7 +30,7 @@ title: Doxygen 使い方メモ
     - 被呼び出し関係図を作成：`CALLER_GRAPH = YES`
 
 ## コメントスタイル
-- [Doxygen 書き方メモ（C, C++）](https://qiita.com/inabe49/items/23e615649e8539d857a8),
+- [Doxygen 書き方メモ（C, C++）](https://qiita.com/inabe49/items/23e615649e8539d857a8)
 - [JavaDoc](https://www.aiosl-tec.co.jp/java/247/) 
 - ヘッダファイル
     ````cpp

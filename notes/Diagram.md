@@ -3,7 +3,6 @@ title: 資料作成メモ
 ---
 　
 ## 資料作成
-
 - ガイドライン
     - [プレゼンのまとめ](http://www2.yukawa.kyoto-u.ac.jp/~akio.tomiya/slides.html)
     - [発表スライドについての基本的なルール](https://www.gakushuin.ac.jp/~881791/presentation/slide.html)
@@ -18,10 +17,11 @@ title: 資料作成メモ
 - アイコン素材
     - [The Noun Project](https://thenounproject.com/)
     - [Icons - Material Design](https://material.io/resources/icons/?style=baseline)
+    - [ICOOON MONO](https://icooon-mono.com/)
 
 ## PlantUML
-
 - [マニュアル](https://plantuml.com/ja/)
+- [チートシート](https://qiita.com/ogomr/items/0b5c4de7f38fd1482a48)
 - [環境構築](https://qiita.com/couzie/items/9dedb834c5aff09ea7b2)
     - [Windows 7上にPlantUMLをインストール](http://www.aise.ics.saitama-u.ac.jp/~gotoh/InstallPlantUMLonWindows7.html)
     - [JDK の比較](https://qiita.com/kojiita/items/72e0b88fabb210f6e68f)
@@ -40,4 +40,7 @@ title: 資料作成メモ
 	- 左側右クリックで変更可能
 	- いらないプレースホルダーがある場合など
 - [図形合成](http://blog.bot.vc/2012/02/figurecomp/)
-：重なった図形を右クリック → グループ化 → 結合・和集合・交差・型抜き 
+：重なった図形を右クリック → グループ化 → 結合・和集合・交差・型抜き
+
+## Word
+- [図の差し替え](https://www.becoolusers.com/office/change-picture.html)
