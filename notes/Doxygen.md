@@ -35,10 +35,10 @@ title: Doxygen 使い方メモ
 - ヘッダファイル
     ```cpp
     /**
-     * @file header.h
-     * @brief ヘッダファイル
-     * Copyright 2020 applejxd
-     */
+     \* @file header.h
+     \* @brief ヘッダファイル
+     \* Copyright 2020 applejxd
+     \*/
     ```
 - 名前空間
     ```cpp
