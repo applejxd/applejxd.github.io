@@ -83,6 +83,10 @@ title: C++ コーディングメモ
 - キャストは C++ の機能で
     - static_cast
     - dynamic_cast
+- ループで使う変数はループ内で宣言, 例外は以下（Effective C++ §26）
+    - 効率化重視
+    - 代入が生成と破棄よりもローコスト
+    - ループ回数が多い
 - 巨大なコピーを避ける
     - 巨大なメンバ変数の getter は const 参照で
     - [ある程度 RVO, NRVO 任せで大丈夫](https://theolizer.com/cpp-school1/cpp-school1-37/)
