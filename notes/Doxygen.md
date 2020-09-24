@@ -33,13 +33,13 @@ title: Doxygen 使い方メモ
 - [Doxygen 書き方メモ（C, C++）](https://qiita.com/inabe49/items/23e615649e8539d857a8),
 - [JavaDoc](https://www.aiosl-tec.co.jp/java/247/) 
 - ヘッダファイル
-    ```java
+    ````cpp
     /**
      * @file header.h
      * @brief ヘッダファイル
      * Copyright 2020 applejxd
      */
-    ```
+    ````
 - 名前空間
     ```cpp
     //! hoge に関するクラス群
@@ -55,7 +55,7 @@ title: Doxygen 使い方メモ
     };
     ```
 - 関数・メソッド
-    ```java
+    ````cpp
     /*
      * 関数
      * @param arg 引数
@@ -64,7 +64,7 @@ title: Doxygen 使い方メモ
     double function(int arg){
         ...
     }
-    ```
+    ````
 - 変数
     ```cpp
     //! 変数
