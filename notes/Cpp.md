@@ -88,8 +88,8 @@ title: C++ コーディングメモ
     - 代入が生成と破棄よりもローコスト
     - ループ回数が多い
 - 巨大なコピーを避ける
-    - 巨大なメンバ変数の getter は const 参照で
-    - [ある程度 RVO, NRVO 任せで大丈夫](https://theolizer.com/cpp-school1/cpp-school1-37/)
+    - 巨大な（組み込み型等以外の）変数は const 参照で（Effective C++ §20）
+    - [ローカル変数の戻り値は値渡しで RVO, NRVO 任せ](https://theolizer.com/cpp-school1/cpp-school1-37/)（Effective C++ §21）
 - [メンバイニシャライザを有効活用](http://jagabeeinitialize.hatenablog.com/entry/2018/01/21/192043)
     - コンストラクタによる初期化よりも速い
     - 宣言順での初期化に注意
