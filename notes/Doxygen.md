@@ -33,7 +33,7 @@ title: Doxygen 使い方メモ
 - [Doxygen 書き方メモ（C, C++）](https://qiita.com/inabe49/items/23e615649e8539d857a8),
 - [JavaDoc](https://www.aiosl-tec.co.jp/java/247/) 
 - ヘッダファイル
-    ```cpp
+    ```java
     /**
      * @file header.h
      * @brief ヘッダファイル
@@ -55,7 +55,7 @@ title: Doxygen 使い方メモ
     };
     ```
 - 関数・メソッド
-    ```cpp
+    ```java
     /*
      * 関数
      * @param arg 引数
