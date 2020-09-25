@@ -24,9 +24,10 @@ title: トップページ
 
 ### プログラミング
 - [C++ コーディングメモ](notes/Cpp.md)
-  - [C++ オブジェクト指向メモ](notes/CppObject.md)
   - [C++ ビルドメモ](notes/CppBuild.md)
+  - [C++ デバッグ/エラー処理](notes/CppDebug.md)
   - [Doxygen メモ](notes/Doxygen.md)
+  - [C++ オブジェクト指向メモ](notes/CppObject.md)
   - [OpenCV メモ](notes/OpenCV.md)
 - [Python コーディングメモ](notes/Python.md)
   - [LightGBM で時系列データ分析](notes/LightGBM.md)

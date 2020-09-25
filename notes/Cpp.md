@@ -12,26 +12,6 @@ title: C++ コーディングメモ
 - Tips
     - [More C++ Idioms](https://ja.wikibooks.org/wiki/More_C%2B%2B_Idioms)
     - [C/C++迷信集](http://www.kijineko.co.jp/tech/superstitions)
-- コーディングスタイル
-
-## コーディング規約
-- [Google C++ スタイルガイド 日本語全訳](https://ttsuki.github.io/styleguide/cppguide.ja.html)
-- [クリーンコーディング](https://qiita.com/elipmoc101/items/01003c82dbd2e464a071)
-- [出力の参照渡しとポインタ渡しの比較](http://orycha.hatenablog.com/entry/2017/02/19/115015)
-- [namespace の賢い使い方](https://qiita.com/_EnumHack/items/430da105a541f9ecd774)
-- [無名名前空間](https://kaworu.jpn.org/cpp/%E7%84%A1%E5%90%8D%E5%90%8D%E5%89%8D%E7%A9%BA%E9%96%93)
-
-### Cpplint
-- [Google C++ スタイルチェッカー：cpplint](https://github.com/cpplint/cpplint)
-- "Single-parameter constructors should be marked explicit."
-    - 暗黙のコンストラクタを呼び出さないように宣言に explicit を付ける
-    - コーディング例
-        ```cpp
-        class Example {
-         public:
-          explicit Example(double arg);
-        };
-        ```
 
 ## ややこしいものの区別
 
@@ -88,7 +68,8 @@ title: C++ コーディングメモ
     - 代入が生成と破棄よりもローコスト
     - ループ回数が多い
 - 巨大なコピーを避ける
-    - 巨大な（組み込み型等以外の）変数は const 参照で（Effective C++ §20）
+    - [巨大な（組み込み型等以外の）変数は const 参照で（Effective C++ §20）
+    - [出力の参照渡しとポインタ渡しの比較](http://orycha.hatenablog.com/entry/2017/02/19/115015)
     - [ローカル変数の戻り値は値渡しで RVO, NRVO 任せ](https://theolizer.com/cpp-school1/cpp-school1-37/)（Effective C++ §21）
 - [メンバイニシャライザを有効活用](http://jagabeeinitialize.hatenablog.com/entry/2018/01/21/192043)
     - コンストラクタによる初期化よりも速い

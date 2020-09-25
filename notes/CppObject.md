@@ -46,3 +46,7 @@ title: C++ オブジェクト指向メモ
     return this->member;
   }
   ```
+
+## 名前空間（カプセル化）
+- [namespace の賢い使い方](https://qiita.com/_EnumHack/items/430da105a541f9ecd774)
+- [無名名前空間](https://kaworu.jpn.org/cpp/%E7%84%A1%E5%90%8D%E5%90%8D%E5%89%8D%E7%A9%BA%E9%96%93)
