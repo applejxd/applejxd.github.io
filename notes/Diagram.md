@@ -18,6 +18,11 @@ title: 資料作成メモ
     - [The Noun Project](https://thenounproject.com/)
     - [Icons - Material Design](https://material.io/resources/icons/?style=baseline)
     - [ICOOON MONO](https://icooon-mono.com/)
+    - [Font Awesome](https://fontawesome.com/)
+- 写真素材
+    - [photoAC](https://www.photo-ac.com/)
+-　ジェネレーター
+    - [QR Code Generator](https://www.unitag.io/qrcode)
 
 ## PlantUML
 - [マニュアル](https://plantuml.com/ja/)
@@ -32,7 +37,8 @@ title: 資料作成メモ
     - AsciiMath：標準搭載
     - JLatexMath：ライブラリのインストールが必須
 
-## PowerPoint
+## Office
+### PowerPoint
 
 - アウトライン表示：C-S-Tab
 	- プレースホルダーとテキストボックスの違い
@@ -42,5 +48,8 @@ title: 資料作成メモ
 - [図形合成](http://blog.bot.vc/2012/02/figurecomp/)
 ：重なった図形を右クリック → グループ化 → 結合・和集合・交差・型抜き
 
-## Word
+### Word
 - [図の差し替え](https://www.becoolusers.com/office/change-picture.html)
+
+## 日本語
+- [日本語校正サポート](https://www.kiji-check.com/)
