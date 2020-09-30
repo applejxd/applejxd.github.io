@@ -30,7 +30,7 @@ $ find [検索ディレクトリ] -name [名前]
     ```
 
 ### [grep](https://webkaru.net/linux/grep-command/)
-ファイル内容検索. パイプでand検索.
+テキスト（ファイル内容）検索. パイプでand検索.
 ```bash
 $ grep RegExp
 $ grep -rl RegExp	# pwd 以下のファイルを再帰的に検索
@@ -45,6 +45,8 @@ $ grep RegExp Filename	# RegExp を含む行を表示
 	- -n: マッチした行番号も表示
 	- -h: マッチしたファイル名も表示
 	- -v: 文字列を除く行をすべて表示
+- ユースケース集
+- インストールファイル検索：`dpkg -L $package_name | grep $file_name`
 
 ## ファイル編集
 
