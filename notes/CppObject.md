@@ -35,13 +35,16 @@ title: C++ オブジェクト指向メモ
 - アクセサの例
   ```cpp
   // セッター
-  ExampleClass& setter(const vector<double>& member){
+  inline void setter(const vector<double>& member) {
+    this->member = member
+  };
+  // メソッドチェインが可能なセッター
+  inline ExampleClass& setter(const vector<double>& member) {
     this->member = member;
-    // メソッドチェインが可能
     return *this;
   }
   // ゲッター
-  const vector<double>& getter(void) const{
+  inline const vector<double>& getter(void) const {
     // const 参照でコピーコストを下げる
     return this->member;
   }
