@@ -49,20 +49,22 @@ title: C++ オブジェクト指向メモ
 
 ## [インターフェース](https://marycore.jp/prog/cpp/interface-class-and-duck-typing/)
 
-- インターフェースクラス（純粋仮想関数）
-  - アップキャストを利用
+- 継承（純粋仮想関数）
   ```cpp
+  // 抽象クラス
   class ITest {
     ITest(double);
-    void DoTest(void) = 0;
+    virtual void DoTest(void) = 0;
   }
-
+  // 具象クラス
   class Test : public ITest {
+    // 継承コンストラクタ
     using ITest::ITest;
-    void DoTest(void) { printf("Hello World!\n"); }
+    void DoTest(void) override { printf("Hello World!\n"); }
   }
-
+  // 抽象クラスのコンポジション
   class TestRunner{
+    // アップキャスト
     TestRunner() : test_ins(new Test()) {}
     ITest* test_ins;
   }
