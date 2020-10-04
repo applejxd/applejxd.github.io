@@ -47,6 +47,28 @@ title: C++ オブジェクト指向メモ
   }
   ```
 
+## [インターフェース](https://marycore.jp/prog/cpp/interface-class-and-duck-typing/)
+
+- インターフェースクラス（純粋仮想関数）
+  - アップキャストを利用
+  ```cpp
+  class ITest {
+    ITest(double);
+    void DoTest(void) = 0;
+  }
+
+  class Test : public ITest {
+    using ITest::ITest;
+    void DoTest(void) { printf("Hello World!\n"); }
+  }
+
+  class TestRunner{
+    TestRunner() : test_ins(new Test()) {}
+    ITest* test_ins;
+  }
+  ```
+- ダックタイピング（テンプレート）
+
 ## 名前空間（カプセル化）
 - [namespace の賢い使い方](https://qiita.com/_EnumHack/items/430da105a541f9ecd774)
 - [無名名前空間](https://kaworu.jpn.org/cpp/%E7%84%A1%E5%90%8D%E5%90%8D%E5%89%8D%E7%A9%BA%E9%96%93)
@@ -55,3 +77,15 @@ title: C++ オブジェクト指向メモ
 ## ユーザー定義の型（構造体・クラス・共用体）
 
 - [ユーザー定義型の変換（C++)](https://docs.microsoft.com/ja-jp/cpp/cpp/user-defined-type-conversions-cpp?view=vs-2019)
+- 共用体：変数名とインデックス双方からアクセス
+  ```cpp
+  union {
+    std::array<double, 4>;
+    struct {
+      double x;
+      double y;
+      double dxdt;
+      double dydt;
+    }
+  }
+  ```
