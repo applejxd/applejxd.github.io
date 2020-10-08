@@ -2,7 +2,7 @@
 title: STL メモ
 ---
 
-## 使用方針
+## 使い分け
 
 - [STLの型の使い分け](https://qiita.com/h_hiro_/items/a83a8fd2391d4a3f0e1c)
     - （動的に要素数を宣言したい）配列：array
@@ -11,6 +11,9 @@ title: STL メモ
     - std::array の方が書きやすい
     - ポインタ渡しではなく、const 参照で渡す
 - char よりも std::string
+
+## 使用方法
+
 - 巨大なコンテナは const 参照で渡す（値渡しでコピーしない）
 - 検索は find_if で
     ```cpp
@@ -22,6 +25,16 @@ title: STL メモ
     vector<double> d_vec;
     auto result = find_if(d_vec.begin(), d_vec,end(), judge);
     ```
+- [std::vector の insert, erase は使用後に上書き必須](https://qiita.com/kumagi/items/4285b732dde3441ea854)
+  ```cpp
+  vector<int> elements{1, 2, 3, 4};
+  auto iter = elements.begin() + 2;
+  for (int index=0; index < 10; index++) {
+    // intert 後はイテレータが不定になるので上書き
+    iter = elements.insert(iter, index);
+    iter++;
+  }
+  ```
 
 ## ループ処理
 
@@ -48,18 +61,5 @@ title: STL メモ
   for(auto iter = elements.begin();
       iter != elements.end(); iter++) {
     sum += *iter;
-  }
-  ```
-
-## イテレータ
-
-- [std::vector の insert, erase は使用後に上書き必須](https://qiita.com/kumagi/items/4285b732dde3441ea854)
-  ```cpp
-  vector<int> elements{1, 2, 3, 4};
-  auto iter = elements.begin() + 2;
-  for (int index=0; index < 10; index++) {
-    // intert 後はイテレータが不定になるので上書き
-    iter = elements.insert(iter, index);
-    iter++;
   }
   ```

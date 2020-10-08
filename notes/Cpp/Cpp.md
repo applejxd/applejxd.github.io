@@ -63,6 +63,7 @@ title: C++ コーディングメモ
         ...
     }
     ```
+- ダックタイピング（テンプレート）
 - [アライメントとパディング](http://jr0bak.homelinux.net/~imai/linux/arm_gcc_badknowhow/arm_gcc_badknowhow.html)
 - マクロの正しい使い方：条件付きコンパイルなど
 
