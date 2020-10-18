@@ -9,10 +9,12 @@ title: 英語リンク集
 - 辞書
   - [Thesaurus.com](https://www.thesaurus.com/)
   - [数学・物理オンライン辞典](http://allthingsuniverse.com/mathphysdictionary/index.html)
-- 言い回し・コロケーション
+- コロケーション
   - [Just The Word](http://www.just-the-word.com/)
   - [Hyper Collocation](https://hypcol.marutank.net/ja/)
+- 例文検索
   - [Do People Say](https://dopeoplesay.com/)
+  - [ludwig.guru](https://ludwig.guru/)
   - [Academic Phrasebank](http://www.phrasebank.manchester.ac.uk/)
 
 ## ニュースサイト
