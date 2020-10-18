@@ -1,7 +1,11 @@
 ---
 title: 資料作成メモ
 ---
-　
+
+## 日本語校正
+- [日本語校正サポート](https://www.kiji-check.com/)
+- [JTF日本語スタイルチェッカー](https://www.jtf.jp/jp/style_guide/jtfstylechecker.html)
+
 ## 資料作成
 - ガイドライン
     - [プレゼンのまとめ](http://www2.yukawa.kyoto-u.ac.jp/~akio.tomiya/slides.html)
@@ -50,6 +54,3 @@ title: 資料作成メモ
 
 ### Word
 - [図の差し替え](https://www.becoolusers.com/office/change-picture.html)
-
-## 日本語
-- [日本語校正サポート](https://www.kiji-check.com/)

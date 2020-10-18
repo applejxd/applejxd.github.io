@@ -41,8 +41,9 @@ title: Python まとめノート
 
 - [Python におけるデザインパターン](https://pydp.info/)
 - [継承よりも委譲](https://qiita.com/kotetsu75/items/4b903023001f157554a4)
+- [ダックタイピング入門](https://code-graffiti.com/duck-typing-in-python/)
 - [抽象基底クラス](https://docs.python.org/ja/3/library/abc.html)
-：[抽象クラスとダック・タイピング](https://qiita.com/kaneshin/items/269bc5f156d86f8a91c4)
+- [抽象クラスとダック・タイピング](https://qiita.com/kaneshin/items/269bc5f156d86f8a91c4)
 	```python
 	from abc import ABC, abstructmethod
 
