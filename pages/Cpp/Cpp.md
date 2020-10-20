@@ -12,6 +12,9 @@ title: C++ コーディングメモ
 - Tips
     - [More C++ Idioms](https://ja.wikibooks.org/wiki/More_C%2B%2B_Idioms)
     - [C/C++迷信集](http://www.kijineko.co.jp/tech/superstitions)
+- コーディングスタイル
+    - [軽量コーディング](https://marycore.jp/prog/cpp/cpp-lightweight-coding-standards/)
+    - [重量コーディング](https://marycore.jp/prog/cpp/cpp-heavyweight-coding-standards/)
 
 ## ややこしいものの区別
 

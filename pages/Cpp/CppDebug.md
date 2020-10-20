@@ -2,9 +2,10 @@
 title: C++ デバッグ/エラー処理
 ---
 
-## コーディング規約
+## コーディング規約など
 - [Google C++ スタイルガイド 日本語全訳](https://ttsuki.github.io/styleguide/cppguide.ja.html)
 - [クリーンコーディング](https://qiita.com/elipmoc101/items/01003c82dbd2e464a071)
+- [Enum でエラーコード](https://qiita.com/nrslib/items/1287b5888f7db6166320)
 
 ### Cpplint
 - [Google C++ スタイルチェッカー：cpplint](https://github.com/cpplint/cpplint)

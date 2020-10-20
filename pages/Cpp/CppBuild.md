@@ -13,6 +13,7 @@ title: C++ ビルドメモ
   - [プロジェクトの階層化](https://kamino.hatenablog.com/entry/cmake_tutorial2)
 - Tips
   - [スタティックリンクとダイナミックリンク](http://www.cc.kyoto-su.ac.jp/~kbys/kiso/cpu/dynamic-link.html)
+  - [条件付きコンパイル](http://www.wisdomsoft.jp/383.html)
 
 ## 単一ファイルのビルド
 
