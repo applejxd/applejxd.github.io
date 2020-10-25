@@ -31,10 +31,13 @@ title: トップページ
   - [STL メモ](pages/Cpp/STL.md)
   - [OpenCV メモ](pages/Cpp/OpenCV.md)
 - [Python コーディングメモ](pages/Python.md)
-  - [LightGBM で時系列データ分析](pages/LightGBM.md)
+  - [Sphinx メモ](pages/Sphinx.md)
+  - [Pandas メモ](pages/Pandas.md)
   - [Google Colaboratory](https://github.com/applejxd/colaboratory)
+  - [LightGBM で時系列データ分析](pages/LightGBM.md)
 
 ## その他
-- [資料作成メモ](pages/Diagram.md)
+- [理学メモ](pages/Science.md)
+- [資料作成メモ](pages/Document.md)
 - [英語リンク集](pages/English.md)
 - [リンク集](pages/Links.md)

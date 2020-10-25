@@ -30,12 +30,6 @@ title: Python まとめノート
 	- [docstringのstyle3種の例](https://qiita.com/yokoc1322/items/ebf25c9cb779ff5ebc9c)
 	：Type Hints 付きなら reStructuredText で
 	- [チームメイトのためにdocstringを書こう！](https://www.slideshare.net/cocodrips/docstring-pyconjp2019)
-- Sphinx：docstringを読み込んで仕様書を生成
-	- [sphinx-apidoc](https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html)
-	：公式マニュアル
-	- [Sphinxの使い方](https://qiita.com/futakuchi0117/items/4d3997c1ca1323259844)
-	：入門記事
-	- [sphinxでpythonのクラスや関数のドキュメントを自動生成する](https://joppot.info/2018/03/30/4156)
 
 ## オブジェクト指向プログラミング
 
@@ -47,6 +41,7 @@ title: Python まとめノート
 	```python
 	from abc import ABC, abstructmethod
 
+	# 抽象基底クラス
 	class BaseClass(ABC):
 		def __init__(self):
 			pass
@@ -61,6 +56,12 @@ title: Python まとめノート
 
 		def method(self):
 			printf("Hello World!")
+	
+	class Composit:
+		def __init__(self):
+			self.instance = ChildClass()
+			# ダックタイピング
+			self.instance.method
 	```
 - [クラスメソッドとスタティックメソッド](https://qiita.com/1plus4/items/b37ec6ea90569ffdebfe)
 	```python

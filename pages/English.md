@@ -23,3 +23,7 @@ title: 英語リンク集
 - [Hacker News](https://news.ycombinator.com/)
 - [Sora News 24](https://soranews24.com/)
 - [Nagoya Calendar](https://www.nic-nagoya.or.jp/en/nagoya-calendar/)
+
+## その他
+- [Google.com](https://www.google.com/webhp?gl=us&hl=en&gws_rd=cr&pws=0)
+- [Vocabulary.com](https://www.vocabulary.com/)
