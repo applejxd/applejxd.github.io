@@ -2,6 +2,14 @@
 title: 資料作成メモ
 ---
 
+## アカデミックライティング
+- [参考文献の書き方](https://www.bun.kyoto-u.ac.jp/2009gakusei-sien/researchinfo/paper_writing/ohura/references.pdf)
+- [優れた研究論文の書き方](https://www.slideshare.net/kdmsnr/writing-a-paper-seven-suggestions)
+- [科学技術論文の書き方](http://www.okada-lab.org/Ronbun/)
+- [アカデミックライティングまとめ](https://crd.ndl.go.jp/reference/modules/d3ndlcrdentry/index.php?page=ref_view&ldtl=1&dtltbs=1&mcmd=25&st=update&asc=desc&ndc1=83&ndc_lk=1&id=1000203151)
+- [論文・プレゼンの表現メモ](https://www.gfd-dennou.org/arch/hiroki/homepage-old/main014.html#writing)
+- [How to prepare for seminars](https://www.ms.u-tokyo.ac.jp/~yasuyuki/sem.htm)
+
 ## 日本語校正
 - [日本語校正サポート](https://www.kiji-check.com/)
 - [JTF日本語スタイルチェッカー](https://www.jtf.jp/jp/style_guide/jtfstylechecker.html)
