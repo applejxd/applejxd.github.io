@@ -12,6 +12,7 @@ title: 数学/物理メモ
 ## 応用数学
 - [21世紀の統計科学](https://www.jss.gr.jp/book/books/)
 - [講義のーと：データ解析のための統計モデリング](https://eprints.lib.hokudai.ac.jp/dspace/handle/2115/49477)
+- [統計手法の選び方（チャート）](http://www.gen-info.osaka-u.ac.jp/MEPHAS/tejunn.html)
 
 ## 工学
 - [確率システム制御特論](http://lab.cntl.kyutech.ac.jp/~nishida/lecture/psc/psc.html)

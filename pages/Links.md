@@ -2,10 +2,13 @@
 title: リンク集
 ---
 
+### プログラミング
+- [gitignore.io](https://www.toptal.com/developers/gitignore)
+- [codic](https://codic.jp/engine)
+
 ### 技術
 
-- [Qiita 殿堂入り記
-- 事](http://youwht.ml/static/TAG_TOP.html)
+- [Qiita 殿堂入り記事](http://youwht.ml/static/TAG_TOP.html)
 - [awesome](https://github.com/sindresorhus/awesome)
 - [PYPL](https://pypl.github.io/PYPL.html)
 ：プログラミング使用率ランキング
