@@ -3,7 +3,6 @@ title: リンク集
 ---
 
 ### プログラミング
-- [gitignore.io](https://www.toptal.com/developers/gitignore)
 - [codic](https://codic.jp/engine)
 
 ### 技術

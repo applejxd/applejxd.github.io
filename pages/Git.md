@@ -4,13 +4,6 @@ title: Git メモ
 
 ## 基本
 - [図解Git](https://marklodato.github.io/visual-git-guide/index-ja.html)
-- リモートリポジトリの作成
-	```bash
-	$ cd /path/to/remote/repo
-	$ git init --bare --shared
-	$ cd /path/to/local/repo
-	$ git remote add origin /path/to/remote/repo
-	```
 - [HEAD の指定](https://qiita.com/chihiro/items/d551c14cb9764454e0b9)
 	- alias として @ が使える
 	- @~[n] : n回、1番目の親をたどる
@@ -18,6 +11,30 @@ title: Git メモ
 	- (ex.) @~~ と @^^ は同じ。@^2は違う。
 	- (ex.) @^2~3：最初は2番目の親を1回たどり、その後毎回1番目の親を3回たどる
 - [CHANGELOG の書き方](https://blog.yux3.net/entry/2017/05/04/035811)
+
+## リポジトリ設定
+
+- [gitignore.io](https://www.toptal.com/developers/gitignore)
+- [.gitignore でホワイトリスト](https://qiita.com/officemove/items/b0409cb1ee946edadc3e)
+	```
+	*
+	!*/
+	!/.gitignore
+	```
+	- リモートリポジトリの作成
+	```bash
+	$ cd /path/to/remote/repo
+	$ git init --bare --shared
+	$ cd /path/to/local/repo
+	$ git remote add origin /path/to/remote/repo
+	```
+- [リモートリポジトリの移動](https://qiita.com/orange5405/items/783b74667bcc69a34a52)
+	- タグは移動できない様子
+	```bash
+	$ git clone --mirror /path/to/source/repo.git
+	$ cd repo.git
+	$ git push --mirror /path/to/destination
+	```
 
 ## [リセットしたいとき](http://tinyurl.com/yyl8ltp7)
 
