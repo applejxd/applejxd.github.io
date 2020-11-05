@@ -18,6 +18,7 @@ title: Doxygen 使い方メモ
 
 ## 設定方法 
 - 基本設定
+    - 出力先：`OUTPUT_DIRECTORY = docs`
     - 言語設定：`OUTPUT_LANGUAGE = JAPANESE`
     - LaTeX を生成しない：`GENERATE_LATEX = NO`
 - 表示内容

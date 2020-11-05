@@ -24,8 +24,8 @@ title: Sphinx メモ
   ```
 - ビルド
   ```shell
-  $ sphinx-apidoc -f -o ./docs .
-  $ sphinx-build -a ./docs ./docs/_build
+  $ sphinx-apidoc -f -o ./rst .
+  $ sphinx-build -a ./rst ./docs
   ```
 
 ## 拡張機能
