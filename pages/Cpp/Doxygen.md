@@ -6,7 +6,7 @@ title: Doxygen 使い方メモ
 - [Doxygen 公式](http://www.doxygen.jp/docblocks.html)
 - インストール方法
     ```shell
-    $ sudo apt install -y １ｑdoxygen
+    $ sudo apt install -y doxygen
     $ sudo apt install -y graphviz
     ```
 - [使用方法](http://penguinitis.g1.xrea.com/computer/programming/doxygen.html)
