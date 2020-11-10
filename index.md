@@ -6,7 +6,7 @@ title: トップページ
 ## 技術
 
 ### 公開コード
-- [Github](https://github.com/applejxd)
+- [Github Repositries](https://github.com/applejxd?tab=repositories)
 - [Github Gist](https://gist.github.com/applejxd)
 
 ### 環境構築
