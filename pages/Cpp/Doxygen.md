@@ -22,8 +22,8 @@ title: Doxygen 使い方メモ
     - 言語設定：`OUTPUT_LANGUAGE = JAPANESE`
     - LaTeX を生成しない：`GENERATE_LATEX = NO`
 - 表示内容
-    - private も表示：`EXTREACT_PRIVATE = YES`
-    - static も表示：`EXTARACT_STATIC = YES`
+    - private も表示：`EXTRACT_PRIVATE = YES`
+    - static も表示：`EXTRACT_STATIC = YES`
     - ソースコードも含める：`INLINE_SOURCES = YES`
 - 図作成（要 graphviz）
     - 図を作成：`HAVE_DOT = YES`
