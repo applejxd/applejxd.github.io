@@ -13,7 +13,7 @@ title: トップページ
 - [Windows メモ](pages/Windows.md)
   - [WSL メモ](pages/WSL.md)
 - [開発環境メモ](pages/Preferences.md)
-  - [dotfiles (for Mac/Linux/WSL)](https://github.com/applejxd/dotfiles)
+  - [dotfiles for Mac/Linux/WSL (GitHub)](https://github.com/applejxd/dotfiles)
 
 ### 開発全般
 - [Git メモ](pages/Git.md)
@@ -30,11 +30,11 @@ title: トップページ
   - [C++ オブジェクト指向メモ](pages/Cpp/CppObject.md)
   - [STL メモ](pages/Cpp/STL.md)
   - [OpenCV メモ](pages/Cpp/OpenCV.md)
-- [Python コーディングメモ](pages/Python.md)
-  - [Sphinx メモ](pages/Sphinx.md)
-  - [Pandas メモ](pages/Pandas.md)
-  - [Google Colaboratory](https://github.com/applejxd/colaboratory)
-  - [LightGBM で時系列データ分析](pages/LightGBM.md)
+- [Python コーディングメモ](pages/Python/Python.md)
+  - [Sphinx メモ](pages/Python/Sphinx.md)
+  - [Pandas メモ](pages/Python/Pandas.md)
+  - [Google Colaboratory (GitHub)](https://github.com/applejxd/colaboratory)
+  - [LightGBM で時系列データ分析](pages/Python/LightGBM.md)
 
 ## その他
 - [理学メモ](pages/Science.md)
