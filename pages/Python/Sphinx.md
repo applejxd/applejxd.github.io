@@ -20,12 +20,12 @@ title: Sphinx メモ
   ```shell
   $ mkdir docs
   # conf.py, index.rst 変更
-  $ sphinx-quickstart docs
+  $ sphinx-quickstart sphinx
   ```
 - ビルド
   ```shell
-  $ sphinx-apidoc -f -o ./rst .
-  $ sphinx-build -a ./rst ./docs
+  $ sphinx-apidoc -f -o ./sphinx .
+  $ sphinx-build -a ./sphinx ./docs
   ```
 
 ## 拡張機能
