@@ -8,6 +8,14 @@ title: Python まとめノート
 ：pipenv でプロジェクト固有のライブラリ空間を作る
 - [ライブラリ管理の比較](https://qiita.com/KRiver1/items/c1788e616b77a9bad4dd)
 ：pipenv がベストっぽい
+	```bash
+	$ python3 -m pip install pipenv
+	$ pipenv install numpy
+	# 単一コマンド実行
+	$ pipenv run python3 main.py
+	# 仮想環境立ち上げ
+	$ pipenv shell
+	```
 - Windows で機械学習やるなら anaconda 以外は使えない様子
 	```shell
 	$ choco install anaconda
