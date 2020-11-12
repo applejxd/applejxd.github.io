@@ -2,12 +2,20 @@
 title: GitHub Pages メモ
 ---
 
-## GitHub Pages の内容
+## GitHub Pages まとめ
 
 - [Markdown で作って公開](http://yoshikyoto.github.io/text/git/gh_pages_md.html)
 - [テーマの設定](https://docs.github.com/ja/github/working-with-github-pages/adding-a-theme-to-your-github-pages-site-with-the-theme-chooser)
 - [ユーザーページとプロジェクトページ](https://qiita.com/mesh1nek0x0/items/ab5f4557d1fc3a7c5ce3)
 - [目次の作り方](https://blog.kotet.jp/2018/04/toc-on-github-pages/#allejojekyll-toc)
+
+## 自動生成ドキュメントの表示
+
+1. "Settings > GitHub Pages > Source" に進む
+2. "master/docs" で Save
+3. README.md にリンク設置
+    - Doxygen：(固有アドレス)/html/annotated.html
+    - Sphinx:(固有アドレス)/index.html
 
 ## 構文
 
