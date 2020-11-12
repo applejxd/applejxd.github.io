@@ -17,6 +17,13 @@ title: GitHub Pages メモ
     - Doxygen：(固有アドレス)/html/annotated.html
     - Sphinx:(固有アドレス)/index.html
 
+Sphinx の場合は次の操作が必要：
+- doc/.nojekyll の空ファイル生成
+- index.html に次を追加
+    ```html
+    <base href="(固有アドレス)" charset="utf-8/>
+    ```
+
 ## 構文
 
 - Markdown
