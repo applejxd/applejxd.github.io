@@ -32,7 +32,7 @@ title: トップページ
   - [OpenCV メモ](pages/Cpp/OpenCV.md)
 - [Python メモ](pages/Python/Python.md)
   - [Sphinx メモ](pages/Python/Sphinx.md)
-  - [Pandas メモ](pages/Python/Pandas.md)
+  - [Series/DataFrame/ndarray 逆引きインデックス](pages/Python/DataTypes.md)
   - [Google Colaboratory (GitHub)](https://github.com/applejxd/colaboratory)
   - [LightGBM で時系列データ分析](pages/Python/LightGBM.md)
 

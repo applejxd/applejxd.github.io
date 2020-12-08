@@ -2,6 +2,20 @@
 title: Windows メモ
 ---
 
+## 基本設定
+
+1. アカウント作成時はローカルアカウント → Microsoft アカウントに変更 （アカウント名のため）
+1. Windows Update & セキュリティ設定
+2. バックアップのリストア → tools の設定
+3. [Chocolatey](https://chocolatey.org/install) インストール
+    ```shell
+    $ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    ```
+4. [packages.config](https://gist.github.com/applejxd/e56fef3adf05108bed62ae847cf71bc5) を通じて chocolatey パッケージインストール
+5. フォントインストール：Hack Nerd Font（"Hack Regular Nerd Font Complete Windows Compatible" a.k.a. "Hack NF"）
+6. VSCode 同期設定
+7. Windows Terminal 設定
+
 ## [ファイル名を指定して実行（Win+R）](http://www.checkpad.jp/list/show/981136)
 
 - システム系
@@ -32,17 +46,6 @@ title: Windows メモ
 - [工場出荷状態に戻す（HP)](https://support.hp.com/jp-ja/document/c02159559)
 ：起動時にF11キー
 - [クリーンインストールする](https://www.ikt-s.com/windows10_clean_install_fmvd77j/)
-
-## 基本設定
-
-1. Windows Update & セキュリティ設定
-2. バックアップのリストア → tools の設定
-3. [Chocolatey](https://chocolatey.org/install) インストール
-    ```shell
-    $ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-    ```
-4. [packages.config](https://gist.github.com/applejxd/e56fef3adf05108bed62ae847cf71bc5) を通じて chocolatey パッケージインストール
-5. フォントインストール：Hack Nerd Font（"Hack Regular Nerd Font Complete Windows Compatible" a.k.a. "Hack NF"）
 
 ## 解決済みの問題
 
