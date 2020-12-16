@@ -2,10 +2,10 @@
 title: リンク集
 ---
 
-### プログラミング
+## プログラミング
 - [codic](https://codic.jp/engine)
 
-### 技術
+## 技術
 
 - [Qiita 殿堂入り記事](http://youwht.ml/static/TAG_TOP.html)
 - [awesome](https://github.com/sindresorhus/awesome)
@@ -14,7 +14,7 @@ title: リンク集
 - [OverAPI.com](https://overapi.com/)：チートシート集
 - [アルゴリズムビジュアル大辞典](https://yutaka-watanobe.github.io/star-aida/books/)
 
-### ネタ
+## ネタ
 
 - [バカ向け言語 Scala](http://rirakkumya.hatenablog.com/entry/2013/04/20/093044)
 - [クソコード動画「共通化の罠」](https://togetter.com/li/1354658)

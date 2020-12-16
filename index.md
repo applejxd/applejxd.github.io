@@ -12,6 +12,7 @@ title: トップページ
 ### 環境構築
 - [Windows メモ](pages/Windows.md)
   - [WSL メモ](pages/WSL.md)
+  - [Powershell メモ](paegs/PowerShell.md)
 - [開発環境メモ](pages/Preferences.md)
   - [dotfiles for Mac/Linux/WSL (GitHub)](https://github.com/applejxd/dotfiles)
 
