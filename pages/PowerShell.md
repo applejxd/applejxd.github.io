@@ -32,7 +32,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
 
 ### [その他](https://www.haruru29.net/blog/how-to-download-files-using-powershell/)
 
-- Invoke-WebRequest/wget
+- Invoke-WebRequest/iwr (alias として wget)
 - curl (Windows 10 1803 以降)
 
 ### コマンド実行
