@@ -2,24 +2,33 @@
 title: PowerShell メモ
 ---
 
-## 実行ポリシー
+## [実行ポリシー](https://qiita.com/kikuchi/items/59f219eae2a172880ba6)
 
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force
+```
+- `Set-ExecutionPolicy`：実行ポリシーを変更
+  - `Restricted`：デフォルト。構成ファイルの読み込み・スクリプトの実行を行わない
+  - `Unrestricted`：すべての構成ファイルの読み込み・スクリプトの実行が可能。署名なしのスクリプトは確認を行う。
+  - `Bypass`：何もブロックせず、警告・メッセージを非表示
+- `-Scope Process`：プロセス限定で実行ポリシーを変更（管理者権限は不要）
 
 ## ダウンロード
 
-### WebClient を使う方法
+### .Net の WebClient を使う方法
 
 ```powershell
 (New-Object System.Net.WebClient).DownloadFile('URL','/path/to/save/dir')
-```
-- New-Object：.NET Frameworkのインスタンスを作成
-- System.Net.Webclient：リモートリソースとのデータ送受信に使用
-- DownloadFile：コンテンツをダウンロード
-
-```powershell
 (new-object net.webclient).DownloadString('URL')
 ```
-- DownloadString：実行メモリバッファに内容をダウンロード
+- New-Object：.NET Frameworkのインスタンスを作成
+- [`System.Net.Webclient`](https://docs.microsoft.com/ja-jp/dotnet/api/system.net.webclient?view=net-5.0)
+  ：データ送受信のためのクラス
+  - [`DownloadFile`](https://docs.microsoft.com/ja-jp/dotnet/api/system.net.webclient.downloadfile?view=net-5.0)
+  ：データをファイルとしてダウンロードするメソッド
+  - [`DownloadString`](https://docs.microsoft.com/ja-jp/dotnet/api/system.net.webclient.downloadstring?view=net-5.0)
+  ：データを String としてダウンロードするメソッド
+
 
 ### [その他](https://www.haruru29.net/blog/how-to-download-files-using-powershell/)
 
