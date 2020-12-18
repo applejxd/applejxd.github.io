@@ -5,7 +5,10 @@ title: PowerShell メモ
 ## [実行ポリシー](https://qiita.com/kikuchi/items/59f219eae2a172880ba6)
 
 ```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force
+# 何らかのスクリプトが実行できなかった場合のコマンド
+Set-ExecutionPolicy Unrestricted -Force
+# プロセス限定
+Set-ExecutionPolicy Bypass -Scope Process -Force 
 ```
 - `Set-ExecutionPolicy`：実行ポリシーを変更
   - `Restricted`：デフォルト。構成ファイルの読み込み・スクリプトの実行を行わない
