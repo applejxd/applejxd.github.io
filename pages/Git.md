@@ -4,6 +4,11 @@ title: Git メモ
 
 ## 基本
 - [図解Git](https://marklodato.github.io/visual-git-guide/index-ja.html)
+- 使い始める
+	```bash
+	$ git config --global user.name "Alice"
+	$ git config --global user.email alice@example.com
+	```
 - [HEAD の指定](https://qiita.com/chihiro/items/d551c14cb9764454e0b9)
 	- alias として @ が使える
 	- @~[n] : n回、1番目の親をたどる
