@@ -59,6 +59,7 @@ $ grep RegExp Filename	# RegExp を含む行を表示
 $ sed -e "s/置換条件/置換文字/g"
 ```
 - [ユースケース一覧](https://qiita.com/hirohiro77/items/7fe2f68781c41777e507)
+- [GNU sed REPL](https://sed.js.org/)：シミュレータ
 
 ### [awk](https://qiita.com/yamazon/items/563af1b485ff413d381f)
 
