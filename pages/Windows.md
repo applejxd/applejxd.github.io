@@ -2,21 +2,25 @@
 title: Windows メモ
 ---
 
-## 基本設定
+## 設定
+### セットアップ
 
 1. アカウント作成時はローカルアカウント → Microsoft アカウントに変更 （アカウント名のため）
-1. Windows Update & セキュリティ設定
-2. バックアップのリストア → tools の設定
-3. [Chocolatey](https://chocolatey.org/install) インストール
-    ```shell
-    $ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-    ```
-4. [packages.config](https://gist.github.com/applejxd/e56fef3adf05108bed62ae847cf71bc5) を通じて chocolatey パッケージインストール
-5. フォントインストール：Hack Nerd Font（"Hack Regular Nerd Font Complete Windows Compatible" a.k.a. "Hack NF"）
-6. VSCode 同期設定
-7. Windows Terminal 設定
+2. Windows Update & セキュリティ設定
+3. バックアップのリストア → tools の設定
+4. [セットアップスクリプト](https://github.com/applejxd/windows-setup)
 
-## [ファイル名を指定して実行（Win+R）](http://www.checkpad.jp/list/show/981136)
+### JetBrain IDEs
+
+- インストール：JetBrains Toolbox から
+- PyCharm インタプリタ：Anaconda のルートから python.exe を指定
+- CLion ツールチェイン
+	- Cygwin：Chocolatey　で可。C:\tools\cygwin を指定。
+	- WSL：Bash のみ可。
+
+## Tips
+
+### [ファイル名を指定して実行（Win+R）](http://www.checkpad.jp/list/show/981136)
 
 - システム系
 	- タスクマネージャ：taskmgr
@@ -36,6 +40,7 @@ title: Windows メモ
 
 ## トラブルシューティング
 
+### ツール
 - セーフモード
     1. Win+R から msconfig
     2. 「ブート」を選択
@@ -47,7 +52,7 @@ title: Windows メモ
 ：起動時にF11キー
 - [クリーンインストールする](https://www.ikt-s.com/windows10_clean_install_fmvd77j/)
 
-## 解決済みの問題
+### 解決済みの問題
 
 - [ユーザーフォルダ名の変更](https://pc-karuma.net/windows10-rename-user-folder/)
     1. 作成時はローカルアカウント
@@ -60,7 +65,7 @@ title: Windows メモ
 - KeySwapがうまく作動しない ：設定クリアして再起動・設定して再起動
 - WSL の環境をリセットしたい ： 「アプリと機能」から Ubuntu をリセットするだけ
 
-## (個人的)未解決の不具合
+### (個人的)未解決の不具合
 
 - 復元の失敗 → ユーザーアカウント制御が異常に厳しくなる
 - 設定のアイコンがうまく表示されない
