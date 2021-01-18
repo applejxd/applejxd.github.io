@@ -133,3 +133,16 @@ $ convert [変換前ファイル] [変換後ファイル]
 
 - diff：`$ patch [option] applied_file < patch_file.patch`
 - git：`$ git apply diff.patch`
+
+## ユーザー処理
+
+- ユーザー追加
+	- ワンライナーで追加： シェル指定・ホームディレクトリ付き
+		```shell
+  		$ sudo useradd -s /bin/bash -m username
+		```
+	- ウィザードで追加：`$ sudo adduser username`
+- ユーザー削除：`$ sudo userdel -r username`
+- グループに追加：`$ sudo usermod -G group username`
+	- sudo 権限を追加：`$ sudo usermod -aG sudo username`
+- グループ確認：`$ cat /etc/group | grep username`
