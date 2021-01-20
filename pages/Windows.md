@@ -10,13 +10,22 @@ title: Windows メモ
 3. バックアップのリストア → tools の設定
 4. [セットアップスクリプト](https://github.com/applejxd/windows-setup)
 
+### WSL
+- GUI アプリ設定
+	1. Vxcsrv インストール
+	2. ファイアウォールはパブリックも設定
+	3. Xlaunch 起動時に "Disable access control" をチェック
+	4. 以下の環境変数を WSL に設定
+	```shell
+	export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+	```
 ### JetBrain IDEs
 
 - インストール：JetBrains Toolbox から
 - PyCharm インタプリタ：Anaconda のルートから python.exe を指定
 - CLion ツールチェイン
 	- Cygwin：Chocolatey　で可。C:\tools\cygwin を指定。
-	- WSL：Bash のみ可。
+	- WSL：Bash のみ可。ビルド設定から環境変数を定義。DISPLAY 設定はファイルから読み込み。
 
 ## Tips
 
