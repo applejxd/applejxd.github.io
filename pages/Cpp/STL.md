@@ -4,13 +4,23 @@ title: STL メモ
 
 ## 使い分け
 
+- 組込型の代替
+  - [配列よりも std::array](http://tinyurl.com/y3uqd7s5)
+  - [char よりも std::string](https://qiita.com/7shi/items/cac7b3e9b90bf91b00cc)
+- 配列として使う
+  - （動的に要素数を宣言したい）静的配列：array
+  - 動的配列：vector
 - [STLの型の使い分け](https://qiita.com/h_hiro_/items/a83a8fd2391d4a3f0e1c)
-    - （動的に要素数を宣言したい）配列：array
-    - 動的配列：vector
-- [配列よりも std::array](http://tinyurl.com/y3uqd7s5)
-    - std::array の方が書きやすい
-    - ポインタ渡しではなく、const 参照で渡す
-- char よりも std::string
+  - ソートか速度か
+    - 常にソートする：set, map, multimap
+    - 高速にアクセスする：unordered 系統
+  - ユニークにする：set, map 系統
+  - キーを使ってアクセス：map, multimap 系統
+  - 集合操作をする：set
+- ユーザー定義の構造体に対するコンテナ
+  - unordred 系列：[構造体に対するハッシュを定義](http://vivi.dyndns.org/tech/cpp/unordered_map.html#decl)
+  - ソート可能なコンテナ：構造体に対する順序を定義
+- ポインタ渡しではなく、const 参照で渡す
 
 ## 使用方法
 
