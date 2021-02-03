@@ -44,4 +44,4 @@ title: トップページ
 - [リンク集](pages/Links.md)
 
 ## その他メモ
-- [ミンサガ攻略](pages/ミンサガ.md)
+- [ミンサガ攻略](pages/Memo/ミンサガ.md)
