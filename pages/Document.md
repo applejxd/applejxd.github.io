@@ -61,6 +61,8 @@ title: 資料作成メモ
 	- いらないプレースホルダーがある場合など
 - [図形合成](http://blog.bot.vc/2012/02/figurecomp/)
 ：重なった図形を右クリック → グループ化 → 結合・和集合・交差・型抜き
+- 数式
+    - 入力開始：（右）Alt+;
 
 ### Word
 - [図の差し替え](https://www.becoolusers.com/office/change-picture.html)

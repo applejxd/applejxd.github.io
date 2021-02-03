@@ -37,8 +37,11 @@ title: トップページ
   - [Google Colaboratory (GitHub)](https://github.com/applejxd/colaboratory)
   - [LightGBM で時系列データ分析](pages/Python/LightGBM.md)
 
-## その他
+## 学習メモ
 - [理学メモ](pages/Science.md)
 - [資料作成メモ](pages/Document.md)
 - [英語リンク集](pages/English.md)
 - [リンク集](pages/Links.md)
+
+## その他メモ
+- [ミンサガ攻略](pages/ミンサガ.md)
