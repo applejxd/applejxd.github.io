@@ -31,6 +31,7 @@ title: トップページ
   - [C++ オブジェクト指向メモ](pages/Cpp/CppObject.md)
   - [STL メモ](pages/Cpp/STL.md)
   - [OpenCV メモ](pages/Cpp/OpenCV.md)
+  - [C++ ライブラリメモ](pages/Cpp/CppLibrary.md)
 - [Python メモ](pages/Python/Python.md)
   - [Sphinx メモ](pages/Python/Sphinx.md)
   - [データ型逆引きノート](https://github.com/applejxd/colaboratory/blob/master/DataTypes.ipynb)
