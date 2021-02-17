@@ -24,6 +24,7 @@ title: トップページ
   - [Linux コマンドメモ](pages/LinuxCommand.md)
 
 ### プログラミング
+- [アルゴリズムメモ](pages/Algorithm.md)
 - [C++ コーディングメモ](pages/Cpp/Cpp.md)
   - [C++ ビルドメモ](pages/Cpp/CppBuild.md)
   - [C++ デバッグ/エラー処理](pages/Cpp/CppDebug.md)
