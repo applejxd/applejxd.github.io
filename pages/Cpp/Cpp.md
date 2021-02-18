@@ -13,6 +13,7 @@ title: C++ コーディングメモ
     - [More C++ Idioms](https://ja.wikibooks.org/wiki/More_C%2B%2B_Idioms)
     - [C/C++迷信集](http://www.kijineko.co.jp/tech/superstitions)
 - コーディングスタイル
+    - [Google C++ スタイルガイド](https://ttsuki.github.io/styleguide/cppguide.ja.html)
     - [軽量コーディング](https://marycore.jp/prog/cpp/cpp-lightweight-coding-standards/)
     - [重量コーディング](https://marycore.jp/prog/cpp/cpp-heavyweight-coding-standards/)
 
