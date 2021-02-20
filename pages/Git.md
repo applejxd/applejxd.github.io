@@ -40,6 +40,14 @@ title: Git メモ
 	$ cd repo.git
 	$ git push --mirror /path/to/destination
 	```
+- デフォルトブランチの変更：master → main
+  ```bash
+	$ git branch -m master main
+	$ git fetch origin
+	$ git branch -u origin/main main
+	```
+
+
 
 ## [リセットしたいとき](http://tinyurl.com/yyl8ltp7)
 
