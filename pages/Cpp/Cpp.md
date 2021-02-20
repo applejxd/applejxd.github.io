@@ -13,6 +13,7 @@ title: C++ コーディングメモ
     - [More C++ Idioms](https://ja.wikibooks.org/wiki/More_C%2B%2B_Idioms)
     - [C/C++迷信集](http://www.kijineko.co.jp/tech/superstitions)
 - コーディングスタイル
+    - [Google C++ スタイルガイド](https://ttsuki.github.io/styleguide/cppguide.ja.html)
     - [軽量コーディング](https://marycore.jp/prog/cpp/cpp-lightweight-coding-standards/)
     - [重量コーディング](https://marycore.jp/prog/cpp/cpp-heavyweight-coding-standards/)
 
@@ -69,17 +70,3 @@ title: C++ コーディングメモ
 - ダックタイピング（テンプレート）
 - [アライメントとパディング](http://jr0bak.homelinux.net/~imai/linux/arm_gcc_badknowhow/arm_gcc_badknowhow.html)
 - マクロの正しい使い方：条件付きコンパイルなど
-
-## ライブラリ
-
-- [GoogleTest](https://github.com/google/googletest)：
-[Google Test ドキュメント日本語訳 上級ガイド](http://opencv.jp/googletestdocs/advancedguide.html)
-- Ceres
-- flann
-
-### Eigen
-- [デバッグ](http://wildpie.hatenablog.com/entry/20160206/1454747559)
-    - ウォッチ式：`*var.data()@num`
-- [注意点](https://www.regentechlog.com/2018/12/09/eigen-note/)
-    - [固定サイズの型によるメンバ変数](http://eigen.tuxfamily.org/dox/group__TopicStructHavingEigenMembers.html)
-    - [固定サイズの型に対するSTLコンテナの宣言](http://eigen.tuxfamily.org/dox/group__TopicStlContainers.html)

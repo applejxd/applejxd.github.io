@@ -13,6 +13,7 @@ title: トップページ
 - [Windows メモ](pages/Windows.md)
   - [WSL メモ](pages/WSL.md)
   - [Powershell メモ](pages/PowerShell.md)
+  - [セットアップ(GitHub)](https://github.com/applejxd/windows-setup)
 - [開発環境メモ](pages/Preferences.md)
   - [dotfiles for Mac/Linux/WSL (GitHub)](https://github.com/applejxd/dotfiles)
 
@@ -24,6 +25,7 @@ title: トップページ
   - [Linux コマンドメモ](pages/LinuxCommand.md)
 
 ### プログラミング
+- [アルゴリズムメモ](pages/Algorithm.md)
 - [C++ コーディングメモ](pages/Cpp/Cpp.md)
   - [C++ ビルドメモ](pages/Cpp/CppBuild.md)
   - [C++ デバッグ/エラー処理](pages/Cpp/CppDebug.md)
@@ -31,6 +33,7 @@ title: トップページ
   - [C++ オブジェクト指向メモ](pages/Cpp/CppObject.md)
   - [STL メモ](pages/Cpp/STL.md)
   - [OpenCV メモ](pages/Cpp/OpenCV.md)
+  - [C++ ライブラリメモ](pages/Cpp/CppLibrary.md)
 - [Python メモ](pages/Python/Python.md)
   - [Sphinx メモ](pages/Python/Sphinx.md)
   - [データ型逆引きノート](https://github.com/applejxd/colaboratory/blob/master/DataTypes.ipynb)
