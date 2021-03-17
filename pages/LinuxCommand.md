@@ -58,8 +58,8 @@ $ grep RegExp Filename	# RegExp を含む行を表示
 ```bash
 $ sed -e "s/置換条件/置換文字/g"
 ```
-- [ユースケース一覧](https://qiita.com/hirohiro77/items/7fe2f68781c41777e507)
 - [GNU sed REPL](https://sed.js.org/)：シミュレータ
+- [ユースケース一覧](https://qiita.com/hirohiro77/items/7fe2f68781c41777e507)
 
 ### [awk](https://qiita.com/yamazon/items/563af1b485ff413d381f)
 
@@ -67,6 +67,7 @@ $ sed -e "s/置換条件/置換文字/g"
 ```bash
 $ awk -F'[,]' -v 'OFS=,' '{print $1, $NF}'
 ```
+- [AWK REPL](https://awk.js.org/)：シミュレータ
 - -F: 読み込みデータの区切り文字（複数指定可）
 - -v: 変数指定
 	- OFS: 区切り文字（書き出し）
