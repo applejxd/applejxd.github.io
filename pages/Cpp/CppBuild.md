@@ -48,7 +48,7 @@ title: C++ ビルドメモ
   $ make
   $ make install
   ```
-- アンインストール：`xargs sudo rm < install_manifest.txt`
+- アンインストール：`xargs sudo rm -rf < install_manifest.txt`
 
 ### 単一ファイルの場合
 
