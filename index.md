@@ -14,6 +14,7 @@ title: トップページ
   - [WSL メモ](pages/WSL.md)
   - [Powershell メモ](pages/PowerShell.md)
   - [セットアップ(GitHub)](https://github.com/applejxd/windows-setup)
+- [Mac メモ](pages/Mac.md)
 - [開発環境メモ](pages/Preferences.md)
   - [dotfiles for Mac/Linux/WSL (GitHub)](https://github.com/applejxd/dotfiles)
 
