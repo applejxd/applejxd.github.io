@@ -31,3 +31,19 @@ title: VPN 設定メモ
     - ローカルブリッジ設定
 7. 自宅内ネットワークのルータの設定変更
     - 上記 1. に応じてルータのアドレスとDHCPの設定変更
+
+## その他参考リンク
+
+### 設定参考
+- [ネットワーク構成例](http://gachi3lab.blogspot.com/2017/09/vpsvpn.html)
+- [Ubuntu への SoftEther VPN インストール](https://qiita.com/rimksky/items/e169f9af83ce472b4ce3)
+- [ポート開放の詳細](http://www.ranran.mydns.jp/blog/?p=195)
+- [ppa から SoftEther VPN インストール](https://zenn.dev/nemuki/articles/aa5b93e506f765)：バグのためVPN接続がうまくいかない？
+
+### シンプルな VPN 設定
+- [IPsec VPN Server Auto Setup Scripts](https://github.com/hwdsl2/setup-ipsec-vpn)
+- [上記を使ったシンプルな VPN サーバ設定例](https://engineers.weddingpark.co.jp/aws-cli-amazon-lightsail/)
+
+### リモートデスクトップ
+- [Windows 10 HomeをProにアップグレードしたら何故かEnterpriseになってライセンス認証が通らない](https://www.nedia.ne.jp/blog/tech/2019/06/11/14605)
+- [Windows 10 の汎用プロダクトキー一覧](https://chirashi.twittospia.com/%E6%8A%80%E8%A1%93/windows-10%E3%81%AE%E6%B1%8E%E7%94%A8%E3%83%97%E3%83%AD%E3%83%80%E3%82%AF%E3%83%88%E3%82%AD%E3%83%BC%E3%81%A8%E3%81%AF%E4%BD%95%E3%81%A7%E3%81%99%E3%81%8B%EF%BC%9F%E3%81%9D%E3%82%8C%E3%82%89%E3%82%92/2020-10-18/)
