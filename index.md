@@ -15,6 +15,7 @@ title: トップページ
   - [Powershell メモ](pages/PowerShell.md)
   - [セットアップ(GitHub)](https://github.com/applejxd/windows-setup)
 - [Mac メモ](pages/Mac.md)
+- [VPN 設定メモ](pages/VPN.md)
 - [開発環境メモ](pages/Preferences.md)
   - [dotfiles for Mac/Linux/WSL (GitHub)](https://github.com/applejxd/dotfiles)
 
