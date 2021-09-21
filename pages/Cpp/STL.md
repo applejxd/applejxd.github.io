@@ -73,3 +73,16 @@ title: STL メモ
     sum += *iter;
   }
   ```
+  
+## 各種変換
+
+```cpp
+// 生配列 <-> vector
+double raw_array[3]{1,2,3};
+std::vector<double> vector_array(std::begin(raw_array), std::end(raw_array));
+raw_array = vector_array.data();
+
+// 生配列 -> array (std::array は C++11から, std::to_array は C++20 から)
+std::array<double, 3> array_array = std::to_array(raw_array)
+raw_array = array_array.data();
+```
