@@ -6,10 +6,12 @@ title: トップページ
 ## 技術
 
 ### 公開コード
+
 - [Github Repositries](https://github.com/applejxd?tab=repositories)
 - [Github Gist](https://gist.github.com/applejxd)
 
 ### 環境構築
+
 - [Windows メモ](pages/Windows.md)
   - [WSL メモ](pages/WSL.md)
   - [Powershell メモ](pages/PowerShell.md)
@@ -20,6 +22,7 @@ title: トップページ
   - [dotfiles for Mac/Linux/WSL (GitHub)](https://github.com/applejxd/dotfiles)
 
 ### 開発全般
+
 - [Git メモ](pages/Git.md)
   - [GitHub Pages メモ](pages/GitHubPages.md)
 - [Terminal 操作メモ](pages/Terminal.md)
@@ -27,6 +30,7 @@ title: トップページ
   - [Linux コマンドメモ](pages/LinuxCommand.md)
 
 ### プログラミング
+
 - [アルゴリズムメモ](pages/Algorithm.md)
 - [C++ コーディングメモ](pages/Cpp/Cpp.md)
   - [C++ ビルドメモ](pages/Cpp/CppBuild.md)
@@ -41,12 +45,15 @@ title: トップページ
   - [データ型逆引きノート](https://github.com/applejxd/colaboratory/blob/master/DataTypes.ipynb)
   - [Google Colaboratory (GitHub)](https://github.com/applejxd/colaboratory)
   - [LightGBM で時系列データ分析](pages/Python/LightGBM.md)
+- [JVM メモ](pages/JVM.md)
 
 ## 学習メモ
+
 - [理学メモ](pages/Science.md)
 - [資料作成メモ](pages/Document.md)
 - [英語リンク集](pages/English.md)
 - [リンク集](pages/Links.md)
 
 ## その他メモ
+
 - [ミンサガ攻略](pages/Memo/ミンサガ.md)
