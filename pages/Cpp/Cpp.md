@@ -3,44 +3,47 @@ title: C++ コーディングメモ
 ---
 
 ## サイトリンク
-- リファレンス
-    - [cppreference.com](https://ja.cppreference.com/w/)
-    - [cpprefjp - C++日本語リファレンス](https://cpprefjp.github.io/)
-- 学習
-    - [一週間で身につくC++言語の基本](http://cpp-lang.sevendays-study.com/)
-    - [さくさく理解する C言語/C++ プログラミング 入門](http://vivi.dyndns.org/tech/cpp/cpp.html)
-- Tips
-    - [More C++ Idioms](https://ja.wikibooks.org/wiki/More_C%2B%2B_Idioms)
-    - [C/C++迷信集](http://www.kijineko.co.jp/tech/superstitions)
+
 - コーディングスタイル
-    - [Google C++ スタイルガイド](https://ttsuki.github.io/styleguide/cppguide.ja.html)
-    - [軽量コーディング](https://marycore.jp/prog/cpp/cpp-lightweight-coding-standards/)
-    - [重量コーディング](https://marycore.jp/prog/cpp/cpp-heavyweight-coding-standards/)
+  - [Google C++ スタイルガイド](https://ttsuki.github.io/styleguide/cppguide.ja.html)
+  - [軽量コーディング](https://marycore.jp/prog/cpp/cpp-lightweight-coding-standards/)
+  - [重量コーディング](https://marycore.jp/prog/cpp/cpp-heavyweight-coding-standards/)
+- リファレンス
+  - [cppreference.com](https://ja.cppreference.com/w/)
+  - [cpprefjp - C++日本語リファレンス](https://cpprefjp.github.io/)
+  - [hacking C++](https://hackingcpp.com/index.html)
+- 学習
+  - [一週間で身につくC++言語の基本](http://cpp-lang.sevendays-study.com/)
+  - [さくさく理解する C言語/C++ プログラミング 入門](http://vivi.dyndns.org/tech/cpp/cpp.html)
+- Tips
+  - [More C++ Idioms](https://ja.wikibooks.org/wiki/More_C%2B%2B_Idioms)
+  - [C/C++迷信集](http://www.kijineko.co.jp/tech/superstitions)
 
 ## ややこしいものの区別
 
 - [右辺値参照と左辺値参照](https://cpprefjp.github.io/lang/cpp11/rvalue_ref_and_move_semantics.html)
-    - 右辺値は名前無し一時オブジェクト
-    - 左辺値は名前有り実態のあるオブジェクト
+  - 右辺値は名前無し一時オブジェクト
+  - 左辺値は名前有り実態のあるオブジェクト
 
 ## Tips
 
 - キャストは C++ の機能で
-    - static_cast
-    - dynamic_cast
+  - static_cast
+  - dynamic_cast
 - ループで使う変数はループ内で宣言, 例外は以下（Effective C++ §26）
-    - 効率化重視
-    - 代入が生成と破棄よりもローコスト
-    - ループ回数が多い
+  - 効率化重視
+  - 代入が生成と破棄よりもローコスト
+  - ループ回数が多い
 - 巨大なコピーを避ける
-    - [巨大な（組み込み型等以外の）変数は const 参照で（Effective C++ §20）
-    - [出力の参照渡しとポインタ渡しの比較](http://orycha.hatenablog.com/entry/2017/02/19/115015)
-    - [ローカル変数の戻り値は値渡しで RVO, NRVO 任せ](https://theolizer.com/cpp-school1/cpp-school1-37/)（Effective C++ §21）
+  - [巨大な（組み込み型等以外の）変数は const 参照で（Effective C++ §20）
+  - [出力の参照渡しとポインタ渡しの比較](http://orycha.hatenablog.com/entry/2017/02/19/115015)
+  - [ローカル変数の戻り値は値渡しで RVO, NRVO 任せ](https://theolizer.com/cpp-school1/cpp-school1-37/)（Effective C++ §21）
 - [メンバイニシャライザを有効活用](http://jagabeeinitialize.hatenablog.com/entry/2018/01/21/192043)
-    - コンストラクタによる初期化よりも速い
-    - 宣言順での初期化に注意
-    - 一様初期化構文（波カッコによる初期化子リスト）を有効活用
+  - コンストラクタによる初期化よりも速い
+  - 宣言順での初期化に注意
+  - 一様初期化構文（波カッコによる初期化子リスト）を有効活用
 - デフォルト引数の設定はヘッダで行う
+
     ```cpp
     class hoge{
         public:
@@ -51,7 +54,9 @@ title: C++ コーディングメモ
         ...
     }
     ```
+
 - ラムダ式：単一の関数内で同一の処理が繰り返される場合など
+
     ```cpp
     void func(double a){
         auto f = [a](double x){
@@ -67,6 +72,7 @@ title: C++ コーディングメモ
         ...
     }
     ```
+
 - ダックタイピング（テンプレート）
 - [アライメントとパディング](http://jr0bak.homelinux.net/~imai/linux/arm_gcc_badknowhow/arm_gcc_badknowhow.html)
 - マクロの正しい使い方：条件付きコンパイルなど
