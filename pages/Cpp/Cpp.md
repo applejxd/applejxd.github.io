@@ -44,34 +44,34 @@ title: C++ コーディングメモ
   - 一様初期化構文（波カッコによる初期化子リスト）を有効活用
 - デフォルト引数の設定はヘッダで行う
 
-    ```cpp
-    class hoge{
-        public:
-            double method(double arg = 1.);
-    };
+```cpp
+class hoge{
+    public:
+        double method(double arg = 1.);
+};
 
-    double hoge::method(double arg){
-        ...
-    }
-    ```
+double hoge::method(double arg){
+    ...
+}
+```
 
 - ラムダ式：単一の関数内で同一の処理が繰り返される場合など
 
-    ```cpp
-    void func(double a){
-        auto f = [a](double x){
-            return pow(x,a);
-        };
+```cpp
+void func(double a){
+    auto f = [a](double x){
+        return pow(x,a);
+    };
 
-        auto df = [a](double x){
-            return a*pow(x, a-1);
-        };
+    auto df = [a](double x){
+        return a*pow(x, a-1);
+    };
 
-        double value = f(10.) + df(10.) * 10.;
+    double value = f(10.) + df(10.) * 10.;
 
-        ...
-    }
-    ```
+    ...
+}
+```
 
 - ダックタイピング（テンプレート）
 - [アライメントとパディング](http://jr0bak.homelinux.net/~imai/linux/arm_gcc_badknowhow/arm_gcc_badknowhow.html)
