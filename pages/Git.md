@@ -3,58 +3,80 @@ title: Git メモ
 ---
 
 ## 基本
+
 - [図解Git](https://marklodato.github.io/visual-git-guide/index-ja.html)
 - [Git Flow ブランチモデル](https://qiita.com/kaitoland/items/5c98f60e33658c4433ef)
 - [CHANGELOG の書き方](https://blog.yux3.net/entry/2017/05/04/035811)
-- [gitignore.io](https://www.toptal.com/developers/gitignore)
-- [.gitignore でホワイトリスト](https://qiita.com/officemove/items/b0409cb1ee946edadc3e)
-	```
-	*
-	!*/
-	!/.gitignore
-	```
 
 ## 各種設定
 
 ### ユーザ設定
+
 - 基本
-	```bash
-	$ git config --global user.name "Alice"
-	$ git config --global user.email alice@example.com
-	```
+
+```bash
+$ git config --global user.name "Alice"
+$ git config --global user.email alice@example.com
+```
+
 - [GitHub で匿名アドレスを使いたい場合](https://qiita.com/sta/items/982ab68e8220a81d485c)
 
 ### リポジトリ作成・管理
+
 - リモートリポジトリの作成
-	```bash
-	$ cd /path/to/remote/repo
-	$ git init --bare --shared
-	$ cd /path/to/local/repo
-	$ git remote add origin /path/to/remote/repo
-	```
+
+```bash
+$ cd /path/to/remote/repo
+$ git init --bare --shared
+$ cd /path/to/local/repo
+$ git remote add origin /path/to/remote/repo
+```
 - [リモートリポジトリの移行](https://qiita.com/orange5405/items/783b74667bcc69a34a52)
 	- タグは移動できない様子
-	```bash
-	$ git clone --mirror /path/to/source/repo.git
-	$ cd repo.git
-	$ git push --mirror /path/to/destination
-	```
+	
+```bash
+$ git clone --mirror /path/to/source/repo.git
+$ cd repo.git
+$ git push --mirror /path/to/destination
+```
+
+### gitignore 設定
+
+- [gitignore.io](https://www.toptal.com/developers/gitignore)
+- [追加したファイルを除外](https://tinyurl.com/yne4h7hc)
+
+```
+git rm --cached hoge
+```
+		
+- [.gitignore でホワイトリスト](https://qiita.com/officemove/items/b0409cb1ee946edadc3e)
+
+```
+*
+!*/
+!/.gitignore
+```
 
 ## リポジトリ操作
 
 ### ブランチ操作
+
 - リモートブランチをチェックアウト
-  ```bash
-	$ git checkout -b develop origin/develop
-	```
+
+```bash
+$ git checkout -b develop origin/develop
+```
+
 - デフォルトブランチの変更：master → main
-  ```bash
-	$ git branch -m master main
-	$ git fetch origin
-	$ git branch -u origin/main main
-	```
+
+```bash
+$ git branch -m master main
+$ git fetch origin
+$ git branch -u origin/main main
+```
 
 #### リセット
+
 - HEAD だけ削除：`$ git reset --soft @~`
 	- コミットを削除・コミット候補は維持
 	- 最新のコミットをキャンセル : 
@@ -67,37 +89,44 @@ title: Git メモ
 - 監視対象外の内容も削除：`$ git clean -df`
 
 #### やり直し
+
 - [現在のブランチでの実装を別ブランチに移動](https://gist.github.com/koudaiii/526707492ebc5915596e)
-	```bash
-	$ git stash		# ローカルの変更を退避
-	$ git checkout another_branch	# ブランチ変更
-	$ git stash apply	# ローカルの変更を戻す	
-	```
+
+```bash
+$ git stash		# ローカルの変更を退避
+$ git checkout another_branch	# ブランチ変更
+$ git stash apply	# ローカルの変更を戻す
+```
 
 - [どうしようもないとき→ミッシングリンクを発見](https://qiita.com/tbaba/items/af563deac65d1b12de49)
 	1. `$ git reflog` で HEAD 履歴確認
 	2. 直前の状態に戻るなら : `$ git reset —hard HEAD@{1}`
 
 ## Tips
+
 - [HEAD の指定](https://qiita.com/chihiro/items/d551c14cb9764454e0b9)
 	- alias として @ が使える
 	- @~[n] : n回、1番目の親をたどる
 	- @^[n] : n番目の親をたどる
 	- (ex.) @~~ と @^^ は同じ。@^2は違う。
 	- (ex.) @^2~3：最初は2番目の親を1回たどり、その後毎回1番目の親を3回たどる
+	
 ### コマンド等
+
 - [tig](https://qiita.com/suino/items/b0dae7e00bd7165f79ea)
 - [gitflow-avh](https://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html)
-	```bash
-	$ git flow init	# 初期化
-	$ git flow feature start test	# feature ブランチ開始
-	$ ...
-	$ git flow feature finish test	# feature ブランチ終了
-	$ git flow release start 0.1.0 # リリース開始
-	$ # CHANGELOG.md 編集
-	$ git flow release finish
-	$ # マージのメッセージはそのまま
-	$ # タグ生成時にメッセージを追加
-	```
+
+```bash
+$ git flow init	# 初期化
+$ git flow feature start test	# feature ブランチ開始
+$ ...
+$ git flow feature finish test	# feature ブランチ終了
+$ git flow release start 0.1.0 # リリース開始
+$ # CHANGELOG.md 編集
+$ git flow release finish
+$ # マージのメッセージはそのまま
+$ # タグ生成時にメッセージを追加
+```
+	
 - Vscode 向け
 	- GitLens, Git Graph, Git History
