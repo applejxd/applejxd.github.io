@@ -74,5 +74,6 @@ void func(double a){
 ```
 
 - ダックタイピング（テンプレート）
+  - 多重インクルードエラーは inline で回避
 - [アライメントとパディング](http://jr0bak.homelinux.net/~imai/linux/arm_gcc_badknowhow/arm_gcc_badknowhow.html)
 - マクロの正しい使い方：条件付きコンパイルなど
