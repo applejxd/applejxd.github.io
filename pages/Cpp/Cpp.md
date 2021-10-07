@@ -75,5 +75,8 @@ void func(double a){
 
 - ダックタイピング（テンプレート）
   - [多重インクルードエラーは inline で回避](https://tinyurl.com/yfxbxqvv)
+- [テンプレートと純粋仮想関数は両立不可](https://tinyurl.com/yhwlebul)
+  - テンプレートはコンパイル時コード生成
+  - 純粋仮想関数は実行時の動的呼び出し
 - [アライメントとパディング](http://jr0bak.homelinux.net/~imai/linux/arm_gcc_badknowhow/arm_gcc_badknowhow.html)
 - マクロの正しい使い方：条件付きコンパイルなど
