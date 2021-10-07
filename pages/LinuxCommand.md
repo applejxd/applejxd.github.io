@@ -9,21 +9,20 @@ title: Linux コマンドメモ
 
 ### [find](https://webkaru.net/linux/find-command/)
 
-ファイル名検索
-
 ```bash
 $ find [検索ディレクトリ] -name [名前]
 ```
 
-- -delete: 削除もする
-- xargs で渡す
+- ファイル名検索
+  - -delete: 削除もする
+  - xargs で渡す
+- [findとxargsの基本的な使い方](https://webkaru.net/linux/find-command/)
+  - [xargs コマンド - コマンドの使い方](https://hydrocul.github.io/wiki/commands/xargs.html)
 
 ```bash
 find . -name "*.dat" -type f | xargs wc -l
 ```
 
-- [findとxargsの基本的な使い方](https://webkaru.net/linux/find-command/)
-- [xargs コマンド - コマンドの使い方](https://hydrocul.github.io/wiki/commands/xargs.html)
 - chmod を使った例
 
 ```bash
@@ -37,14 +36,13 @@ $ sudo find . -type f -print | xargs sudo chmod 444
 
 ### [grep](https://webkaru.net/linux/grep-command/)
 
-テキスト（ファイル内容）検索. パイプでand検索.
-
 ```bash
 $ grep RegExp
 $ grep -rl RegExp	# pwd 以下のファイルを再帰的に検索
 $ grep RegExp Filename	# RegExp を含む行を表示
 ```
 
+- テキスト（ファイル内容）検索. パイプでand検索.
 - 検索オプション
 	- -r: カレントディレクトリ以下を再帰的に検索
 	- -i: 大文字と小文字の区別をしない
@@ -63,23 +61,21 @@ $ grep RegExp Filename	# RegExp を含む行を表示
 
 ### [sed (Stream EDitor)](https://qiita.com/muran001/items/472abcfc353d5df7b77a)
 
-置換処理
-
 ```bash
 $ sed -e "s/置換条件/置換文字/g"
 ```
 
+- 置換処理
 - [GNU sed REPL](https://sed.js.org/)：シミュレータ
 - [ユースケース一覧](https://qiita.com/hirohiro77/items/7fe2f68781c41777e507)
 
 ### [awk](https://qiita.com/yamazon/items/563af1b485ff413d381f)
 
-抽出処理
-
 ```bash
 $ awk -F'[,]' -v 'OFS=,' '{print $1, $NF}'
 ```
 
+- 抽出処理
 - [AWK REPL](https://awk.js.org/)：シミュレータ
 - -F: 読み込みデータの区切り文字（複数指定可）
 - -v: 変数指定
@@ -106,12 +102,11 @@ $ awk -F'[,]' -v 'OFS=,' '{print $1, $NF}'
 
 ### [nkf](https://webkaru.net/linux/nkf-command/)
 
-文字コードを変換して標準出力。
-
 ```bash
 $ nkf -w before.dat > after.dat
 ```
 
+- 文字コードを変換して標準出力
 - 文字コード指定
 	- -w: UTF-8
 	- -s: Shift_JIS
@@ -157,17 +152,16 @@ $ diff -uprN /path/to/original /path/to/modified > folder.patch
 
 ## ユーザー処理
 
-- ユーザー追加
-	- ワンライナーで追加： シェル指定・ホームディレクトリ付き
-
 ```shell
 $ sudo useradd -s /bin/bash -m username
 ```
 
-- ウィザードで追加：`$ sudo adduser username`
-- ユーザー削除：`$ sudo userdel -r username`
-- グループに追加：`$ sudo usermod -G group username`
-- sudo 権限を追加：`$ sudo usermod -aG sudo username`
+- ユーザー追加
+  - ワンライナーで追加： シェル指定・ホームディレクトリ付き
+  - ウィザードで追加：`$ sudo adduser username`
+  - ユーザー削除：`$ sudo userdel -r username`
+  - グループに追加：`$ sudo usermod -G group username`
+  - sudo 権限を追加：`$ sudo usermod -aG sudo username`
 - グループ確認：`$ cat /etc/group | grep username`
 
 ## その他
