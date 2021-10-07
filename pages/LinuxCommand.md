@@ -22,8 +22,8 @@ $ find [検索ディレクトリ] -name [名前]
 find . -name "*.dat" -type f | xargs wc -l
 ```
 
-	- [findとxargsの基本的な使い方](https://webkaru.net/linux/find-command/)
-	- [xargs コマンド - コマンドの使い方](https://hydrocul.github.io/wiki/commands/xargs.html)
+- [findとxargsの基本的な使い方](https://webkaru.net/linux/find-command/)
+- [xargs コマンド - コマンドの使い方](https://hydrocul.github.io/wiki/commands/xargs.html)
 - chmod を使った例
 
 ```bash
@@ -164,10 +164,10 @@ $ diff -uprN /path/to/original /path/to/modified > folder.patch
 $ sudo useradd -s /bin/bash -m username
 ```
 
-	- ウィザードで追加：`$ sudo adduser username`
+- ウィザードで追加：`$ sudo adduser username`
 - ユーザー削除：`$ sudo userdel -r username`
 - グループに追加：`$ sudo usermod -G group username`
-	- sudo 権限を追加：`$ sudo usermod -aG sudo username`
+- sudo 権限を追加：`$ sudo usermod -aG sudo username`
 - グループ確認：`$ cat /etc/group | grep username`
 
 ## その他
