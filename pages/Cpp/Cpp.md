@@ -76,10 +76,17 @@ void func(double a){
 - マクロの正しい使い方：条件付きコンパイルなど
 - [アライメントとパディング](http://jr0bak.homelinux.net/~imai/linux/arm_gcc_badknowhow/arm_gcc_badknowhow.html)
 
-## テンプレート(ダックタイピング)
+## [インタフェース](https://tinyurl.com/ye4w87rm)
 
-- [テンプレートの定義はヘッダファイルに
-書く](https://tinyurl.com/ydqmsaon)
+### インタフェースクラス
+
+- 派生クラスをインタフェースクラスにアップキャストする
+- 実行時に動的にポリモーフィズムを達成
+
+### テンプレート
+
+- テンプレートは静的(コンパイル時計算)ポリモーフィズム
+- [テンプレートの定義はヘッダファイルに書く](https://tinyurl.com/ydqmsaon)
 - [多重インクルードエラーは inline で回避](https://tinyurl.com/yfxbxqvv)
 - 継承は移譲+テンプレートで書けることがある
 - [テンプレートと純粋仮想関数は両立不可](https://tinyurl.com/yhwlebul)
