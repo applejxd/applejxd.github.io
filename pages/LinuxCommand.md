@@ -10,14 +10,14 @@ title: Linux コマンドメモ
 ### [find](https://webkaru.net/linux/find-command/)
 
 ```bash
-$ find [検索ディレクトリ] -name [名前]
+find [検索ディレクトリ] -name [名前]
 ```
 
 - ファイル名検索
   - -delete: 削除もする
   - xargs で渡す
 - [findとxargsの基本的な使い方](https://webkaru.net/linux/find-command/)
-  - [xargs コマンド - コマンドの使い方](https://hydrocul.github.io/wiki/commands/xargs.html)
+  - [xargs コマンド - コマンドの使い方](https://tinyurl.com/y9hzph6j)
 
 ```bash
 find . -name "*.dat" -type f | xargs wc -l
@@ -37,21 +37,23 @@ $ sudo find . -type f -print | xargs sudo chmod 444
 ### [grep](https://webkaru.net/linux/grep-command/)
 
 ```bash
-$ grep RegExp
-$ grep -rl RegExp	# pwd 以下のファイルを再帰的に検索
-$ grep RegExp Filename	# RegExp を含む行を表示
+grep RegExp
+# pwd 以下のファイルを再帰的に検索
+grep -rl RegExp
+# RegExp を含む行を表示
+grep RegExp Filename
 ```
 
 - テキスト（ファイル内容）検索. パイプでand検索.
 - 検索オプション
-	- -r: カレントディレクトリ以下を再帰的に検索
-	- -i: 大文字と小文字の区別をしない
-	- -w: 検索を単語として行う
+  - -r: カレントディレクトリ以下を再帰的に検索
+  - -i: 大文字と小文字の区別をしない
+  - -w: 検索を単語として行う
 - 表示オプション
-	- -l: ファイル名のみ表示
-	- -n: マッチした行番号も表示
-	- -h: マッチしたファイル名も表示
-	- -v: 文字列を除く行をすべて表示
+  - -l: ファイル名のみ表示
+  - -n: マッチした行番号も表示
+  - -h: マッチしたファイル名も表示
+  - -v: 文字列を除く行をすべて表示
 - ユースケース集
 - インストールファイル検索：`dpkg -L $package_name | grep $file_name`
 
@@ -59,68 +61,66 @@ $ grep RegExp Filename	# RegExp を含む行を表示
 
 - データ処理関連は Pandasを使うて手も
 
-### [sed (Stream EDitor)](https://qiita.com/muran001/items/472abcfc353d5df7b77a)
+### [sed (Stream EDitor)](https://tinyurl.com/yzkfcaxv)
 
 ```bash
-$ sed -e "s/置換条件/置換文字/g"
+sed -e "s/置換条件/置換文字/g"
 ```
 
 - 置換処理
 - [GNU sed REPL](https://sed.js.org/)：シミュレータ
-- [ユースケース一覧](https://qiita.com/hirohiro77/items/7fe2f68781c41777e507)
+- [ユースケース一覧](https://tinyurl.com/ygo2wh2d)
 
-### [awk](https://qiita.com/yamazon/items/563af1b485ff413d381f)
+### [awk](https://tinyurl.com/yhl7mvog)
 
 ```bash
-$ awk -F'[,]' -v 'OFS=,' '{print $1, $NF}'
+awk -F'[,]' -v 'OFS=,' '{print $1, $NF}'
 ```
 
 - 抽出処理
 - [AWK REPL](https://awk.js.org/)：シミュレータ
 - -F: 読み込みデータの区切り文字（複数指定可）
 - -v: 変数指定
-	- OFS: 区切り文字（書き出し）
-	- RS: レコードの区切り文字（改行相当・読み込み）
-	- ORS: レコードの区切り文字（改行相当・書き出し）
+  - OFS: 区切り文字（書き出し）
+  - RS: レコードの区切り文字（改行相当・読み込み）
+  - ORS: レコードの区切り文字（改行相当・書き出し）
 - 出力変数
-	- $0: すべてのデータ
-	- $1,$2,... : 1,2,.. 個目のデータ
-	- $NF: 最後のデータ
-	- $NF-1: 最後から二番目のデータ
+  - $0: すべてのデータ
+  - $1,$2,... : 1,2,.. 個目のデータ
+  - $NF: 最後のデータ
+  - $NF-1: 最後から二番目のデータ
 
 ### その他データ処理
 
-- [Linuxコマンドでテキストデータを自在に操る](https://orangain.hatenablog.com/entry/20100916/1284631280)
+- [Linuxコマンドでテキストデータを自在に操る](https://tinyurl.com/ybk3fs4z)
   - cat, paste：単純に縦・横にデータ結合
-  - [join](https://eng-entrance.com/linux-command-join)
-	：データ結合（複数フィールドは awk で[:]区切りで1フィールド目に結合して使う）
-- [sort](https://eng-entrance.com/linux-command-sort)
-：データの並び替え
-- [LinuxでExcelをCSVに変換するコマンドラインツール](https://notchained.hatenablog.com/entry/2014/11/24/105410)
+  - [join](https://eng-entrance.com/linux-command-join)：データ結合（複数フィールドは awk で[:]区切りで1フィールド目に結合して使う）
+- [sort](https://tinyurl.com/yhe3gzoe)：データの並び替え
+- [LinuxでExcelをCSVに変換するコマンドラインツール](https://tinyurl.com/yzf9nu83)
 
 ## ファイル変換
 
 ### [nkf](https://webkaru.net/linux/nkf-command/)
 
 ```bash
-$ nkf -w before.dat > after.dat
+nkf -w before.dat > after.dat
 ```
 
 - 文字コードを変換して標準出力
 - 文字コード指定
-	- -w: UTF-8
-	- -s: Shift_JIS
-	- -e: EUC-JP
+  - -w: UTF-8
+  - -s: Shift_JIS
+  - -e: EUC-JP
 - —overwrite：上書き
 
 ```bash
-$ nkf -w —-overwrite hoge.dat
+nkf -w —-overwrite hoge.dat
 ```
 
 - --guess：文字コード判定
 
 ```bash
-$ nkf --guess hoge.dat
+nkf --guess hoge.dat
 ```
 
 ### convert
@@ -128,21 +128,21 @@ $ nkf --guess hoge.dat
 画像・pdfファイルの相互変換
 
 ```bash
-$ convert [変換前ファイル] [変換後ファイル]
+convert [変換前ファイル] [変換後ファイル]
 ```
 
 ## パッチ処理
 
 ### パッチ作成
 
-- [diff を使う](https://qiita.com/astro_super_nova/items/e30dcaf4d106deebc63c)
+- [diff を使う](https://tinyurl.com/ye8jgqnw)
 
 ```shell
-$ diff -up original_source modified_source > source.patch
-$ diff -uprN /path/to/original /path/to/modified > folder.patch
+diff -up original_source modified_source > source.patch
+diff -uprN /path/to/original /path/to/modified > folder.patch
 ```
 
-- [git を使う](https://qiita.com/sea_mountain/items/7d9c812e68a26bd1a292)
+- [git を使う](https://tinyurl.com/ybbxgynh)
 ：`$ git diff > diff.patch`
 
 ### パッチ適用
@@ -153,7 +153,7 @@ $ diff -uprN /path/to/original /path/to/modified > folder.patch
 ## ユーザー処理
 
 ```shell
-$ sudo useradd -s /bin/bash -m username
+sudo useradd -s /bin/bash -m username
 ```
 
 - ユーザー追加
@@ -163,10 +163,19 @@ $ sudo useradd -s /bin/bash -m username
   - グループに追加：`$ sudo usermod -G group username`
   - sudo 権限を追加：`$ sudo usermod -aG sudo username`
 - グループ確認：`$ cat /etc/group | grep username`
+- [SSH 鍵生成](https://tinyurl.com/yhj2odla)・[SSH 登録](https://tinyurl.com/yf7trmlh)
+
+```bash
+# クライアント側にて実施
+# パスフレーズなし鍵生成
+ssh-keygen -t ed25519 -P "" -f key-name
+# 鍵送信・登録
+ssh-copy-id -i ~/.ssh/key-name.pub remote_url
+```
 
 ## その他
 
 ```shell
 # os 確認
-$ neofetch
+neofetch
 ```
