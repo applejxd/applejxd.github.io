@@ -4,50 +4,52 @@ title: C++ ビルドメモ
 
 ## リンク
 
-- ドキュメント
-  - [cmake-variables](https://cmake.org/cmake/help/v3.13/manual/cmake-variables.7.html)
+- コンパイラオプション
+  - [プログラム高速化の禁術](https://tinyurl.com/y8rfnqjh)
+  - [警告オプション](https://tinyurl.com/yhjbpj2d)
+- CMake マニュアル
+  - [cmake-variables](https://tinyurl.com/yfbepgg9)
   - [CMake チュートリアル](http://opencv.jp/cmake/cmake_tutorial.html)
-- 書き方
-  - [現代的な cmake スクリプト](https://qiita.com/shohirose/items/5b406f060cd5557814e9)
-  - [CMake の使い方](https://qiita.com/shohirose/items/45fb49c6b429e8b204ac)
+- CMake の書き方
+  - [現代的な cmake スクリプト](https://tinyurl.com/yfmlbw6v)
+  - [CMake の使い方](https://tinyurl.com/ye25hbaf)
   - [プロジェクトの階層化](https://kamino.hatenablog.com/entry/cmake_tutorial2)
 - Tips
-  - [スタティックリンクとダイナミックリンク](http://www.cc.kyoto-su.ac.jp/~kbys/kiso/cpu/dynamic-link.html)
+  - [スタティックリンクとダイナミックリンク](https://tinyurl.com/yff4q2tf)
   - [条件付きコンパイル](http://www.wisdomsoft.jp/383.html)
 
 ## 単一ファイルのビルド
 
-- コマンドライン
-  ```bash
-  $ gcc main.cpp -o out
-  ```
-- [Suffix Alias (fo Zsh)](https://itchyny.hatenablog.com/entry/20130227/1361933011)
+- コマンドライン：`gcc main.cpp -o out`
+- [Suffix Alias (fo Zsh)](https://tinyurl.com/yfdhr4cz)
   - 拡張子に応じてコマンドを実行してくれるエイリアス(Zsh 限定)
-  - .zshrc に以下を記載
-    ```zsh
-    function runcpp () {
-      g++ -O2 $1
-      shift
-      ./a.out $@ 
-    }
-    alias -s {c,cpp}='runcpp'    
-    ```
-  - 次のコマンドでコンパイル
-    ```zsh
-    $ ./main.cpp
-    ```
+  
+```zsh
+function runcpp () {
+  g++ -O2 $1
+  shift
+  ./a.out $@ 
+}
+# Suffix Alias
+alias -s {c,cpp}='runcpp'    
+
+# コンパイル
+./main.cpp
+```
 
 ## CMake
 
 ### 実行方法
 
 - ビルド・インストール
-  ```shell
-  $ mkdir build && cd build
-  $ cmake ../
-  $ make
-  $ make install
-  ```
+
+```shell
+mkdir build && cd build
+cmake ../
+make
+make install
+```
+
 - アンインストール：`xargs sudo rm -rf < install_manifest.txt`
 
 ### 単一ファイルの場合
@@ -80,62 +82,66 @@ project<br>
  ├ main.cpp<br>
  └ CMakeLists.txt
 - /project/CMakeLists.txt
-    ```cmake
-    cmake_minimum_required(VERSION 3.8.0)
-    project(Main)
 
-    add_executable(Main main.cc)
-    target_compile_options(Main PUBLIC -O2 -Wall)
-    target_compile_features(Main PUBLIC cxx_std_11)
+```cmake
+cmake_minimum_required(VERSION 3.8.0)
+project(Main)
 
-    # サブディレクトリのプロジェクトを追加してリンク
-    add_subdirectory(src)
-    target_link_libraries(Main PUBLIC Sub)
+add_executable(Main main.cc)
+target_compile_options(Main PUBLIC -O2 -Wall)
+target_compile_features(Main PUBLIC cxx_std_11)
 
-    # テストを有効化
-    enable_testing()
-    add_subdirectory(test)
-    ```
+# サブディレクトリのプロジェクトを追加してリンク
+add_subdirectory(src)
+target_link_libraries(Main PUBLIC Sub)
+
+# テストを有効化
+enable_testing()
+add_subdirectory(test)
+```
+
 - /project/src/CMakeLists.txt
-    ```cmake
-    cmake_minimum_required(VERSION 3.8.0)
 
-    add_library(Sub SHARED sub.cpp)
+```cmake
+cmake_minimum_required(VERSION 3.8.0)
 
-    # ヘッダファイルのフォルダを指定
-    target_include_directories(Sub
-        PUBLIC
-            ${PROJECT_SOURCE_DIR}/include
-    )
-    ```
+add_library(Sub SHARED sub.cpp)
+
+# ヘッダファイルのフォルダを指定
+target_include_directories(Sub PUBLIC
+  ${PROJECT_SOURCE_DIR}/include
+)
+```
+
 - /project/test/CMakeLists.txt
-    ```cmake
-    cmake_minimum_required(VERSION 3.8.0)
 
-    include(GoogleTest)
+```cmake
+cmake_minimum_required(VERSION 3.8.0)
 
-    add_library(GTest
-        SHARED ${PROJECT_SOURCE_DIR}/test/gtest/gtest-all.cc
-    )
-    target_include_directories(GTest
-        PUBLIC ${PROJECT_SOURCE_DIR}/test
-    )
+include(GoogleTest)
 
-    add_library(GMain
-        SHARED ${PROJECT_SOURCE_DIR}/test/gtest/gtest_main.cc
-    )
-    target_include_directories(GMain
-        PUBLIC ${PROJECT_SOURCE_DIR}/test
-    )
+add_library(GTest
+    SHARED ${PROJECT_SOURCE_DIR}/test/gtest/gtest-all.cc
+)
+target_include_directories(GTest
+    PUBLIC ${PROJECT_SOURCE_DIR}/test
+)
 
-    add_executable(SolverTest solver_test.cc)
-    target_compile_options(SolverTest PUBLIC -O2 -Wall)
-    target_compile_features(SolverTest PUBLIC cxx_std_11)
-    target_link_libraries(SolverTest
-        PUBLIC
-            GTest
-            GMain
-    )
+add_library(GMain
+    SHARED ${PROJECT_SOURCE_DIR}/test/gtest/gtest_main.cc
+)
+target_include_directories(GMain
+    PUBLIC ${PROJECT_SOURCE_DIR}/test
+)
 
-    gtest_add_tests(TARGET SolverTest)
-    ```
+add_executable(SolverTest solver_test.cc)
+target_compile_options(SolverTest PUBLIC -O2 -Wall)
+target_compile_features(SolverTest PUBLIC cxx_std_11)
+target_link_libraries(SolverTest
+    PUBLIC
+        GTest
+        GMain
+)
+
+gtest_add_tests(TARGET SolverTest)
+```
