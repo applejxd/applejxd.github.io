@@ -21,7 +21,14 @@ git config --global user.email alice@example.com
 
 - [GitHub で匿名アドレスを使いたい場合](https://qiita.com/sta/items/982ab68e8220a81d485c)
 
-### リポジトリ作成・管理
+### リモートリポジトリ操作
+
+- リモートリポジトリの登録
+
+```bash
+git remote add origin /url/to/remote/repo
+git push -u origin main
+```
 
 - リモートリポジトリの作成
 
