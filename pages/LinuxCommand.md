@@ -17,22 +17,23 @@ find [検索ディレクトリ] -name [名前]
   - -delete: 削除もする
   - xargs で渡す
 - [findとxargsの基本的な使い方](https://webkaru.net/linux/find-command/)
-  - [xargs コマンド - コマンドの使い方](https://tinyurl.com/y9hzph6j)
 
-```bash
-find . -name "*.dat" -type f | xargs wc -l
-```
+  ```bash
+  find . -name "*.dat" -type f | xargs wc -l
+  ```
+
+  - [xargs コマンド - コマンドの使い方](https://tinyurl.com/y9hzph6j)
 
 - chmod を使った例
 
-```bash
-# ディレクトリ
-$ sudo find . -type d -print | xargs sudo chmod 755
-# 通常のファイル
-$ sudo find . -type f -print | xargs sudo chmod 644
-# secure なファイル
-$ sudo find . -type f -print | xargs sudo chmod 444
-```
+  ```bash
+  # ディレクトリ
+  $ sudo find . -type d -print | xargs sudo chmod 755
+  # 通常のファイル
+  $ sudo find . -type f -print | xargs sudo chmod 644
+  # secure なファイル
+  $ sudo find . -type f -print | xargs sudo chmod 444
+  ```
 
 ### [grep](https://webkaru.net/linux/grep-command/)
 
@@ -113,23 +114,19 @@ nkf -w before.dat > after.dat
   - -e: EUC-JP
 - —overwrite：上書き
 
-```bash
-nkf -w —-overwrite hoge.dat
-```
+  ```bash
+  nkf -w —-overwrite hoge.dat
+  ```
 
 - --guess：文字コード判定
 
-```bash
-nkf --guess hoge.dat
-```
+  ```bash
+  nkf --guess hoge.dat
+  ```
 
 ### convert
 
-画像・pdfファイルの相互変換
-
-```bash
-convert [変換前ファイル] [変換後ファイル]
-```
+画像・pdfファイルの相互変換:`convert [変換前ファイル] [変換後ファイル]`
 
 ## パッチ処理
 
@@ -137,41 +134,33 @@ convert [変換前ファイル] [変換後ファイル]
 
 - [diff を使う](https://tinyurl.com/ye8jgqnw)
 
-```shell
-diff -up original_source modified_source > source.patch
-diff -uprN /path/to/original /path/to/modified > folder.patch
-```
+  ```shell
+  diff -up original_source modified_source > source.patch
+  diff -uprN /path/to/original /path/to/modified > folder.patch
+  ```
 
-- [git を使う](https://tinyurl.com/ybbxgynh)
-：`$ git diff > diff.patch`
+- [git を使う](https://tinyurl.com/ybbxgynh)：`git diff > diff.patch`
 
 ### パッチ適用
 
-- diff：`$ patch [option] applied_file < patch_file.patch`
-- git：`$ git apply diff.patch`
+- diff：`patch [option] applied_file < patch_file.patch`
+- git：`git apply diff.patch`
 
 ## ユーザー処理
 
-```shell
-sudo useradd -s /bin/bash -m username
-```
-
-- ユーザー追加
+- ユーザー追加:`sudo useradd -s /bin/bash -m username`
   - ワンライナーで追加： シェル指定・ホームディレクトリ付き
-  - ウィザードで追加：`$ sudo adduser username`
-  - ユーザー削除：`$ sudo userdel -r username`
-  - グループに追加：`$ sudo usermod -G group username`
-  - sudo 権限を追加：`$ sudo usermod -aG sudo username`
-- グループ確認：`$ cat /etc/group | grep username`
-- [SSH 鍵生成](https://tinyurl.com/yhj2odla)・[SSH 登録](https://tinyurl.com/yf7trmlh)
-
-```bash
-# クライアント側にて実施
-# パスフレーズなし鍵生成
-ssh-keygen -t ed25519 -P "" -f key-name
-# 鍵送信・登録
-ssh-copy-id -i ~/.ssh/key-name.pub remote_url
-```
+  - ウィザードで追加：`sudo adduser username`
+  - ユーザー削除：`sudo userdel -r username`
+  - グループに追加：`sudo usermod -G group username`
+  - sudo 権限を追加：`sudo usermod -aG sudo username`
+- グループ確認：`cat /etc/group | grep username`
+- SSH
+  - [SSH 鍵生成](https://tinyurl.com/yhj2odla):`ssh-keygen -t ed25519 -P "" -f key-name`
+    - パスワードなし:`-P ""`
+    - 鍵の名前指定:`-f key-name`
+  - [SSH 登録](https://tinyurl.com/yf7trmlh):`ssh-copy-id -i ~/.ssh/key-name.pub remote_url`
+    - 直接行う場合は key-name.pub を登録先の ~/.ssh/authorized_keys に追記
 
 ## その他
 
