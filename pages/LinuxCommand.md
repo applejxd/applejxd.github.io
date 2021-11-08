@@ -156,11 +156,18 @@ nkf -w before.dat > after.dat
   - sudo 権限を追加：`sudo usermod -aG sudo username`
 - グループ確認：`cat /etc/group | grep username`
 - SSH
-  - [SSH 鍵生成](https://tinyurl.com/yhj2odla):`ssh-keygen -t ed25519 -P "" -f key-name`
+  - [SSH 鍵生成](https://tinyurl.com/yhj2odla):`ssh-keygen -t ed25519 -P "" -f key_name`
     - パスワードなし:`-P ""`
     - 鍵の名前指定:`-f key-name`
-  - [SSH 登録](https://tinyurl.com/yf7trmlh):`ssh-copy-id -i ~/.ssh/key-name.pub remote_url`
+  - [SSH 登録](https://tinyurl.com/yf7trmlh):`ssh-copy-id -i ~/.ssh/key_name.pub remote_url`
     - 直接行う場合は key-name.pub を登録先の ~/.ssh/authorized_keys に追記
+
+      ```bash
+      # クライアント側
+      scp key_name.pub remote_url:~/.ssh
+      # サーバ側
+      cat ~/.ssh/key_name.pub >> ~/.ssh/authorized_keys
+      ```
 
 ## その他
 
