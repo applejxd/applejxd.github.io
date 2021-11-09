@@ -164,6 +164,8 @@ nkf -w before.dat > after.dat
 
       ```bash
       # クライアント側
+      eval `ssh-agent`
+      ssh-add ~/.ssh/key_name
       scp key_name.pub remote_url:~/.ssh
       # サーバ側
       cat ~/.ssh/key_name.pub >> ~/.ssh/authorized_keys
