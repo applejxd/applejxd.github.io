@@ -10,6 +10,7 @@ title: 英語リンク集
   - [Grammarly](https://app.grammarly.com/)
   - [After the Deadline](https://www.polishmywriting.com/)
 - 辞書
+  - [Oxford Learner's Dictionaries](https://www.oxfordlearnersdictionaries.com/)
   - [Thesaurus.com](https://www.thesaurus.com/)
   - [数学・物理オンライン辞典](http://allthingsuniverse.com/mathphysdictionary/index.html)
 - コロケーション
