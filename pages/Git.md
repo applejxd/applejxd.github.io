@@ -24,6 +24,8 @@ git config --global user.email alice@example.com
 ### リモートリポジトリ操作
 
 - リモートリポジトリの登録
+  - [SSH 認証の github 設定](https://zenn.dev/keikuchen/articles/cffa31d69ecaae7e91d7)
+  - 自分の GitHub リポジトリの設定コマンド：`git remote set-url origin github:(user_name)/(repo_name).git`
 
 ```bash
 git remote add origin /url/to/remote/repo
@@ -86,7 +88,7 @@ git fetch origin
 git branch -u origin/main main
 ```
 
-#### リセット
+### リセット
 
 - HEAD だけ削除：`$ git reset --soft @~`
   - コミットを削除・コミット候補は維持
@@ -99,7 +101,7 @@ git branch -u origin/main main
   - ローカルの変更をキャンセル
 - 監視対象外の内容も削除：`$ git clean -df`
 
-#### やり直し
+### やり直し
 
 - [現在のブランチでの実装を別ブランチに移動](https://gist.github.com/koudaiii/526707492ebc5915596e)
 
@@ -150,5 +152,8 @@ git flow release start 0.1.0
 git flow release finish
 ```
 
+## その他
+
+### プラグイン等
 - Vscode 向け
   - GitLens, Git Graph, Git History
