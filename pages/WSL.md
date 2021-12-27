@@ -19,7 +19,7 @@ title: WSL メモ
     ```shell
     $ wsl --set-default-version 2
     ```
-5. 「Ubuntu 18.04」 （安定）をインストール
+5. 「Ubuntu 18.04」をインストール
 6. バージョン確認
     ```shell
     $ wsl -l -v
@@ -40,3 +40,10 @@ title: WSL メモ
     ```bash
     explorer.exe /path/to/file
     ```
+
+## CLion との連携
+
+- ログインシェルを bash のままにする
+    - zsh だと make, compilers が認識しない
+- /etc/wsl.conf を設定する
+    - 設定しないと toolchain の cmake エラー
