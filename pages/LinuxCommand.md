@@ -9,11 +9,13 @@ title: Linux コマンドメモ
 
 ### [find](https://webkaru.net/linux/find-command/)
 
+ファイル名検索
+
 ```bash
 find [検索ディレクトリ] -name [名前]
 ```
 
-- ファイル名検索
+- オプション
   - -delete: 削除もする
   - xargs で渡す
 - [findとxargsの基本的な使い方](https://webkaru.net/linux/find-command/)
@@ -37,6 +39,8 @@ find [検索ディレクトリ] -name [名前]
 
 ### [grep](https://webkaru.net/linux/grep-command/)
 
+テキスト（ファイル内容）検索. パイプでand検索.
+
 ```bash
 grep RegExp
 # pwd 以下のファイルを再帰的に検索
@@ -45,7 +49,6 @@ grep -rl RegExp
 grep RegExp Filename
 ```
 
-- テキスト（ファイル内容）検索. パイプでand検索.
 - 検索オプション
   - -r: カレントディレクトリ以下を再帰的に検索
   - -i: 大文字と小文字の区別をしない
@@ -56,29 +59,38 @@ grep RegExp Filename
   - -h: マッチしたファイル名も表示
   - -v: 文字列を除く行をすべて表示
 - ユースケース集
-- インストールファイル検索：`dpkg -L $package_name | grep $file_name`
+  - インストールファイル検索：`dpkg -L $package_name | grep $file_name`
 
 ## ファイル編集
 
 - データ処理関連は Pandasを使うて手も
 
-### [sed (Stream EDitor)](https://tinyurl.com/yzkfcaxv)
+### [sed (Stream EDitor)](https://www.gnu.org/software/sed/manual/sed.html)
+
+置換処理
 
 ```bash
-sed -e "s/置換条件/置換文字/g"
+sed "s/置換条件/置換文字/g" input.txt > output.txt
 ```
 
-- 置換処理
 - [GNU sed REPL](https://sed.js.org/)：シミュレータ
-- [ユースケース一覧](https://tinyurl.com/ygo2wh2d)
+- [ユースケース一覧](https://qiita.com/hirohiro77/items/7fe2f68781c41777e507)
+- 非オプションパラメータの扱い
+  - スクリプト指定(-e or -f)かない:第1がスクリプト・それ以降は入力ファイル
+  - 入力ファイルの指定がない:標準入力を使用
+- [オプション](https://atmarkit.itmedia.co.jp/ait/spv/1610/17/news015.html)
+  - -e: テキストでスクリプト指定
+  - -f: ファイルでスクリプト指定
+  - -i: inplace (上書き保存)。続いて文字列指定で、指定形式でのバックアップ。
 
 ### [awk](https://tinyurl.com/yhl7mvog)
 
+抽出処理
+  
 ```bash
 awk -F'[,]' -v 'OFS=,' '{print $1, $NF}'
 ```
 
-- 抽出処理
 - [AWK REPL](https://awk.js.org/)：シミュレータ
 - -F: 読み込みデータの区切り文字（複数指定可）
 - -v: 変数指定
@@ -103,11 +115,12 @@ awk -F'[,]' -v 'OFS=,' '{print $1, $NF}'
 
 ### [nkf](https://webkaru.net/linux/nkf-command/)
 
+文字コードを変換して標準出力
+
 ```bash
 nkf -w before.dat > after.dat
 ```
 
-- 文字コードを変換して標準出力
 - 文字コード指定
   - -w: UTF-8
   - -s: Shift_JIS
@@ -155,21 +168,6 @@ nkf -w before.dat > after.dat
   - グループに追加：`sudo usermod -G group username`
   - sudo 権限を追加：`sudo usermod -aG sudo username`
 - グループ確認：`cat /etc/group | grep username`
-- SSH
-  - [SSH 鍵生成](https://tinyurl.com/yhj2odla):`ssh-keygen -t ed25519 -P "" -f key_name`
-    - パスワードなし:`-P ""`
-    - 鍵の名前指定:`-f key-name`
-  - [SSH 登録](https://tinyurl.com/yf7trmlh):`ssh-copy-id -i ~/.ssh/key_name.pub remote_url`
-    - 直接行う場合は key-name.pub を登録先の ~/.ssh/authorized_keys に追記
-
-      ```bash
-      # クライアント側
-      eval `ssh-agent`
-      ssh-add ~/.ssh/key_name
-      scp key_name.pub remote_url:~/.ssh
-      # サーバ側
-      cat ~/.ssh/key_name.pub >> ~/.ssh/authorized_keys
-      ```
 
 ## その他
 
