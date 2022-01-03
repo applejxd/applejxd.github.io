@@ -26,8 +26,9 @@ title: トップページ
 - [Git メモ](pages/Git.md)
   - [GitHub Pages メモ](pages/GitHubPages.md)
 - [Terminal 操作メモ](pages/Terminal.md)
-  - [シェルスクリプトメモ](pages/ShellScript.md)
+- [シェルスクリプトメモ](pages/ShellScript.md)
   - [Linux コマンドメモ](pages/LinuxCommand.md)
+  - [SSH メモ](pages/SSH.md)
 
 ### プログラミング
 

@@ -18,13 +18,12 @@ sudo sed -i 's/.*PubkeyAuthentication.*/PubkeyAuthentication yes/' /etc/ssh/sshd
 sudo systemctl restart sshd
 ```
 
-Windows の場合
+[Windows の場合](https://docs.microsoft.com/ja-jp/windows-server/administration/openssh/openssh_install_firstuse)
 
-```ps1
-Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
-```
+## SSH クライアント設定
 
-## パスワード認証
+[.ssh/config の設定](https://koejima.com/archives/583/)。
+ワイルドカードを使って基本設定をする。
 
 ## 公開鍵認証
 
@@ -60,6 +59,46 @@ sudo chmod 600 ~/.ssh/*
 
 ## 多段 SSH
 
+[ProxyCommand の設定方法](https://dev.classmethod.jp/articles/bastion-multi-stage-ssh-only-local-pem/)
+
+```bash
+Host bastion
+  HostName 192.168.x.x
+  Port 22
+  User bation_user
+  # ローカル端末に保存した、踏み台サーバの秘密鍵のパス指定
+  IdentityFile ~/.ssh/bation_key
+
+Host private
+  HostName 192.168.x.x
+  Port 22
+  User private_user
+  # ローカル端末に保存した、プライベートサーバの秘密鍵のパス指定
+  IdentityFile ~/.ssh/private_key
+  # 踏み台サーバを経由してログイン
+  ProxyCommand ssh bastion -W %h:%p
+```
       
 ## ポートフォワーディング
 
+Windows での設定
+
+1. [ポート解放](https://qiita.com/taro0219/items/cac50f7bec48c7f5cc6d)
+2. [FW 設定](https://kagasu.hatenablog.com/entry/2018/01/29/184205)
+
+```ps1
+# ポート解放
+netsh advfirewall firewall add rule name="sshd" dir=in action=allow protocol=TCP localport=2222 profile=private
+
+# ファイアウォール確認
+netsh advfirewall firewall show rule name="sshd"
+
+# FW 設定追加
+netsh interface portproxy add v4tov4 listenport=2222 connectport=22 connectaddress=192.168.0.20
+
+# FW 設定確認
+netsh interface portproxy show all
+
+# FE 設定削除
+netsh interface portproxy delete v4tov4 listenport=2222
+```
