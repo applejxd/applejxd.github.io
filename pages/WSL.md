@@ -43,7 +43,14 @@ title: WSL メモ
 
 ## CLion との連携
 
-- ログインシェルを bash のままにする
-    - zsh だと make, compilers が認識しない
-- /etc/wsl.conf を設定する
-    - 設定しないと toolchain の cmake エラー
+- ログインシェルは bash のまま: zsh だと make, compilers が認識しない
+    - ターミナルソフト側でシェルを変更
+- /etc/wsl.conf を設定: 設定しないと toolchain の cmake エラー
+
+## Docker
+
+```bash
+# サービス開始
+sudo service docker start
+```
+
