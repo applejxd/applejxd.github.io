@@ -170,10 +170,12 @@ nkf -w before.dat > after.dat
 - グループ管理
 
   ```bash
-  # グループに追加
-  sudo usermod -G group $USER
+  # セカンダリグループに group を追記
+  sudo usermod -aG group $USER
   # sudo 権限を追加
   sudo usermod -aG sudo username
+  # docker を sudo なしで実行できるようにする
+  sudo usermod -aG docker username
 
   # ユーザのグループ確認
   cat /etc/group | grep $USER
