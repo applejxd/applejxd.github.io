@@ -161,14 +161,28 @@ nkf -w before.dat > after.dat
 
 ## ユーザー処理
 
-- ユーザー追加:`sudo useradd -s /bin/bash -m username`
-  - ワンライナーで追加： シェル指定・ホームディレクトリ付き
+- ユーザー管理
+  - ワンライナーで追加：`sudo useradd -m -s /bin/bash username`
+    - -m オプション：ホームディレクトリ作成
+    - -s オプション：ログインシェル指定
   - ウィザードで追加：`sudo adduser username`
   - ユーザー削除：`sudo userdel -r username`
-  - グループに追加：`sudo usermod -G group username`
-  - sudo 権限を追加：`sudo usermod -aG sudo username`
-- グループ確認：`cat /etc/group | grep username`
+- グループ管理
 
+  ```bash
+  # セカンダリグループに group を追記
+  sudo usermod -aG group $USER
+  # sudo 権限を追加
+  sudo usermod -aG sudo username
+  # docker を sudo なしで実行できるようにする
+  sudo usermod -aG docker username
+
+  # ユーザのグループ確認
+  cat /etc/group | grep $USER
+  # グループのユーザ確認
+  cat /etc/group | grep sudo
+  ```
+  
 ## その他
 
 ```shell
