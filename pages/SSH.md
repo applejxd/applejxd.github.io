@@ -20,6 +20,11 @@ sudo systemctl restart sshd
 
 [Windows の場合](https://docs.microsoft.com/ja-jp/windows-server/administration/openssh/openssh_install_firstuse)
 
+```bash
+# sshd 起動
+Start-Service sshd
+```
+
 ## SSH クライアント設定
 
 [.ssh/config の設定](https://koejima.com/archives/583/)。
