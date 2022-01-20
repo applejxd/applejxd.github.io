@@ -75,12 +75,19 @@ Host bastion
   IdentityFile ~/.ssh/bation_key
 
 Host private
-  HostName 192.168.x.x
+  HostName 192.168.y.y
   Port 22
   User private_user
   # ローカル端末に保存した、プライベートサーバの秘密鍵のパス指定
   IdentityFile ~/.ssh/private_key
   # 踏み台サーバを経由してログイン
+  ProxyCommand ssh bastion -W %h:%p
+
+Host docker
+  HostName localhost
+  Port 2222
+  User private_user
+  IdentityFile ~/.ssh/docker_key
   ProxyCommand ssh bastion -W %h:%p
 ```
       
