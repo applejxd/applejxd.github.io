@@ -50,6 +50,11 @@ title: WSL メモ
     sudo service docker restart
     ```
     
+- GUI 連携
+    - 「ファイアウォールとネットワーク保護」→「ファイアウォールによるアプリケーションの許可」
+      →「VcXsrv windows server」→パブリックを許可
+    - 適切に DISPLAY 変数を定義
+    
 ## CLion との連携
 
 - ログインシェルは bash のまま: zsh だと make, compilers が認識しない
