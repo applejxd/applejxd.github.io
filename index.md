@@ -12,21 +12,23 @@ title: トップページ
 
 ### 環境構築
 
-- [Windows メモ](pages/Windows.md)
-  - [WSL メモ](pages/WSL.md)
-  - [Powershell メモ](pages/PowerShell.md)
-  - [セットアップ(GitHub)](https://github.com/applejxd/windows-setup)
-- [Mac メモ](pages/Mac.md)
-- [VPN 設定メモ](pages/VPN.md)
 - [開発環境メモ](pages/Preferences.md)
-  - [dotfiles for Mac/Linux/WSL (GitHub)](https://github.com/applejxd/dotfiles)
+- [VPN 設定メモ](pages/VPN.md)
+- [Windows 設定 (GitHub)](https://github.com/applejxd/windows-setup)
+- [dotfiles (GitHub)](https://github.com/applejxd/dotfiles)
 
 ### 開発全般
 
 - [Git メモ](pages/Git.md)
   - [GitHub Pages メモ](pages/GitHubPages.md)
 - [Terminal 操作メモ](pages/Terminal.md)
-- [シェルスクリプトメモ](pages/ShellScript.md)
+- [Windows メモ](pages/Windows.md)
+  - [WSL メモ](pages/WSL.md)
+  - [Powershell メモ](pages/PowerShell.md)
+- [Mac メモ](pages/Mac.md)
+- Linux メモ
+  - [Linux サーバメモ](pages/LinuxServer.md)
+  - [シェルスクリプトメモ](pages/ShellScript.md)
   - [Linux コマンドメモ](pages/LinuxCommand.md)
   - [SSH メモ](pages/SSH.md)
 
