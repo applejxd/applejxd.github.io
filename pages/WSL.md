@@ -28,6 +28,7 @@ title: WSL メモ
 ## WSL 特有の操作
 
 - [Cドライブ以外をマウント](https://xn--v6q832hwdkvom.com/post/wsl%E3%81%A7%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%E3%82%92%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%88%E3%81%99%E3%82%8B/)
+
     ```bash
     # マウントポイント作成
     $ sudo mkdir /mnt/mount_point
@@ -36,14 +37,34 @@ title: WSL メモ
     # マウント状況確認
     $ mount
     ```
+    
 - Windows 上でファイルを開く
+
     ```bash
     explorer.exe /path/to/file
     ```
-
+    
+- systemctl が使えない → upstart させる
+    
+    ```bash
+    sudo service docker restart
+    ```
+    
+- GUI 連携
+    - 「ファイアウォールとネットワーク保護」→「ファイアウォールによるアプリケーションの許可」
+      →「VcXsrv windows server」→パブリックを許可
+    - 適切に DISPLAY 変数を定義
+    
 ## CLion との連携
 
-- ログインシェルを bash のままにする
-    - zsh だと make, compilers が認識しない
-- /etc/wsl.conf を設定する
-    - 設定しないと toolchain の cmake エラー
+- ログインシェルは bash のまま: zsh だと make, compilers が認識しない
+    - ターミナルソフト側でシェルを変更
+- /etc/wsl.conf を設定: 設定しないと toolchain の cmake エラー
+
+## Docker
+
+```bash
+# サービス開始
+sudo service docker start
+```
+

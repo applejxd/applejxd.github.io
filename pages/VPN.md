@@ -4,8 +4,8 @@ title: VPN 設定メモ
 
 ## 目標
 
-集合住宅タイプのインターネット契約でグローバルIPの割当がない状況で、
-自宅のネットワークを利用する。
+(「集合住宅タイプのインターネット契約」や WiMAX 利用など)
+グローバルIPの割当がない状況で自宅のネットワークを利用する。
 
 ## 構成
 
@@ -22,13 +22,13 @@ title: VPN 設定メモ
     - TCP ポート 443, UDP ポート 500・4500 開放
 3. VPS サーバに SoftEther VPN Server をインストール（[インストールスクリプト](https://github.com/applejxd/softether-setup)）
 4. 自宅内サーバに SoftEther VPN Bridge・Server Manager をインストール（[ダウンロードリンク](https://www.softether-download.com/ja.aspx?product=softether)）
-5. Server Manager から VPS サーバを設定
+5. VPS サーバを設定 (from Server Manager)
     - 仮想 HUB 作成 → ブリッジ用とクライアント用で別々のユーザを作成 → SecureNat 有効化（1. で設計したアドレスを指定）
     - IPsec/L2TP 設定（セキュリティのため必ず事前共有キーは変更）
     - ローカルブリッジ設定（「新しい tap デバイスとのブリッジ接続」）
-6. Server Manager から 自宅サーバ（localhost） を設定
+6. 自宅サーバ（localhost） を設定 (from Server Manager )
     - 仮想 HUB 作成 → カスケード接続設定
-    - ローカルブリッジ設定
+    - ローカルブリッジ設定 (LANカードへブリッジするため有線接続必須)
 7. 自宅内ネットワークのルータの設定変更
     - 上記 1. に応じてルータのアドレスとDHCPの設定変更
 
