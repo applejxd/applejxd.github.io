@@ -171,6 +171,27 @@ nkf -w before.dat > after.dat
       cat ~/.ssh/key_name.pub >> ~/.ssh/authorized_keys
       ```
 
+## 自動化関連
+
+### 自動入力・自動実行
+
+- [expect](https://qiita.com/ine1127/items/cd6bc91174635016db9b)：ルールに従って自動入力
+- [trap](https://tm.root-n.com/programming:shell_script:command:trap)：シグナル（Ctrl+C等）をトリガーとしてコマンド実行
+  - [EXIT](https://shellscript.sunone.me/signal_and_trap.html)：プロセス終了時に実行
+  - [mktemp の一時ファイルを削除するイディオム](https://mahata.wordpress.com/2017/11/20/%E4%B8%80%E6%99%82%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E7%A2%BA%E5%AE%9F%E3%81%AB%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/)
+  
+  ```bash
+  tmp_file=$(mktemp)
+  trap 'rm -f "$temp_file"' EXIT HUP INT QUIT TERM
+  ```
+
+### ファイル操作
+
+- mktemp：一時ファイル生成
+  - 生成ファイルはユニーク
+  - 生成先は /tmp (再起動時に削除・10日間で未使用ファイル削除)
+  - 削除は上記 trap コマンドを使用するイディオムを活用
+
 ## その他
 
 ```shell

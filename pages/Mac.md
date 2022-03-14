@@ -1,16 +1,17 @@
 ---
 title: Mac メモ
 ---
-
+  
 ## M1 Mac 設定
 
-- [Terminal の Rosetta 解除](https://bit.ly/3iUT5aH)
+- [クリーンインストール](https://support.apple.com/ja-jp/guide/mac-help/mchl7676b710/12.0/mac/12.0)：「システム環境設定」＞「すべてのコンテンツと設定を消去」
+- [Terminal の Rosetta 解除](https://hkmc.jp/note/mac/not_become_arm64.html)
   - ログインシェルが x86_64 になっていないか？
 
-```bash
-brew uninstall zsh
-chsh -s /bin/zsh
-```
+  ```bash
+  brew uninstall zsh
+  chsh -s /bin/zsh
+  ```
 
 ## iOS アプリ開発
 
