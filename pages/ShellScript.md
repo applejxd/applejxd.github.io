@@ -85,6 +85,15 @@ source <(curl -L https://raw.githubusercontent.com/applejxd/dotfiles/master/depl
     ```
 
 - WSL
+  - Distrod にも対応
+
+    ```bash
+    if [[ "$(uname -r)" == *microsoft* ]]; then
+        command
+    fi
+    ```
+
+  - 通常の Ubuntu ディストリビューションのみ
 
     ```bash
     if [[ -f /proc/sys/fs/binfmt_misc/WSLInterop ]]; then

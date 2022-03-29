@@ -6,23 +6,30 @@ title: WSL メモ
 
 0. [コマンドで有効化](https://docs.microsoft.com/ja-jp/windows/wsl/install-win10), appwiz.cpl (Win+R)
 1. WSL1 有効化
+
     ```shell
-    $ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
     ```
+
 2. WSL2 に必要な設定
+
     ```shell
-    $ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+    dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
     ```
+
 3. [Linux カーネルの更新](https://docs.microsoft.com/ja-jp/windows/wsl/wsl2-kernel)
 ：[コマンドで実施？](https://news.mynavi.jp/article/20200620-1059833/)
 4. 再起動して ver. 2 をデフォルトに
+
     ```shell
-    $ wsl --set-default-version 2
+    wsl --set-default-version 2
     ```
+
 5. 「Ubuntu 18.04」をインストール
 6. バージョン確認
+
     ```shell
-    $ wsl -l -v
+    wsl -l -v
     ```
 
 ## WSL 特有の操作
@@ -37,28 +44,28 @@ title: WSL メモ
     # マウント状況確認
     $ mount
     ```
-    
+
 - Windows 上でファイルを開く
 
     ```bash
     explorer.exe /path/to/file
     ```
-    
+
 - systemctl が使えない → upstart させる
-    
+
     ```bash
     sudo service docker restart
     ```
-    
+
 - GUI 連携
-    - 「ファイアウォールとネットワーク保護」→「ファイアウォールによるアプリケーションの許可」
+  - 「ファイアウォールとネットワーク保護」→「ファイアウォールによるアプリケーションの許可」
       →「VcXsrv windows server」→パブリックを許可
-    - 適切に DISPLAY 変数を定義
-    
+  - 適切に DISPLAY 変数を定義
+
 ## CLion との連携
 
 - ログインシェルは bash のまま: zsh だと make, compilers が認識しない
-    - ターミナルソフト側でシェルを変更
+  - ターミナルソフト側でシェルを変更
 - /etc/wsl.conf を設定: 設定しないと toolchain の cmake エラー
 
 ## Docker
@@ -67,4 +74,3 @@ title: WSL メモ
 # サービス開始
 sudo service docker start
 ```
-
