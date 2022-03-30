@@ -87,16 +87,16 @@ source <(curl -L https://raw.githubusercontent.com/applejxd/dotfiles/master/depl
 - WSL
     ```bash
     # WSL2 のみ真
-    [[ "$(uname -r)" == *microsoft* ]]
+    [[ "$(uname -r)" =~ microsoft ]]
     
     # WSL2 のみ真
-    [[ "$(uname -r)" == *WSL2 ]]
+    [[ "$(uname -r)" =~ WSL2 ]]
     
     # WSL1 のみ真
-    [[ "$(uname -r)" == *Microsoft ]]
+    [[ "$(uname -r)" =~ Microsoft ]]
     
     # WSL1/WSL2/Distrod で真
-    [[ "$(uname -r)" == *(M|m)icrosoft* ]]
+    [[ "$(uname -r)" =~ (M|m)icrosoft ]]
     
     # Distrod 以外
     [[ -f /proc/sys/fs/binfmt_misc/WSLInterop ]]
