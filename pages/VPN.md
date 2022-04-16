@@ -9,27 +9,37 @@ title: VPN 設定メモ
 
 ## 構成
 
-- VPN 設定に SoftEther VPN を利用
 - VPN サーバとなる VPS サーバ（AWS Lightsail など）
-- VPN ブリッジとなる自宅内サーバ
+    - SoftEther VPN Server 利用
+- VPN のブリッジ用自宅サーバ (Raspberry Pi や Windows PC など)
+    - SoftEther VPN Server または SoftEther VPN Bridge を使用
+    - [VPN Bridge は VPN Server の機能制限版。](https://ja.softether.org/4-docs/1-manual/5/5.3_Differences_between_VPN_Server_and_VPN_Bridge)
+      VPN Bridge はブリッジ拠点構成の最小版で、VPN Server と接続する単一の仮想HUBとローカルブリッジ機能を持つ。
 - VPN クライアントは L2TP で接続
+- リモートサーバの SoftEther VPN の設定はローカルの SoftEther VPN Server Manager で実施
 
 ## 手順
 
-1. ネットワーク設計を行う・IP アドレスの割当決定（[設計例](https://dsp74118.blogspot.com/2016/02/vpssoftether-vpnlan.html)）
-2. VPS サーバ立ち上げ（[AWS Lightsail を使う場合](https://www.episode02.com/entry/2018/10/03/230945)）
+1. ネットワーク設計を行う・LAN IP アドレスの割当決定（[設計例](https://dsp74118.blogspot.com/2016/02/vpssoftether-vpnlan.html)）
+    - ゲートウェイの IP アドレス
+    - VPN サーバの IP アドレス (Secure NAT の仮想 NIC)
+    - VPN ブリッジ用サーバの IP アドレス
+3. VPS サーバ構築（[AWS Lightsail を使う場合](https://www.episode02.com/entry/2018/10/03/230945)）
     - 静的 IP の割当を実施
     - TCP ポート 443, UDP ポート 500・4500 開放
-3. VPS サーバに SoftEther VPN Server をインストール（[インストールスクリプト](https://github.com/applejxd/softether-setup)）
-4. 自宅内サーバに SoftEther VPN Bridge・Server Manager をインストール（[ダウンロードリンク](https://www.softether-download.com/ja.aspx?product=softether)）
-5. VPS サーバを設定 (from Server Manager)
+    - [SoftEther VPN Server 構築スクリプト](https://github.com/applejxd/softether-setup)
+4. VPN ブリッジ用自宅サーバ構築
+    - [SoftEther VPN Server 構築スクリプト](https://github.com/applejxd/softether-setup)
+6. 自宅 PC に[SoftEther VPN Server Manager](https://www.softether-download.com/ja.aspx?product=softether)をインストール
+7. VPN サーバ設定 (from Server Manager)
     - 仮想 HUB 作成 → ブリッジ用とクライアント用で別々のユーザを作成 → SecureNat 有効化（1. で設計したアドレスを指定）
+    - 上記仮想 HUB に VPN クライアントと VPN ブリッジ用サーバのユーザを作成 (VPN ブリッジ用サーバは固有証明書認証を推奨)
     - IPsec/L2TP 設定（セキュリティのため必ず事前共有キーは変更）
     - ローカルブリッジ設定（「新しい tap デバイスとのブリッジ接続」）
-6. 自宅サーバ（localhost） を設定 (from Server Manager )
-    - 仮想 HUB 作成 → カスケード接続設定
+8. VPN ブリッジ用サーバを設定 (from Server Manager)
+    - 仮想 HUB 作成 → カスケード接続設定 (ホスト名：静的IP, ポート番号:5555, ユーザ認証：クライアント証明書認証)
     - ローカルブリッジ設定 (LANカードへブリッジするため有線接続必須)
-7. 自宅内ネットワークのルータの設定変更
+9. 自宅内ネットワークのルータの設定変更
     - 上記 1. に応じてルータのアドレスとDHCPの設定変更
 
 ## その他参考リンク
