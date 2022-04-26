@@ -19,6 +19,8 @@ title: Linux サーバメモ
   sudo usermod -aG sudo username
   # docker を sudo なしで実行できるようにする
   sudo usermod -aG docker username
+  # RDP 接続可能にする
+  sudo usermod -aG xrdp username
 
   # ユーザのグループ確認
   cat /etc/group | grep $USER
@@ -37,6 +39,6 @@ neofetch
 # 記憶容量確認 (h オプションで単位を調整)
 df -h
 
-# メモリ確認 (m オプションでメガ単位で表示)
-free -m
+# メモリ確認 (h オプションで単位を調整)
+free -h
 ```
