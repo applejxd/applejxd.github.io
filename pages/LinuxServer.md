@@ -30,6 +30,9 @@ title: Linux サーバメモ
 
 ## NAS マウント
 
+自動でマウントする場合は /etc/fstab に設定を記載。
+(cf. [起動時にCIFS自動マウント](http://www.profaim.jp/tools/soft/linux/auto_mnt.php))
+
 ```bash
 # for mount.cifs
 sudo apt-get install -y cifs-utils
