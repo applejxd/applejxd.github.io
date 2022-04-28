@@ -85,18 +85,20 @@ source <(curl -L https://raw.githubusercontent.com/applejxd/dotfiles/master/depl
     ```
 
 - WSL
-  - Distrod にも対応
 
     ```bash
-    if [[ "$(uname -r)" == *microsoft* ]]; then
-        command
-    fi
-    ```
-
-  - 通常の Ubuntu ディストリビューションのみ
-
-    ```bash
-    if [[ -f /proc/sys/fs/binfmt_misc/WSLInterop ]]; then
-        command
-    fi
+    # WSL2 のみ真
+    [[ "$(uname -r)" =~ microsoft ]]
+    
+    # WSL2 のみ真
+    [[ "$(uname -r)" =~ WSL2 ]]
+    
+    # WSL1 のみ真
+    [[ "$(uname -r)" =~ Microsoft ]]
+    
+    # WSL1/WSL2/Distrod で真
+    [[ "$(uname -r)" =~ (M|m)icrosoft ]]
+    
+    # Distrod 以外
+    [[ -f /proc/sys/fs/binfmt_misc/WSLInterop ]]
     ```

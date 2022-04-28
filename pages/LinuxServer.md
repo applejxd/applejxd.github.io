@@ -19,6 +19,8 @@ title: Linux サーバメモ
   sudo usermod -aG sudo username
   # docker を sudo なしで実行できるようにする
   sudo usermod -aG docker username
+  # RDP 接続可能にする
+  sudo usermod -aG xrdp username  
 
   # ユーザのグループ確認
   cat /etc/group | grep $USER
