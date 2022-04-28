@@ -49,4 +49,7 @@ df -h
 
 # メモリ確認 (h オプションで単位を調整)
 free -h
+
+# CPU 温度
+vcgencmd measure_temp
 ```
