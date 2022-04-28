@@ -26,6 +26,16 @@ title: Linux サーバメモ
   cat /etc/group | grep sudo
   ```
 
+## NAS マウント
+
+```bash
+# for mount.cifs
+sudo apt-get install -y cifs-utils
+
+# mode 指定はファイルの書込み等のために必要。vers は SMB 2.0 に対して必要。
+sudo mount -t cifs //nas_ip/hoge $HOME/mnt/hoge -o username=fuga,password=piyo,file_mode=0777,dir_mode=0777,vers=2.0
+```
+
 ## モニタリング
 
 - [Linux 負荷監視コマンドまとめ](https://qiita.com/aosho235/items/c4d6995743dd1dac16e1)
