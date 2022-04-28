@@ -32,7 +32,7 @@ title: Linux サーバメモ
 # for mount.cifs
 sudo apt-get install -y cifs-utils
 
-# mode 指定はファイルの書込み等のために必要。vers は SMB 2.0 に対して必要。
+# mode 指定はファイルの書込み等のために必要. vers は SMB 2.0 に対して必要.
 sudo mount -t cifs //nas_ip/hoge $HOME/mnt/hoge -o username=fuga,password=piyo,file_mode=0777,dir_mode=0777,vers=2.0
 ```
 
