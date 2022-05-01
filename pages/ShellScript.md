@@ -85,6 +85,7 @@ source <(curl -L https://raw.githubusercontent.com/applejxd/dotfiles/master/depl
     ```
 
 - WSL
+
     ```bash
     # WSL2 のみ真
     [[ "$(uname -r)" =~ microsoft ]]

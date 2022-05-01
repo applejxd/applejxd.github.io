@@ -20,7 +20,7 @@ title: Linux サーバメモ
   # docker を sudo なしで実行できるようにする
   sudo usermod -aG docker username
   # RDP 接続可能にする
-  sudo usermod -aG xrdp username
+  sudo usermod -aG xrdp username  
 
   # ユーザのグループ確認
   cat /etc/group | grep $USER
@@ -28,10 +28,19 @@ title: Linux サーバメモ
   cat /etc/group | grep sudo
   ```
 
-## SMB サーバマウント
+## NAS マウント
 
+自動でマウントする場合は /etc/fstab に設定を記載。
+(cf. [起動時にCIFS自動マウント](http://www.profaim.jp/tools/soft/linux/auto_mnt.php))
 
-  
+```bash
+# for mount.cifs
+sudo apt-get install -y cifs-utils
+
+# mode 指定はファイルの書込み等のために必要. vers は SMB 2.0 に対して必要.
+sudo mount -t cifs //nas_ip/hoge $HOME/mnt/hoge -o username=fuga,password=piyo,file_mode=0777,dir_mode=0777,vers=2.0
+```
+
 ## モニタリング
 
 - [Linux 負荷監視コマンドまとめ](https://qiita.com/aosho235/items/c4d6995743dd1dac16e1)
@@ -45,4 +54,7 @@ df -h
 
 # メモリ確認 (h オプションで単位を調整)
 free -h
+
+# CPU 温度
+vcgencmd measure_temp
 ```
