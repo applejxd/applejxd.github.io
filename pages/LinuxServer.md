@@ -28,6 +28,10 @@ title: Linux サーバメモ
   cat /etc/group | grep sudo
   ```
 
+## SMB サーバマウント
+
+
+  
 ## モニタリング
 
 - [Linux 負荷監視コマンドまとめ](https://qiita.com/aosho235/items/c4d6995743dd1dac16e1)
