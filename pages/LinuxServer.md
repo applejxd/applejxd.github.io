@@ -58,3 +58,4 @@ free -h
 # CPU 温度
 vcgencmd measure_temp
 ```
+>>>>>>> Stashed changes
