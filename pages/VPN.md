@@ -22,8 +22,8 @@ title: VPN 設定メモ
     - SoftEther VPN Server または SoftEther VPN Bridge を使用
     - [VPN Bridge は VPN Server の機能制限版。](https://ja.softether.org/4-docs/1-manual/5/5.3_Differences_between_VPN_Server_and_VPN_Bridge)
       VPN Bridge はブリッジ拠点構成の最小版で、VPN Server と接続する単一の仮想HUBとローカルブリッジ機能を持つ。
-- VPN クライアントは L2TP で接続
-- リモートサーバの SoftEther VPN の設定はローカルの SoftEther VPN Server Manager で実施
+- VPN クライアント (L2TP で接続)
+- SoftEther VPN Server Manager 用ローカル PC
 
 ## 手順
 

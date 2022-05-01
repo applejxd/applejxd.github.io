@@ -27,7 +27,13 @@ title: Linux サーバメモ
   # グループのユーザ確認
   cat /etc/group | grep sudo
   ```
+## ネットワーク設定
 
+- 固定 IP などの設定は netplan で
+  - Ubuntu の旧方式は /etc/network/interfaces て設定していた  - [ユーザ設定は /etc/netplan/99-manual.yaml に](https://qiita.com/yas-nyan/items/9033fb1d1037dcf9dba5)
+  - 更新処理は `sudo netplan apply`
+
+ 
 ## NAS マウント
 
 自動でマウントする場合は /etc/fstab に設定を記載。
@@ -58,4 +64,3 @@ free -h
 # CPU 温度
 vcgencmd measure_temp
 ```
->>>>>>> Stashed changes
