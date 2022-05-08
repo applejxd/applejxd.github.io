@@ -30,7 +30,7 @@ title: Linux サーバメモ
 
 ## ネットワーク設定
 
-- 固定 IP などの設定は netplan で
+- 固定 IP などの設定は [netplan](https://www.komee.org/entry/2018/06/12/181400) で
   - Ubuntu の旧方式は /etc/network/interfaces て設定していた
   - [ユーザ設定は /etc/netplan/99-manual.yaml に](https://qiita.com/yas-nyan/items/9033fb1d1037dcf9dba5)
   - 更新処理は `sudo netplan apply`
