@@ -27,12 +27,14 @@ title: Linux サーバメモ
   # グループのユーザ確認
   cat /etc/group | grep sudo
   ```
-## ネットワーク設定
+
+## ネットワーク設定
 
 - 固定 IP などの設定は netplan で
-  - Ubuntu の旧方式は /etc/network/interfaces て設定していた  - [ユーザ設定は /etc/netplan/99-manual.yaml に](https://qiita.com/yas-nyan/items/9033fb1d1037dcf9dba5)
+  - Ubuntu の旧方式は /etc/network/interfaces て設定していた
+  - [ユーザ設定は /etc/netplan/99-manual.yaml に](https://qiita.com/yas-nyan/items/9033fb1d1037dcf9dba5)
   - 更新処理は `sudo netplan apply`
-
+- NIC へ IPv4 アドレスの自動割当（DHCPv4 クライアント有効化）は `sudo dhclient hoge` で
  
 ## NAS マウント
 
