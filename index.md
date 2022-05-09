@@ -57,6 +57,3 @@ title: トップページ
 - [英語リンク集](pages/English.md)
 - [リンク集](pages/Links.md)
 
-## その他メモ
-
-- [ミンサガ攻略](pages/Memo/ミンサガ.md)
