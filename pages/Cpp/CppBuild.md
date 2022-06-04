@@ -39,6 +39,7 @@ alias -s {c,cpp}='runcpp'
 
 ## CMake
 
+- [最新版のビルド・インストール方法](https://cmake.org/install/)
 - [同一階層のC++ソースファイルを全てターゲットに追加する](https://gist.github.com/applejxd/111ad0f3dcdebbb6a269759e8cf25bd5)
 
 ### 実行方法
