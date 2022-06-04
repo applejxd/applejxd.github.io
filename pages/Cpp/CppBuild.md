@@ -45,11 +45,22 @@ alias -s {c,cpp}='runcpp'
 
 - ビルド・インストール
 
-```shell
-mkdir build && cd build
-cmake .. && make -j$(nproc)
-sudo make install
-```
+  ```shell
+  mkdir build && cd build
+  cmake .. && make -j$(nproc)
+  sudo make install
+  ```
+
+  CMake>=3.15からは以下が可能
+  
+  ```bash
+  mkdir ./project/build
+  cmake -S ./project -B ./project/build
+  cmake --build ./project/build
+  sudo cmake --install ./project/build 
+  ```
+  
+  その他詳細は[こちら](https://qiita.com/osamu0329/items/0a72ee32ee6934a7edf7)
 
 - アンインストール：`xargs sudo rm -rf < install_manifest.txt`
 
