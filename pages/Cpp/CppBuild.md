@@ -4,6 +4,9 @@ title: C++ ビルドメモ
 
 ## リンク
 
+- CMakeLitst.txt の例
+  - [フォルダ名からプロジェクト名・ターゲット名自動生成](https://gist.github.com/applejxd/3283739b41de073f3cde07771e48be75)
+  - [同一階層のC++ソースファイルを全てターゲットに追加する](https://gist.github.com/applejxd/111ad0f3dcdebbb6a269759e8cf25bd5)
 - コンパイラオプション
   - [プログラム高速化の禁術](https://tinyurl.com/y8rfnqjh)
   - [警告オプション](https://tinyurl.com/yhjbpj2d)
@@ -39,9 +42,7 @@ alias -s {c,cpp}='runcpp'
 
 ## CMake
 
-- [最新版のビルド・インストール方法](https://cmake.org/install/)
-- [フォルダ名からプロジェクト名・ターゲット名自動生成](https://gist.github.com/applejxd/3283739b41de073f3cde07771e48be75)
-- [同一階層のC++ソースファイルを全てターゲットに追加する](https://gist.github.com/applejxd/111ad0f3dcdebbb6a269759e8cf25bd5)
+[最新版のビルド・インストール方法](https://cmake.org/install/)
 
 ### 実行方法
 
