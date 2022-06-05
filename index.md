@@ -36,7 +36,7 @@ title: トップページ
 
 - [アルゴリズムメモ](pages/Algorithm.md)
 - [C++ コーディングメモ](pages/Cpp/Cpp.md)
-  - [C++ ビルドメモ](pages/Cpp/CppBuild.md)
+  - [CMake & C++ ビルドメモ](pages/Cpp/CppBuild.md)
   - [C++ デバッグ/エラー処理](pages/Cpp/CppDebug.md)
   - [Doxygen メモ](pages/Cpp/Doxygen.md)
   - [C++ オブジェクト指向メモ](pages/Cpp/CppObject.md)
