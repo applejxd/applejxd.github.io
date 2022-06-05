@@ -46,7 +46,6 @@ title: トップページ
 - [Python メモ](pages/Python/Python.md)
   - [Google Colaboratory (GitHub)](https://github.com/applejxd/colaboratory)
   - [Sphinx メモ](pages/Python/Sphinx.md)
-  - [データ型逆引きノート](https://github.com/applejxd/colaboratory/blob/master/DataTypes.ipynb)
   - [LightGBM で時系列データ分析](pages/Python/LightGBM.md)
 - [JVM メモ](pages/JVM.md)
 
