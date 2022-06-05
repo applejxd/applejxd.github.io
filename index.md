@@ -44,9 +44,9 @@ title: トップページ
   - [OpenCV メモ](pages/Cpp/OpenCV.md)
   - [C++ ライブラリメモ](pages/Cpp/CppLibrary.md)
 - [Python メモ](pages/Python/Python.md)
+  - [Google Colaboratory (GitHub)](https://github.com/applejxd/colaboratory)
   - [Sphinx メモ](pages/Python/Sphinx.md)
   - [データ型逆引きノート](https://github.com/applejxd/colaboratory/blob/master/DataTypes.ipynb)
-  - [Google Colaboratory (GitHub)](https://github.com/applejxd/colaboratory)
   - [LightGBM で時系列データ分析](pages/Python/LightGBM.md)
 - [JVM メモ](pages/JVM.md)
 
