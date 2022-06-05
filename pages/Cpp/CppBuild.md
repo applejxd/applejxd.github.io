@@ -1,5 +1,5 @@
 ---
-title: C++ ビルドメモ
+title: CMake & C++ ビルドメモ
 ---
 
 ## CMake
