@@ -12,10 +12,10 @@ title: トップページ
 
 ### 環境構築
 
+- [dotfiles (GitHub)](https://github.com/applejxd/dotfiles)
+- [Windows 設定 (GitHub)](https://github.com/applejxd/windows-setup)
 - [開発環境メモ](pages/Preferences.md)
 - [VPN 設定メモ](pages/VPN.md)
-- [Windows 設定 (GitHub)](https://github.com/applejxd/windows-setup)
-- [dotfiles (GitHub)](https://github.com/applejxd/dotfiles)
 
 ### 開発全般
 
