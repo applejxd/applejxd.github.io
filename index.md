@@ -34,7 +34,6 @@ title: トップページ
 
 ### プログラミング
 
-- [アルゴリズムメモ](pages/Algorithm.md)
 - [C++ コーディングメモ](pages/Cpp/Cpp.md)
   - [CMake & C++ ビルドメモ](pages/Cpp/CppBuild.md)
   - [Doxygen メモ](pages/Cpp/Doxygen.md)
