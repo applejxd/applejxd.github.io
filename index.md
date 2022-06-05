@@ -19,18 +19,18 @@ title: トップページ
 
 ### 開発全般
 
-- [Git メモ](pages/Git.md)
-  - [GitHub Pages メモ](pages/GitHubPages.md)
-- [Terminal 操作メモ](pages/Terminal.md)
-- [Windows メモ](pages/Windows.md)
-  - [WSL メモ](pages/WSL.md)
-  - [Powershell メモ](pages/PowerShell.md)
-- [Mac メモ](pages/Mac.md)
 - Linux メモ
   - [Linux サーバメモ](pages/LinuxServer.md)
   - [シェルスクリプトメモ](pages/ShellScript.md)
   - [Linux コマンドメモ](pages/LinuxCommand.md)
   - [SSH メモ](pages/SSH.md)
+- [Windows メモ](pages/Windows.md)
+  - [Powershell メモ](pages/PowerShell.md)
+  - [WSL メモ](pages/WSL.md)
+- [Mac メモ](pages/Mac.md)
+- [Git メモ](pages/Git.md)
+  - [GitHub Pages メモ](pages/GitHubPages.md)
+- [Terminal 操作メモ](pages/Terminal.md)
 
 ### プログラミング
 
