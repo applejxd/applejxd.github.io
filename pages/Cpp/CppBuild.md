@@ -2,8 +2,9 @@
 title: C++ ビルドメモ
 ---
 
-## リンク
+## CMake
 
+- [最新版のビルド・インストール方法](https://cmake.org/install/)
 - CMakeLitst.txt の例
   - [フォルダ名からプロジェクト名・ターゲット名自動生成](https://gist.github.com/applejxd/3283739b41de073f3cde07771e48be75)
   - [同一階層のC++ソースファイルを全てターゲットに追加する](https://gist.github.com/applejxd/111ad0f3dcdebbb6a269759e8cf25bd5)
@@ -14,16 +15,6 @@ title: C++ ビルドメモ
   - [現代的な cmake スクリプト](https://tinyurl.com/yfmlbw6v)
   - [CMake の使い方](https://tinyurl.com/ye25hbaf)
   - [プロジェクトの階層化](https://kamino.hatenablog.com/entry/cmake_tutorial2)
-- コンパイラオプション
-  - [プログラム高速化の禁術](https://tinyurl.com/y8rfnqjh)
-  - [警告オプション](https://tinyurl.com/yhjbpj2d)
-- Tips
-  - [スタティックリンクとダイナミックリンク](https://tinyurl.com/yff4q2tf)
-  - [条件付きコンパイル](http://www.wisdomsoft.jp/383.html)
-
-## CMake
-
-[最新版のビルド・インストール方法](https://cmake.org/install/)
 
 ### 実行方法
 
@@ -142,9 +133,15 @@ target_link_libraries(SolverTest
 gtest_add_tests(TARGET SolverTest)
 ```
 
-## 単一ファイルのビルド
+## コマンドラインでのビルド
 
-- コマンドライン：`gcc main.cpp -o out`
+- 基本のコマンド：`gcc main.cpp -o out`
+- コンパイラオプション
+  - [プログラム高速化の禁術](https://tinyurl.com/y8rfnqjh)
+  - [警告オプション](https://tinyurl.com/yhjbpj2d)
+- Tips
+  - [スタティックリンクとダイナミックリンク](https://tinyurl.com/yff4q2tf)
+  - [条件付きコンパイル](http://www.wisdomsoft.jp/383.html)
 - [Suffix Alias (fo Zsh)](https://tinyurl.com/yfdhr4cz)
   - 拡張子に応じてコマンドを実行してくれるエイリアス(Zsh 限定)
   
