@@ -24,6 +24,7 @@ title: STL メモ
 
 ## 使用方法
 
+- [要素アクセスは indexing より at() メソッドの方が安全](https://cpprefjp.github.io/reference/vector/vector/at.html)
 - 巨大なコンテナは const 参照で渡す（値渡しでコピーしない）
 - 検索は find_if で
     ```cpp
