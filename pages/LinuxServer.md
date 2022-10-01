@@ -2,6 +2,29 @@
 title: Linux サーバメモ
 ---
 
+## モニタリング
+
+- [Linux 負荷監視コマンドまとめ](https://qiita.com/aosho235/items/c4d6995743dd1dac16e1)
+
+```shell
+# os 確認
+neofetch
+
+# 記憶容量確認 (h オプションで単位を調整)
+df -h
+
+# メモリ確認 (h オプションで単位を調整)
+free -h
+
+# CPU 温度
+vcgencmd measure_temp
+```
+
+## ログ確認
+
+- システム全体：/var/log/syslog
+- 
+
 ## ユーザー処理
 
 - ユーザー管理
@@ -47,22 +70,4 @@ sudo apt-get install -y cifs-utils
 
 # mode 指定はファイルの書込み等のために必要. vers は SMB 2.0 に対して必要.
 sudo mount -t cifs //nas_ip/hoge $HOME/mnt/hoge -o username=fuga,password=piyo,file_mode=0777,dir_mode=0777,vers=2.0
-```
-
-## モニタリング
-
-- [Linux 負荷監視コマンドまとめ](https://qiita.com/aosho235/items/c4d6995743dd1dac16e1)
-
-```shell
-# os 確認
-neofetch
-
-# 記憶容量確認 (h オプションで単位を調整)
-df -h
-
-# メモリ確認 (h オプションで単位を調整)
-free -h
-
-# CPU 温度
-vcgencmd measure_temp
 ```
