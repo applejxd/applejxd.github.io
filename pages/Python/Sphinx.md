@@ -3,6 +3,7 @@ title: Sphinx メモ
 ---
 
 ## 使用方法
+
 - [sphinx-apidoc](https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html)
 ：公式マニュアル
 - [Sphinxの使い方](https://qiita.com/futakuchi0117/items/4d3997c1ca1323259844)
@@ -12,20 +13,26 @@ title: Sphinx メモ
 ## セットアップ & ビルド
 
 - インストール
+
   ```shell
-  $ conda install sphinx
-  $ conda install sphinx_rtd_theme
+  conda install sphinx
+  conda install sphinx_rtd_theme
   ```
+
 - セットアップ
+
   ```shell
-  $ mkdir docs
+  mkdir docs
   # conf.py, index.rst 変更
-  $ sphinx-quickstart sphinx
+  sphinx-quickstart sphinx
   ```
+
 - ビルド
+
   ```shell
-  $ sphinx-apidoc -f -o ./sphinx .
-  $ sphinx-build -a ./sphinx ./docs
+  # cf. https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html
+  sphinx-apidoc -e -f -o ./sphinx .
+  sphinx-build -a ./sphinx ./docs
   ```
 
 ## 拡張機能
