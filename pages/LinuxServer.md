@@ -26,7 +26,6 @@ vcgencmd measure_temp
 ## ログ確認
 
 - システム全体：/var/log/syslog
-- 
 
 ## ユーザー処理
 
