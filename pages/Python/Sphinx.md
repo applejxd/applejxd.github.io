@@ -25,6 +25,7 @@ title: Sphinx メモ
   mkdir docs
   # conf.py, index.rst 変更
   sphinx-quickstart sphinx
+  # > ソースディレクトリとビルドディレクトリを分ける（y / n） [n]: n
   ```
 
 - ビルド
