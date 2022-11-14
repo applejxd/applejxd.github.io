@@ -31,6 +31,7 @@ title: トップページ
 - [Git メモ](pages/Git.md)
   - [GitHub Pages メモ](pages/GitHubPages.md)
 - [Terminal 操作メモ](pages/Terminal.md)
+- [IDE メモ](pages/IDE.md)
 
 ### プログラミング
 
