@@ -19,6 +19,26 @@ title: C++ コーディングメモ
   - [More C++ Idioms](https://ja.wikibooks.org/wiki/More_C%2B%2B_Idioms)
   - [C/C++迷信集](http://www.kijineko.co.jp/tech/superstitions)
 
+## [インタフェース](https://tinyurl.com/ye4w87rm)
+
+### インタフェースクラス
+
+- 派生クラスをインタフェースクラスにアップキャストする
+- 実行時に動的にポリモーフィズムを達成
+
+### テンプレート
+
+- テンプレートは静的(コンパイル時計算)ポリモーフィズム
+- 継承は移譲 + テンプレートで書けることがある
+- コンパイル時の注意
+  - [テンプレートの定義はヘッダファイルに書く](https://qiita.com/i153/items/38f9688a9c80b2cb7da7)
+  - [多重インクルードエラーは inline で回避](https://qiita.com/m4saka/items/cf5d3867dd50438021b4)
+  - [テンプレートと純粋仮想関数は両立不可](https://stackoverflow.com/questions/2354210/can-a-class-member-function-template-be-virtual)：テンプレートはコンパイル時にコード生成するが、純粋仮想関数は実行時に動的呼び出しを行うため
+    - [Type Erasure による両立](https://clown.cube-soft.jp/entry/20110321/1300714348)
+- 各種テクニック
+  - [部分特殊化](https://programming-place.net/ppp/contents/cpp/language/023.html#partial_specialization)
+  - [可変引数テンプレート](https://cpprefjp.github.io/lang/cpp11/variadic_templates.html)
+
 ## ややこしいものの区別
 
 - [右辺値参照と左辺値参照](https://cpprefjp.github.io/lang/cpp11/rvalue_ref_and_move_semantics.html)
@@ -35,7 +55,7 @@ title: C++ コーディングメモ
   - 代入が生成と破棄よりもローコスト
   - ループ回数が多い
 - 巨大なコピーを避ける
-  - [巨大な（組み込み型等以外の）変数は const 参照で（Effective C++ §20）
+  - 巨大な（組み込み型等以外の）変数は const 参照で（Effective C++ §20）
   - [出力の参照渡しとポインタ渡しの比較](http://orycha.hatenablog.com/entry/2017/02/19/115015)
   - [ローカル変数の戻り値は値渡しで RVO, NRVO 任せ](https://theolizer.com/cpp-school1/cpp-school1-37/)（Effective C++ §21）
 - [メンバイニシャライザを有効活用](http://jagabeeinitialize.hatenablog.com/entry/2018/01/21/192043)
@@ -75,21 +95,3 @@ void func(double a){
 
 - マクロの正しい使い方：条件付きコンパイルなど
 - [アライメントとパディング](http://jr0bak.homelinux.net/~imai/linux/arm_gcc_badknowhow/arm_gcc_badknowhow.html)
-
-## [インタフェース](https://tinyurl.com/ye4w87rm)
-
-### インタフェースクラス
-
-- 派生クラスをインタフェースクラスにアップキャストする
-- 実行時に動的にポリモーフィズムを達成
-
-### テンプレート
-
-- テンプレートは静的(コンパイル時計算)ポリモーフィズム
-- [テンプレートの定義はヘッダファイルに書く](https://tinyurl.com/ydqmsaon)
-- [多重インクルードエラーは inline で回避](https://tinyurl.com/yfxbxqvv)
-- 継承は移譲+テンプレートで書けることがある
-- [テンプレートと純粋仮想関数は両立不可](https://tinyurl.com/yhwlebul)
-　- テンプレートはコンパイル時コード生成
-　- 純粋仮想関数は実行時の動的呼び出し
-　- [Type Erasure による両立](https://tinyurl.com/3t7bcza4)

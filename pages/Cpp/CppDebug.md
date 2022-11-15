@@ -3,15 +3,18 @@ title: C++ デバッグ/エラー処理
 ---
 
 ## コーディング規約など
+
 - [Google C++ スタイルガイド 日本語全訳](https://ttsuki.github.io/styleguide/cppguide.ja.html)
 - [クリーンコーディング](https://qiita.com/elipmoc101/items/01003c82dbd2e464a071)
 - [Enum でエラーコード](https://qiita.com/nrslib/items/1287b5888f7db6166320)
 
 ### Cpplint
+
 - [Google C++ スタイルチェッカー：cpplint](https://github.com/cpplint/cpplint)
 - "Single-parameter constructors should be marked explicit."
-    - 暗黙のコンストラクタを呼び出さないように宣言に explicit を付ける
-    - コーディング例
+  - 暗黙のコンストラクタを呼び出さないように宣言に explicit を付ける
+  - コーディング例
+
         ```cpp
         class Example {
          public:
@@ -22,6 +25,7 @@ title: C++ デバッグ/エラー処理
 ## 例外処理
 
 - 基本
+
   ```cpp
   #include <iostream>
   #include <stdexcept>
@@ -52,10 +56,12 @@ title: C++ デバッグ/エラー処理
     return 0;
   }
   ```
+
 - [例外クラス](https://programming-place.net/ppp/contents/cpp/library/017.html)
 - [例外の再送出](http://kaitei.net/cpp/exceptions/)
 
 ## Segmentation Fault の解決
+
 - デバッガを用いる方法
   1. ブレークポイントなしでデバッガ起動
   2. 「例外の発生」箇所から、コールスタックで呼び出し元を辿る
