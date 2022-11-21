@@ -45,7 +45,7 @@ title: Sphinx メモ
 
 ## reStructuredText
 
-```Python
+```python
 class Hoge:
   """
   テストクラス
