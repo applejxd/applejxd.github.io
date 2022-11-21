@@ -4,10 +4,9 @@ title: Sphinx メモ
 
 ## 使用方法
 
-- [sphinx-apidoc](https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html)
-：公式マニュアル
-- [Sphinxの使い方](https://qiita.com/futakuchi0117/items/4d3997c1ca1323259844)
-：入門記事
+- [sphinx-apidoc](https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html)：公式マニュアル
+- [Sphinx Themes Gallery](https://sphinx-themes.org/)
+- [Sphinxの使い方](https://qiita.com/futakuchi0117/items/4d3997c1ca1323259844)：入門記事
 - [sphinxでpythonのクラスや関数のドキュメントを自動生成する](https://joppot.info/2018/03/30/4156)
 
 ## セットアップ & ビルド
@@ -38,8 +37,11 @@ title: Sphinx メモ
 
 ## 拡張機能
 
-- sphinx.ext.inheritance_diagrams
-  - 継承関係図
+- sphinx.ext.autodoc：docstring からドキュメント自動生成
+  - sphinx.ext.napoleon: numpy/Google スタイルの docstring 対応 (reStructured text 形式には不要)
+- sphinx.ext.viewcode: ソースコードへの link を追加
+- sphinx.ext.graphviz: 各種図生成
+  - sphinx.ext.inheritance_diagram：継承関係図生成
 
 ## reStructuredText
 
@@ -61,3 +63,15 @@ class Hoge:
     self.member = arg
     return len(arg)
 ```
+
+## Tips
+
+- docstring からのドキュメント自動生成には sphinx.ext.autodoc が必要なため注意
+- Module 化していない場合に __init__.py を作っていると不具合が生じるため注意
+- conf.py の Path setup は conf.py からの .py ファイルへの相対パスを指定
+
+  ```python
+  import os
+  import sys
+  sys.path.insert(0, os.path.abspath('../'))
+  ```
