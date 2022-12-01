@@ -32,6 +32,20 @@ title: WSL メモ
     wsl -l -v
     ```
 
+## 基本設定
+  
+- GUI アプリ設定
+
+ 1. Vxcsrv インストール
+ 2. ファイアウォールはパブリックも設定
+    - 「ファイアウォールとネットワーク保護」→「ファイアウォールによるアプリケーションの許可」→「VcXsrv windows server」→パブリックを許可
+ 3. Xlaunch 起動時に "Disable access control" をチェック
+ 4. DISPLAY 環境変数を設定
+
+ ```shell
+ export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
+ ```
+
 ## WSL 特有の操作
 
 - [Cドライブ以外をマウント](https://xn--v6q832hwdkvom.com/post/wsl%E3%81%A7%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%89%E3%83%A9%E3%82%A4%E3%83%96%E3%82%92%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%88%E3%81%99%E3%82%8B/)
@@ -57,16 +71,14 @@ title: WSL メモ
     sudo service docker restart
     ```
 
-- GUI 連携
-  - 「ファイアウォールとネットワーク保護」→「ファイアウォールによるアプリケーションの許可」
-      →「VcXsrv windows server」→パブリックを許可
-  - 適切に DISPLAY 変数を定義
-
 ## CLion との連携
 
-- ログインシェルは bash のまま: zsh だと make, compilers が認識しない
-  - ターミナルソフト側でシェルを変更
-- /etc/wsl.conf を設定: 設定しないと toolchain の cmake エラー
+- ログインシェルは bash のまま (zsh だと make, compilers が認識しない)
+  - zsh 等が使いたければターミナルソフト側でシェルを変更して使う
+- /etc/wsl.conf を設定 (設定しないと toolchain の cmake エラー)
+- GUI 使用
+  - DISPLAY 設定をファイルから読み込む。または
+  - [login shell を読み込むように設定](https://intellij-support.jetbrains.com/hc/en-us/community/posts/4412179322514-How-to-run-and-debug-a-GUI-application-on-WSL2-)
 
 ## Docker
 
@@ -74,3 +86,8 @@ title: WSL メモ
 # サービス開始
 sudo service docker start
 ```
+
+## トラブルシューティング
+
+- [WSL 2 仮想ハード ディスクのサイズを拡張する](https://learn.microsoft.com/ja-jp/windows/wsl/vhd-size)
+  - [How do I get back unused disk space from Ubuntu on WSL2?](https://superuser.com/questions/1606213/how-do-i-get-back-unused-disk-space-from-ubuntu-on-wsl2)

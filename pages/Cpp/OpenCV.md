@@ -14,10 +14,13 @@ OpenCV の使い方の基本説明.
 
 - 一部翻訳
 - 2次元座標上の点のためのクラステンプレート [Point_](http://opencv.jp/opencv-2.1/cpp/basic_structures.html) を利用
+
     ```cpp
     typedef Point_<float> Point2f;
     ```
+
 - ソースコード内容
+
     ```cpp
     #include "opencv2/video/tracking.hpp"
     #include "opencv2/highgui.hpp"
@@ -55,11 +58,12 @@ OpenCV の使い方の基本説明.
 
 - [cv::Mat](http://opencv.jp/cookbook/opencv_mat.html)
 ：画像を管理する構造体 "兼"　行列を管理する構造体
-    - [cv::Mat のタイプ一覧](https://tech-blog.s-yoshiki.com/entry/76)
-    - CV_8U：符号なしの8ビット整数
-    - CV_8UC3：3個の CV_8U カラー画像の初期値
-    - CV_32F：浮動小数点数，32ビット
+  - [cv::Mat のタイプ一覧](https://tech-blog.s-yoshiki.com/entry/76)
+  - CV_8U：符号なしの8ビット整数
+  - CV_8UC3：3個の CV_8U カラー画像の初期値
+  - CV_32F：浮動小数点数，32ビット
 - ソースコード内容
+
     ```cpp
     int main(int, char**)
     {
@@ -81,6 +85,7 @@ OpenCV の使い方の基本説明.
 - [cv::setIdentity](http://opencv.jp/opencv-2svn/cpp/operations_on_arrays.html#cv-setidentity)
 ：行列を定数倍した単位行列として初期化
 - ソースコード内容
+
     ```cpp
     for(;;)
     {
@@ -116,6 +121,7 @@ OpenCV の使い方の基本説明.
 - [cv::Mat.rows, cols](http://opencv.jp/opencv-2svn/cpp/basic_structures.html#mat)
 ：行数・列数
 - ソースコード内容
+
     ```cpp
     // 回転中心を設定
     Point2f center(img.cols*0.5f, img.rows*0.5f);
@@ -138,9 +144,11 @@ OpenCV の使い方の基本説明.
     ```
 
 ### ループ内処理：マクロ定義
+
 - [cv::line](http://opencv.jp/opencv-2svn/cpp/drawing_functions.html#cv-line)
 ：2点を結ぶ線分を描画
 - ソースコード内容
+
     ```cpp
     #define drawCross( center, color, d)                \
         line(img, Point( center.x - d, center.y - d ),  \
@@ -160,6 +168,7 @@ OpenCV の使い方の基本説明.
 - [cv::waitKey](http://opencv.jp/opencv-2.1/cpp/user_interface.html#cv-waitkey)
 ：キーが押されるまで待機
 - ソースコード内容
+
     ```cpp
     // 画面クリア
     img = Scalar::all(0);
