@@ -60,7 +60,7 @@ vcgencmd measure_temp
   - [ユーザ設定は /etc/netplan/99-manual.yaml に](https://qiita.com/yas-nyan/items/9033fb1d1037dcf9dba5)
   - 更新処理は `sudo netplan apply`
 - NIC へ IPv4 アドレスの自動割当（DHCPv4 クライアント有効化）は `sudo dhclient hoge` で
- 
+
 ## NAS マウント
 
 自動でマウントする場合は /etc/fstab に設定を記載。
@@ -73,3 +73,23 @@ sudo apt-get install -y cifs-utils
 # mode 指定はファイルの書込み等のために必要. vers は SMB 2.0 に対して必要.
 sudo mount -t cifs //nas_ip/hoge $HOME/mnt/hoge -o username=fuga,password=piyo,file_mode=0777,dir_mode=0777,vers=2.0
 ```
+
+## dd コマンド (ディスク読み書き)
+
+Windows は以下で使用可能:
+
+```bash
+scoop install dd
+```
+
+コマンド例:
+
+```bash
+# メディア確認
+dd --list
+# 書き出し, bs は一度に書き込みするサイズ
+dd if=$(メディア名) of=$(出力先).iso bs=1M
+# 書き込み
+dd if=$(対象ファイル).iso of=$(メディア名) bs=1M
+```
+
