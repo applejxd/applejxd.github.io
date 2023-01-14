@@ -8,6 +8,7 @@ title: トップページ
 ### 公開コード
 
 - [Github Repositries](https://github.com/applejxd?tab=repositories)
+  - [Google Colaboratory (GitHub)](https://github.com/applejxd/colaboratory)
 - [Github Gist](https://gist.github.com/applejxd)
 
 ### 環境構築
@@ -15,7 +16,10 @@ title: トップページ
 - [dotfiles (GitHub)](https://github.com/applejxd/dotfiles)
 - [Windows 設定 (GitHub)](https://github.com/applejxd/windows-setup)
 - [開発環境メモ](pages/Preferences.md)
+
 - [VPN 設定メモ](pages/VPN.md)
+- M5Stack 関連
+  - [ATOM Matrix メモ](pages/AtomMatrix.md)
 
 ### 開発全般
 
@@ -35,6 +39,10 @@ title: トップページ
 
 ### プログラミング
 
+- [Python メモ](pages/Python/Python.md)
+  - [Google Colaboratory (GitHub)](https://github.com/applejxd/colaboratory)
+  - [Sphinx メモ](pages/Python/Sphinx.md)
+  - [LightGBM で時系列データ分析](pages/Python/LightGBM.md)
 - [C++ コーディングメモ](pages/Cpp/Cpp.md)
   - [CMake & C++ ビルドメモ](pages/Cpp/CppBuild.md)
   - [Doxygen メモ](pages/Cpp/Doxygen.md)
@@ -43,10 +51,6 @@ title: トップページ
   - [STL メモ](pages/Cpp/STL.md)
   - [OpenCV メモ](pages/Cpp/OpenCV.md)
   - [C++ ライブラリメモ](pages/Cpp/CppLibrary.md)
-- [Python メモ](pages/Python/Python.md)
-  - [Google Colaboratory (GitHub)](https://github.com/applejxd/colaboratory)
-  - [Sphinx メモ](pages/Python/Sphinx.md)
-  - [LightGBM で時系列データ分析](pages/Python/LightGBM.md)
 - [JVM メモ](pages/JVM.md)
 
 ## 学習メモ
