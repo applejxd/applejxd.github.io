@@ -2,6 +2,15 @@
 title: Python まとめノート
 ---
 
+## 各種ドキュメント
+
+- [numpy](https://numpy.org/devdocs/reference/index.html)
+- [scipy](https://docs.scipy.org/doc/scipy/reference/index.html)
+- [pandas](https://pandas.pydata.org/docs/reference/index.html)
+- [matplotlib](https://matplotlib.org/stable/api/index)
+- [OpenCV](https://docs.opencv.org/4.x/)
+- [Open3D](http://www.open3d.org/docs/release/)
+
 ## ライブラリ管理
 
 ### pip

@@ -57,6 +57,8 @@ title: C++ コーディングメモ
 - 巨大なコピーを避ける
   - 巨大な（組み込み型等以外の）変数は const 参照で（Effective C++ §20）
   - [出力の参照渡しとポインタ渡しの比較](http://orycha.hatenablog.com/entry/2017/02/19/115015)
+    - ポインタ渡しだと使わない戻り値を宣言しなくてよい
+    - ポインタ渡しだと nullptr チェックが必要
   - [ローカル変数の戻り値は値渡しで RVO, NRVO 任せ](https://theolizer.com/cpp-school1/cpp-school1-37/)（Effective C++ §21）
 - [メンバイニシャライザを有効活用](http://jagabeeinitialize.hatenablog.com/entry/2018/01/21/192043)
   - コンストラクタによる初期化よりも速い
