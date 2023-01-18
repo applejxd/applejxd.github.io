@@ -1,12 +1,22 @@
 ---
 layout: top
-title: ATOM Matrix メモ
+title: M5Stack メモ
 ---
 
 
-## ATOM Matrix メモ
+## M5Stack メモ
 
-### 環境構築
+### VSCode (Platform IO) 環境構築
+
+参考: [M5Stackの開発環境を整える - PlatformIO IDE編](https://qiita.com/lutecia16v/items/1c560bdd7eac7ebeaff7)
+
+1. VSCode インストール
+2. 拡張機能空 Platform IO インストール
+3. Platform IO の Libraries から必要なライブラリをインストール
+   - 基本的には M5Stack.h をインストール
+   - M5Unified.h を使う場合は M5Stack.h をアンインストール (競合するため)
+
+### Arduino IDE 環境構築
 
 1. [ドライバーインストール](https://github.com/m5stack/M5Atom)
    1. [FTDI ドライバー](https://ftdichip.com/drivers/vcp-drivers/)ダウンロード & 解凍

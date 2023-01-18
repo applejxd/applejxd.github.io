@@ -18,8 +18,7 @@ title: トップページ
 - [開発環境メモ](pages/Preferences.md)
 
 - [VPN 設定メモ](pages/VPN.md)
-- M5Stack 関連
-  - [ATOM Matrix メモ](pages/AtomMatrix.md)
+- [M5Stack メモ](pages/M5Stack.md)
 
 ### 開発全般
 
