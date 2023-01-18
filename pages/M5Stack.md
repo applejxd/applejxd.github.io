@@ -30,6 +30,9 @@ title: M5Stack メモ
 
 ### ハードウェア制御
 
+- [シリアル通信の文字化け解消方法](https://qiita.com/Rcobb/items/20ee2a0613d081295327)
+  - setup() 関数で Serial.begin(19200) のように通信速度を設定
+  - platformio.ini で monitor_speed を同じ速度に設定
 - [ドットマトリクスLED簡単制御方法](https://logikara.blog/matrix_matrix/)
   - M5.dis.drawpix メソッドで表示変更
     - 第1引数は LED の位置。左上から右下へ順に 0~5x5 の整数(下は端子のある側)。
