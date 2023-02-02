@@ -32,15 +32,6 @@ git remote add origin /url/to/remote/repo
 git push -u origin main
 ```
 
-- リモートリポジトリの作成
-
-```bash
-cd /path/to/remote/repo
-git init --bare --shared
-cd /path/to/local/repo
-git remote add origin /path/to/remote/repo
-```
-
 - リモートリポジトリの変更
 
 ```bash
@@ -51,6 +42,15 @@ git push --mirror /path/to/destination
 
 # URL変更
 git remote set-url origin /path/to/new/url
+```
+
+- リモートリポジトリの作成
+
+```bash
+cd /path/to/remote/repo
+git init --bare --shared
+cd /path/to/local/repo
+git remote add origin /path/to/remote/repo
 ```
 
 ### gitignore 設定

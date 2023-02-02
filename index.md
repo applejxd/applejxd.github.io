@@ -9,32 +9,27 @@ title: トップページ
 
 - [Github Repositries](https://github.com/applejxd?tab=repositories)
   - [Google Colaboratory (GitHub)](https://github.com/applejxd/colaboratory)
+  
 - [Github Gist](https://gist.github.com/applejxd)
 
 ### 環境構築
 
+- [Git メモ](pages/Git.md)
+  - [GitHub Pages メモ](pages/GitHubPages.md)
 - [dotfiles (GitHub)](https://github.com/applejxd/dotfiles)
-- [Windows 設定 (GitHub)](https://github.com/applejxd/windows-setup)
-- [開発環境メモ](pages/Preferences.md)
-
-- [VPN 設定メモ](pages/VPN.md)
-- [M5Stack メモ](pages/M5Stack.md)
-
-### 開発全般
-
-- Linux メモ
   - [Linux サーバメモ](pages/LinuxServer.md)
-  - [シェルスクリプトメモ](pages/ShellScript.md)
   - [Linux コマンドメモ](pages/LinuxCommand.md)
   - [SSH メモ](pages/SSH.md)
-- [Windows メモ](pages/Windows.md)
+  - [シェルスクリプトメモ](pages/ShellScript.md)
+  - [Terminal 操作メモ](pages/Terminal.md)
+- [Windows 設定 (GitHub)](https://github.com/applejxd/windows-setup)
+  - [Windows メモ](pages/Windows.md)
   - [Powershell メモ](pages/PowerShell.md)
   - [WSL メモ](pages/WSL.md)
 - [Mac メモ](pages/Mac.md)
-- [Git メモ](pages/Git.md)
-  - [GitHub Pages メモ](pages/GitHubPages.md)
-- [Terminal 操作メモ](pages/Terminal.md)
-- [IDE メモ](pages/IDE.md)
+- [M5Stack メモ](pages/M5Stack.md)
+  - [VPN 設定メモ](pages/VPN.md)
+  - [IDE メモ](pages/IDE.md)
 
 ### プログラミング
 
@@ -58,4 +53,3 @@ title: トップページ
 - [資料作成メモ](pages/Document.md)
 - [英語リンク集](pages/English.md)
 - [リンク集](pages/Links.md)
-
