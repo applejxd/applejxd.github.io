@@ -27,7 +27,8 @@ title: トップページ
   - [Powershell メモ](pages/PowerShell.md)
   - [WSL メモ](pages/WSL.md)
 - [Mac メモ](pages/Mac.md)
-- [M5Stack メモ](pages/M5Stack.md)
+- その他
+  - [M5Stack メモ](pages/M5Stack.md)
   - [VPN 設定メモ](pages/VPN.md)
   - [IDE メモ](pages/IDE.md)
 
