@@ -2,6 +2,11 @@
 title: WSL メモ
 ---
 
+## トラブルシューティング
+
+- [WSL 2 仮想ハード ディスクのサイズを拡張する](https://learn.microsoft.com/ja-jp/windows/wsl/vhd-size)
+  - [How do I get back unused disk space from Ubuntu on WSL2?](https://superuser.com/questions/1606213/how-do-i-get-back-unused-disk-space-from-ubuntu-on-wsl2)
+
 ## インストール手順
 
 0. [コマンドで有効化](https://docs.microsoft.com/ja-jp/windows/wsl/install-win10), appwiz.cpl (Win+R)
@@ -35,6 +40,7 @@ title: WSL メモ
 ## 基本設定
   
 - GUI アプリ設定
+  - WSLg (Microsoft Store 版 WSL) 使用時は不要
 
  1. Vxcsrv インストール
  2. ファイアウォールはパブリックも設定
@@ -86,8 +92,3 @@ title: WSL メモ
 # サービス開始
 sudo service docker start
 ```
-
-## トラブルシューティング
-
-- [WSL 2 仮想ハード ディスクのサイズを拡張する](https://learn.microsoft.com/ja-jp/windows/wsl/vhd-size)
-  - [How do I get back unused disk space from Ubuntu on WSL2?](https://superuser.com/questions/1606213/how-do-i-get-back-unused-disk-space-from-ubuntu-on-wsl2)
