@@ -6,6 +6,7 @@ title: WSL メモ
 
 - [WSL 2 仮想ハード ディスクのサイズを拡張する](https://learn.microsoft.com/ja-jp/windows/wsl/vhd-size)
   - [How do I get back unused disk space from Ubuntu on WSL2?](https://superuser.com/questions/1606213/how-do-i-get-back-unused-disk-space-from-ubuntu-on-wsl2)
+- [WSL上のLinuxをCドライブから移動させる](https://www.aise.ics.saitama-u.ac.jp/~gotoh/HowToReplaceWSL.html)
 
 ## インストール手順
 
