@@ -2,12 +2,27 @@
 title: VPN 設定メモ
 ---
 
-## 目標
+## 設定以降
+
+- [【SoftEther VPN】サーバーのバックアップを取得する方法](https://office54.net/iot/app/softether-vpn-backup)
+  - 「管理画面」→「Config 編集」から操作
+  - エクスポートは「ファイルに保存」。インポートは「ファイルからインポートして書き込む」。
+  - クライアント情報・ログイン情報なども引き継がれる
+
+## 設定新規構成
+
+### 目的
 
 (「集合住宅タイプのインターネット契約」や WiMAX 利用など)
 グローバルIPの割当がない状況で自宅のネットワークを利用する。
+VPSのグローバルIPを通じて接続できるようにする。
 
-## やる事
+IPアドレスは国ごとにレンジが決まっていることに注意。
+[「IPアドレスの割り当て国検索」]から検索可能。
+サーバの設置国とに関わらず、Pアドレスの割り当て国でアクセスが判定されることに注意。
+(AWS に割り当てられる IP アドレスは全て US 判定？)
+
+### やる事
 
 [「Softether VPN §10.5 拠点間接続 VPN の構築」](https://ja.softether.org/4-docs/1-manual/A/10.5)
 の通り
@@ -15,10 +30,11 @@ title: VPN 設定メモ
 1. カスケード接続でリモートの仮想 HUB 同士を Ethernet レベル (L2) 接続
 2. ローカルブリッジ接続で物理 LAN カードと仮想 HUB を Ethernet レベル (L2) 接続
 
-## 構成
+### 構成
 
-- VPN サーバとなる VPS サーバ（AWS Lightsail など）
+- VPN サーバとなる VPS サーバ（「AWS Lightsail」や「さくらのVPS」など）
   - SoftEther VPN Server 利用
+  - [VPSの比較](https://qiita.com/sakarush/items/554dcf920585a8480542)
 - VPN のブリッジ用自宅サーバ (Raspberry Pi や Windows PC など)
   - SoftEther VPN Server または SoftEther VPN Bridge を使用
   - [VPN Bridge は VPN Server の機能制限版。](https://ja.softether.org/4-docs/1-manual/5/5.3_Differences_between_VPN_Server_and_VPN_Bridge)
@@ -26,7 +42,7 @@ title: VPN 設定メモ
 - VPN クライアント (L2TP で接続)
 - SoftEther VPN Server Manager 用ローカル PC
 
-## 手順
+### 手順
 
 1. ネットワーク設計を行う・LAN IP アドレスの割当決定（[設計例](https://dsp74118.blogspot.com/2016/02/vpssoftether-vpnlan.html)）
     - 家庭 LAN 環境のゲートウェイの IP アドレス
@@ -52,7 +68,7 @@ title: VPN 設定メモ
 7. 自宅内ネットワークのルータの設定変更
     - 上記 1. に応じてルータのアドレスとDHCPの設定変更
 
-## Linux の VPN サーバの注意
+### Linux の VPN サーバの注意
 
 [「Softether VPN §3.6 ローカルブリッジ」](https://ja.softether.org/4-docs/1-manual/3/3.6)によると
 
