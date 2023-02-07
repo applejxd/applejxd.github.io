@@ -2,11 +2,13 @@
 title: WSL メモ
 ---
 
-## トラブルシューティング
+## 移行ガイド
 
 - [WSL 2 仮想ハード ディスクのサイズを拡張する](https://learn.microsoft.com/ja-jp/windows/wsl/vhd-size)
   - [How do I get back unused disk space from Ubuntu on WSL2?](https://superuser.com/questions/1606213/how-do-i-get-back-unused-disk-space-from-ubuntu-on-wsl2)
 - [WSL上のLinuxをCドライブから移動させる](https://www.aise.ics.saitama-u.ac.jp/~gotoh/HowToReplaceWSL.html)
+  - 移行後はデフォルトユーザが root になることに注意
+  - [/etc/wsl.conf でデフォルトユーザを指定可能](https://devlights.hatenablog.com/entry/2021/05/29/070000)
 
 ## インストール手順
 
