@@ -8,14 +8,15 @@ title: Sphinx メモ
 - [Sphinx Themes Gallery](https://sphinx-themes.org/)
 - [Sphinxの使い方](https://qiita.com/futakuchi0117/items/4d3997c1ca1323259844)：入門記事
 - [sphinxでpythonのクラスや関数のドキュメントを自動生成する](https://joppot.info/2018/03/30/4156)
+- [PDFファイル作成](https://sphinx-users.jp/cookbook/pdf/index.html)
 
 ## セットアップ & ビルド
 
 - インストール
 
   ```shell
-  conda install sphinx
-  conda install sphinx_rtd_theme
+  pip install sphinx
+  pip install sphinx_rtd_theme
   ```
 
 - セットアップ
@@ -42,6 +43,8 @@ title: Sphinx メモ
 - sphinx.ext.viewcode: ソースコードへの link を追加
 - sphinx.ext.graphviz: 各種図生成
   - sphinx.ext.inheritance_diagram：継承関係図生成
+- sphinx_mdinclude: Markdown ファイルの読込
+  - インストールコマンド: `pip install sphinx-mdinclude`
 
 ## reStructuredText
 
