@@ -9,6 +9,7 @@ title: WSL メモ
 - [WSL上のLinuxをCドライブから移動させる](https://www.aise.ics.saitama-u.ac.jp/~gotoh/HowToReplaceWSL.html)
   - 移行後はデフォルトユーザが root になることに注意
   - [/etc/wsl.conf でデフォルトユーザを指定可能](https://devlights.hatenablog.com/entry/2021/05/29/070000)
+  - [Docker Desktop も同様に移行可能](https://e-penguiner.com/change-location-of-docker-on-windows/)
 
 ## インストール手順
 
