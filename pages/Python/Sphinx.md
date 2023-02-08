@@ -10,6 +10,12 @@ title: Sphinx メモ
 - [Sphinx Themes Gallery](https://sphinx-themes.org/)
 - [Sphinxの使い方](https://qiita.com/futakuchi0117/items/4d3997c1ca1323259844)：入門記事
 - [sphinxでpythonのクラスや関数のドキュメントを自動生成する](https://joppot.info/2018/03/30/4156)
+
+- [Markdown から作成](https://github.com/omnilib/sphinx-mdinclude)
+  1. `pip install sphinx-mdinclude`
+  2. conf.py の extension に sphinx_mdinclude を追加
+  3. [対応する rst ファイルを作成](https://stackoverflow.com/questions/46278683/include-my-markdown-readme-into-sphinx)
+  4. 必要に応じて index.rst などに上記3.のリンクを作成
 - [PDFファイル作成](https://sphinx-users.jp/cookbook/pdf/index.html)
 
 ## セットアップ & ビルド
