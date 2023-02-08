@@ -4,6 +4,8 @@ title: Sphinx メモ
 
 ## 使用方法
 
+- [conf.py 作成例](https://github.com/applejxd/slam-practice/blob/master/python/sphinx/conf.py)
+
 - [sphinx-apidoc](https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html)：公式マニュアル
 - [Sphinx Themes Gallery](https://sphinx-themes.org/)
 - [Sphinxの使い方](https://qiita.com/futakuchi0117/items/4d3997c1ca1323259844)：入門記事
@@ -70,7 +72,7 @@ class Hoge:
 ## Tips
 
 - docstring からのドキュメント自動生成には sphinx.ext.autodoc が必要なため注意
-- Module 化していない場合に __init__.py を作っていると不具合が生じるため注意
+- Module 化していない場合に \_\_init\_\_.py を作っていると不具合が生じるため注意
 - conf.py の Path setup は conf.py からの .py ファイルへの相対パスを指定
 
   ```python
@@ -78,3 +80,8 @@ class Hoge:
   import sys
   sys.path.insert(0, os.path.abspath('../'))
   ```
+
+## トラブルシューティング
+
+- パス名に "-" は厳禁。うまく認識しない。
+- モジュールは \_\_init\_\_.py があるフォルダを自動認識
