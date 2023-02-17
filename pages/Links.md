@@ -7,6 +7,7 @@ title: リンク集
 
 ## 技術
 
+- [J-PlatPat 特許・実用新案検索](https://www.j-platpat.inpit.go.jp/p0100)
 - [Qiita 殿堂入り記事](http://youwht.ml/static/TAG_TOP.html)
 - [awesome](https://github.com/sindresorhus/awesome)
 - [PYPL](https://pypl.github.io/PYPL.html)
