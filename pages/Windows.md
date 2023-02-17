@@ -57,6 +57,9 @@ title: Windows メモ
 
 ### 解決済みの問題
 
+- winget でのインストール失敗
+  - 管理者権限での実行(あるいはsudo)が必要
+  - エラコード2はインストーラは起動するが途中で失敗するケース → `sudo winget install --interactive` で原因を探る
 - [ユーザーフォルダ名の変更](https://pc-karuma.net/windows10-rename-user-folder/)
     1. 作成時はローカルアカウント
     2. Microsoft アカウントに変更
