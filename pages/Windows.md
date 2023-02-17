@@ -64,9 +64,11 @@ title: Windows メモ
     1. 作成時はローカルアカウント
     2. Microsoft アカウントに変更
 - [顔認証が登録できない](https://answers.microsoft.com/ja-jp/windows/forum/windows_10-hello/windows/3bbfbc43-9099-403a-a92e-a6994a914c10)
+
  1. PIN, 顔認証を削除
  2. 「タスクマネージャ」から「サービスホスト: Windows Biometric Service」を強制終了
  3. C:\Windows\System32\WinBioDatabase 内のファイルを削除して再起動
+
 - メモ帳がない：「設定→アプリ→オプション機能」でインストール
 - KeySwapがうまく作動しない ：設定クリアして再起動・設定して再起動
 - WSL の環境をリセットしたい ： 「アプリと機能」から Ubuntu をリセットするだけ
