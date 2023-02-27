@@ -39,6 +39,7 @@ title: トップページ
   - [Sphinx メモ](pages/Python/Sphinx.md)
   - [LightGBM で時系列データ分析](pages/Python/LightGBM.md)
 - [C++ コーディングメモ](pages/Cpp/Cpp.md)
+  - [競技プログラミング Tips](pages/Cpp/CppContest.md)
   - [CMake & C++ ビルドメモ](pages/Cpp/CppBuild.md)
   - [Doxygen メモ](pages/Cpp/Doxygen.md)
   - [C++ オブジェクト指向メモ](pages/Cpp/CppObject.md)

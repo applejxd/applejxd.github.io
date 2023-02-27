@@ -39,14 +39,12 @@ title: C++ コーディングメモ
   - [部分特殊化](https://programming-place.net/ppp/contents/cpp/language/023.html#partial_specialization)
   - [可変引数テンプレート](https://cpprefjp.github.io/lang/cpp11/variadic_templates.html)
 
-## ややこしいものの区別
+## Tips
 
 - [右辺値参照と左辺値参照](https://cpprefjp.github.io/lang/cpp11/rvalue_ref_and_move_semantics.html)
   - 右辺値は名前無し一時オブジェクト
   - 左辺値は名前有り実態のあるオブジェクト
-
-## Tips
-
+  - [Range based for と auto&& による perfect forwarding](https://peng225.hatenablog.com/entry/2016/08/10/224044)
 - キャストは C++ の機能で
   - static_cast
   - dynamic_cast
