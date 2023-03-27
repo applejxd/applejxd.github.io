@@ -16,6 +16,7 @@ title: トップページ
 
 - [Git メモ](pages/Git.md)
   - [GitHub Pages メモ](pages/GitHubPages.md)
+  - [GitHub Status](https://www.githubstatus.com/)
 - [dotfiles (GitHub)](https://github.com/applejxd/dotfiles)
   - [Linux サーバメモ](pages/LinuxServer.md)
   - [Linux コマンドメモ](pages/LinuxCommand.md)
