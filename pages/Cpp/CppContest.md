@@ -4,7 +4,7 @@ title: 競技プログラミング Tips
 
 ## リンク
 
-- [C++ STL メモ](pages/Cpp/STL.md)
+- [C++ STL メモ](STL.md)
 
 ## リソース関連
 
