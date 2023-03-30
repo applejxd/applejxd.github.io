@@ -4,7 +4,11 @@ title: Sphinx メモ
 
 ## 使用方法
 
-- [conf.py 作成例](https://github.com/applejxd/slam-practice/blob/master/python/sphinx/conf.py)
+- サンプル
+  - [conf.py](https://github.com/applejxd/slam-practice/blob/master/python/sphinx/conf.py)
+  - [トップページ](https://raw.githubusercontent.com/applejxd/slam-practice/master/python/sphinx/index.rst)
+  - [README.md](https://raw.githubusercontent.com/applejxd/slam-practice/master/python/sphinx/link_readme.rst)
+  - [ビルドスクリプト](https://github.com/applejxd/slam-practice/blob/master/python/build_docs.ps1)
 
 - [sphinx-apidoc](https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html)：公式マニュアル
 - [Sphinx Themes Gallery](https://sphinx-themes.org/)
