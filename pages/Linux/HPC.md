@@ -53,6 +53,11 @@ conda activate torch
 srun python train.py
 ```
 
+## Environment Modules
+
+- [Environment Modules](https://modules.sourceforge.net/)
+  - [環境構築と設定の例](https://qiita.com/Ag_smith/items/f268ad27165a60aecd35)
+
 ## マルチコア/GPU 処理
 
 - OpenMP: マルチコア処理
@@ -68,6 +73,7 @@ srun python train.py
   - [Data Parallel より高速](https://qiita.com/fam_taro/items/df6061b589c3ccf86089)
   - [実装例](https://qiita.com/meshidenn/items/1f50246cca075fa0fce2)
   - [Torch.Distributed](https://pytorch.org/docs/stable/distributed.html)
+  - バックエンドを NCCL にする場合は環境構築が必要
 
 ## 並列コンピュータ処理
 
