@@ -14,23 +14,24 @@ title: トップページ
 
 ### 環境構築
 
+- [dotfiles (GitHub)](https://github.com/applejxd/dotfiles)
+- [Linux サーバメモ](pages/Linux/LinuxServer.md)
+  - [Linux コマンドメモ](pages/Linux/LinuxCommand.md)
+  - [SSH メモ](pages/Linux/SSH.md)
+  - [シェルスクリプトメモ](pages/Linux/ShellScript.md)
+  - [HPC メモ](pages/Linux/HPC.md)
+  - [VPN 設定メモ](pages/Linux/VPN.md)
 - [Git メモ](pages/Git.md)
   - [GitHub Pages メモ](pages/GitHubPages.md)
   - [GitHub Status](https://www.githubstatus.com/)
-- [dotfiles (GitHub)](https://github.com/applejxd/dotfiles)
-  - [Linux サーバメモ](pages/LinuxServer.md)
-  - [Linux コマンドメモ](pages/LinuxCommand.md)
-  - [SSH メモ](pages/SSH.md)
-  - [シェルスクリプトメモ](pages/ShellScript.md)
-  - [Terminal 操作メモ](pages/Terminal.md)
 - [Windows 設定 (GitHub)](https://github.com/applejxd/windows-setup)
   - [Windows メモ](pages/Windows.md)
   - [Powershell メモ](pages/PowerShell.md)
   - [WSL メモ](pages/WSL.md)
 - [Mac メモ](pages/Mac.md)
+- [Terminal 操作メモ](pages/Terminal.md)
 - その他
   - [M5Stack メモ](pages/M5Stack.md)
-  - [VPN 設定メモ](pages/VPN.md)
   - [IDE メモ](pages/IDE.md)
 
 ### プログラミング

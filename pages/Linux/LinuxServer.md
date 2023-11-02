@@ -9,18 +9,18 @@ title: Linux サーバメモ
 ```shell
 # os 確認
 neofetch
-
 # ディスク記憶容量確認 (h オプションで単位を調整)
 df -h
-
 # フォルダ記憶容量確認
 du -sh ./*
-
 # メモリ確認 (h オプションで単位を調整)
 free -h
-
 # CPU 温度
 vcgencmd measure_temp
+# 1 秒毎に確認
+watch -n 1 free -h
+# 処理の優先順位を下げて実行
+nice watch -n 1 free -h
 ```
 
 ## ログ確認

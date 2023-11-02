@@ -90,7 +90,7 @@ Host docker
   IdentityFile ~/.ssh/docker_key
   ProxyCommand ssh bastion -W %h:%p
 ```
-      
+
 ## ポートフォワーディング
 
 Windows での設定

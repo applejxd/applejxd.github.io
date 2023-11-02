@@ -10,6 +10,7 @@ Set-ExecutionPolicy Unrestricted -Force
 # プロセス限定
 Set-ExecutionPolicy Bypass -Scope Process -Force 
 ```
+
 - `Set-ExecutionPolicy`：実行ポリシーを変更
   - `Restricted`：デフォルト。構成ファイルの読み込み・スクリプトの実行を行わない
   - `Unrestricted`：すべての構成ファイルの読み込み・スクリプトの実行が可能。署名なしのスクリプトは確認を行う。
@@ -24,6 +25,7 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
 (New-Object System.Net.WebClient).DownloadFile('URL','/path/to/save/dir')
 (new-object net.webclient).DownloadString('URL')
 ```
+
 - New-Object：.NET Frameworkのインスタンスを作成
 - [`System.Net.Webclient`](https://docs.microsoft.com/ja-jp/dotnet/api/system.net.webclient?view=net-5.0)
   ：データ送受信のためのクラス
@@ -31,7 +33,6 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
   ：データをファイルとしてダウンロードするメソッド
   - [`DownloadString`](https://docs.microsoft.com/ja-jp/dotnet/api/system.net.webclient.downloadstring?view=net-5.0)
   ：データを String としてダウンロードするメソッド
-
 
 ### [その他](https://www.haruru29.net/blog/how-to-download-files-using-powershell/)
 
@@ -41,7 +42,9 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
 ### コマンド実行
 
 - Invoke-Expression/iex：引数の文字列をコマンドとして実行
+
   ```powershell
   iex ((new-object net.webclient).DownloadString('URL'))
   ```
+
 - Invoke-Command/icm：ローカルおよびリモートコンピュータでコマンドを実行

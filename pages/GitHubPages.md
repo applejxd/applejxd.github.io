@@ -18,8 +18,10 @@ title: GitHub Pages メモ
     - Sphinx:(固有アドレス)/index.html
 
 Sphinx の場合は次の操作が必要：
+
 - doc/.nojekyll の空ファイル生成
 - index.html に次を追加
+
     ```html
     <base href="(固有アドレス)" charset="utf-8/>
     ```
@@ -27,13 +29,13 @@ Sphinx の場合は次の操作が必要：
 ## 構文
 
 - Markdown
-    - [コードブロックとシンタックスハイライト](https://docs.github.com/ja/github/writing-on-github/creating-and-highlighting-code-blocks)
+  - [コードブロックとシンタックスハイライト](https://docs.github.com/ja/github/writing-on-github/creating-and-highlighting-code-blocks)
 - Jekyll
-    - [テンプレート作成のための変数](http://jekyllrb-ja.github.io/docs/variables/)
-    - [テンプレート用言語 Liquid](https://shopify.github.io/liquid/)
+  - [テンプレート作成のための変数](http://jekyllrb-ja.github.io/docs/variables/)
+  - [テンプレート用言語 Liquid](https://shopify.github.io/liquid/)
 
 ## ライブラリ
 
 - CDN関連
-    - [Google Hosted Libraries](https://developers.google.com/speed/libraries)
-    - [MathJax](http://docs.mathjax.org/en/latest/web/start.html)
+  - [Google Hosted Libraries](https://developers.google.com/speed/libraries)
+  - [MathJax](http://docs.mathjax.org/en/latest/web/start.html)
