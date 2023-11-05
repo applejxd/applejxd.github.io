@@ -53,6 +53,14 @@ conda activate torch
 srun python train.py
 ```
 
+### Tips
+
+- [アレイジョブによる実行](https://web.kudpc.kyoto-u.ac.jp/manual/ja/run/tips#arrayjob)
+  - [-a オプション](https://slurm.schedmd.com/sbatch.html#OPT_array)で実行
+  - インデックスは```${SLURM_ARRAY_TASK_ID}```で参照可能
+  - 投げられたジョブは ```(ジョブID)_(タスクID)``` となり ```scancel (ジョブID)``` で一括終了ができる
+  - 複数の configuration で実行する際に便利
+
 ## Environment Modules
 
 - [Environment Modules](https://modules.sourceforge.net/)
@@ -74,6 +82,8 @@ srun python train.py
   - [実装例](https://qiita.com/meshidenn/items/1f50246cca075fa0fce2)
   - [Torch.Distributed](https://pytorch.org/docs/stable/distributed.html)
   - バックエンドを NCCL にする場合は環境構築が必要
+  - [Difference between two kinds of distributed training paradigm](https://discuss.pytorch.org/t/difference-between-two-kinds-of-distributed-training-paradigm/152293)
+- [node, world, and local and global rank](https://stackoverflow.com/questions/58271635/in-distributed-computing-what-are-world-size-and-rank)
 
 ## 並列コンピュータ処理
 
