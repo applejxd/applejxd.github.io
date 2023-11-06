@@ -55,7 +55,22 @@ srun python train.py
 
 ### Tips
 
+- マルチプログラミングのパラダイムの基礎
+  - [構成単位はジョブ・ステップ・タスク](https://stackoverflow.com/questions/46506784/how-do-the-terms-job-task-and-step-relate-to-each-other)
+    - `sbatch`でジョブ作成・バッチ内の `srun` で新規ステップ作成
+    - `sbatch`で複数のジョブを作成する場合は以降のアレイジョブを参照
+    - ステップ毎に複数のタスクを持つ・タスクごとに複数のCPUを割り当てることができる
+    - [複数のタスク数は例えば複数のバックグラウンド処理の分配に影響](https://stackoverflow.com/questions/39186698/what-does-the-ntasks-or-n-tasks-does-in-slurm)
+  - ジョブ->ステップの順でリソース(ノード数・タスク数・CPU数・GPU数等)確保
+    1. sbatch の実行対象スクリプトの `#SBATCH` ディレクティブで"ジョブ全体"のリソースを確保
+    2. 上記スクリプト内の srun で"各ステップのリソース"を確保。必要に応じて"各タスクに割り当てるリソース"も指定。
+    3. 各ステップをバックグラウンド実行(&)する場合は slurm 側でリソース(タスク数・CPU数等)が適宜管理される
+- [GPU の割当](https://slurm.schedmd.com/gres.html#Running_Jobs)
+  - 各ノードで確保するGPU数は `--gres` or `--gpus-per-node` で確保(`#SBATCH`で指定)
+  - 各ジョブで確保するGPU数は `--gpus` で確保(`#SBATCH`で指定・アレイジョブの場合)
+  - 各タスクで確保するGPU数は `--gpus-per-task` で確保する(`srun`で指定)
 - [アレイジョブによる実行](https://web.kudpc.kyoto-u.ac.jp/manual/ja/run/tips#arrayjob)
+  - [公式ドキュメントの解説](https://slurm.schedmd.com/job_array.html)
   - [-a オプション](https://slurm.schedmd.com/sbatch.html#OPT_array)で実行
   - インデックスは```${SLURM_ARRAY_TASK_ID}```で参照可能
   - 投げられたジョブは ```(ジョブID)_(タスクID)``` となり ```scancel (ジョブID)``` で一括終了ができる
