@@ -44,6 +44,7 @@ for c in cat_cols:
 ## バリデーションデータの用意
 
 1例として時期を4分割してクロスバリデーションする場合
+
 ```python
 import numpy as np
 
@@ -74,6 +75,7 @@ for va_period in va_period_list:
 ## モデル定義と予測
 
 - 基本
+
     ```python
     import lightgbm as lgb
     from sklearn.metrics import mean_absolute_error
@@ -104,12 +106,14 @@ for va_period in va_period_list:
     # 予測
     pred = model.predict(test_x)
     ```
+
 - 複数の目的変数への対応：scikit-learn インターフェイスで [MultiOutputRegressor](https://qiita.com/katsuki104/items/71c7581cce60f0e303f3)
 
 ## 特徴量エンジニアリング
 
 - 特徴量作成：[featuretools](https://qiita.com/Hyperion13fleet/items/4eaca365f28049fe11c7)
 - 特徴量評価：[feature_importance](https://qiita.com/studio_haneya/items/e70e835c26524d506e19)
+
     ```python
     import pandas as pd
     imporetance = pd.DataFrame(model.feature_importance, 
@@ -122,6 +126,7 @@ for va_period in va_period_list:
 - [パラメータの説明](https://lightgbm.readthedocs.io/en/latest/Parameters.html)
 - [LightGBM Tuner](https://tech.preferred.jp/ja/blog/hyperparameter-tuning-with-optuna-integration-lightgbm-tuner/)
 ：単一のタスクで自動調整
+
     ```python
     import optuna.integration.lightgbm as lgb
 
@@ -132,5 +137,6 @@ for va_period in va_period_list:
                     best_params=best_params,
                     tuning_history=tuning_history)
     ```
+
 - [hyperopt](https://amalog.hateblo.jp/entry/data-analysis-snippets)
 ：複数のタスクを組み合わせて調整
