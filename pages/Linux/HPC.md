@@ -17,7 +17,7 @@ nice watch -n 10 sinfo
 sinfo -R
 # キューの状態確認
 # cf. https://slurm.schedmd.com/squeue.html
-nice watch -n 2 squeue --format=\"%.7i %.9P %.8j %.8u %.2t %.10M %.12N %.5C %22.b\"
+nice watch -n 2 squeue --format=\"%.7i %.9P %.8j %.8u %.2t %.10M %.12N %.5C %.15B\"
 ```
 
 ### ジョブ投入
