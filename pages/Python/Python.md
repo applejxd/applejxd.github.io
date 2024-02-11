@@ -47,7 +47,7 @@ title: Python まとめノート
 
 ## オブジェクト指向プログラミング
 
-- [Python におけるデザインパターン](https://pydp.info/)
+- [デザインパターン](pages/python/DesignPattern.md)
 - [継承よりも委譲](https://qiita.com/kotetsu75/items/4b903023001f157554a4)
 - [ダックタイピング入門](https://code-graffiti.com/duck-typing-in-python/)
 - [抽象基底クラス](https://docs.python.org/ja/3/library/abc.html)
