@@ -39,6 +39,7 @@ title: トップページ
 - [Python メモ](pages/Python/Python.md)
   - [Google Colaboratory (GitHub)](https://github.com/applejxd/colaboratory)
   - [Sphinx メモ](pages/Python/Sphinx.md)
+  - [オブジェクト指向メモ](pages/Python/ODD.md)
   - [LightGBM で時系列データ分析](pages/Python/LightGBM.md)
 - [C++ コーディングメモ](pages/Cpp/Cpp.md)
   - [競技プログラミング Tips](pages/Cpp/CppContest.md)

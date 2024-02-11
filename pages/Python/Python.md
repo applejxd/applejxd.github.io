@@ -2,10 +2,6 @@
 title: Python まとめノート
 ---
 
-## まとめ
-
-- [ODD：オブジェクト指向プログラミング](pages/Python/ODD.md)
-
 ## 各種ドキュメント
 
 - [numpy](https://numpy.org/devdocs/reference/index.html)
