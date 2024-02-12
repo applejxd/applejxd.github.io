@@ -8,9 +8,12 @@ title: Python で ODD
 - [SOLID 原則メモ](https://zenn.dev/megeton/articles/4aaa067fb3a8de)
 
 - S：[単一責任の原則 (Single Responsibility)](https://plainprogram.com/single-responsibility-principle/)
-  - God クラスを避ける・クラスを単一機能になるまで分割する
+  - 概要：クラスを単一機能になるまで分割する
+  - アンチパターン：God クラス・Manager クラスができる
 - O：[オープン・クローズドの原則（Open-Closed Principle）](https://plainprogram.com/open-closed-principle/)
-  - 概要：オブジェクトに対して追加実装の余地がある（Open）・追加実装で既存機能の編集を要しない（Close）
+  - 概要
+    - オブジェクトに対して追加実装の余地がある（Open）
+    - 追加実装で既存機能の編集を要しない（Close）
   - アンチパターン：引数の内容に応じて分岐処理する
   - デザインパターン：[Factory Method を使う](https://qiita.com/k2491p/items/db69dd2dc43a5a678b4f)
 - L：[リスコフの置換原則（Liskov Substitution）](https://plainprogram.com/liskov-substitution-principle/)
@@ -20,9 +23,12 @@ title: Python で ODD
   - 概要：必須のインタフェースのみになるようクラスを分割する
   - 備考：共通化で使わないインタフェースが現れる場合はそもそも共通化をしない方がいい
 - D：[依存性逆転の原則（Dependency Inversion Principle）](https://plainprogram.com/dependency-inversion-principle/)
-  - 概要：上位・下位モジュールの依存は抽象化する。必要なメソッドのみに依存し、クラスの詳細に依存しない。
-  - 例：[ダックタイピングを使う](https://code-graffiti.com/duck-typing-in-python/)（C++ ならテンプレート）
-  - 例：[Dependency Injection](https://qiita.com/mkgask/items/d984f7f4d94cc39d8e3c)（内部でインスタンスを生成せずに引数として受け取る）
+  - 概要：上位・下位モジュールの依存は抽象化する。具体実装に依存しない。
+  - アンチパターン：上位モジュールで下位モジュールのインスタンスを生成し使用する
+  - デザインパターン：[ダックタイピング](https://code-graffiti.com/duck-typing-in-python/)を使う（C++ ならテンプレート）。以下のステップに相当。
+    1. [Dependency Injection](https://qiita.com/mkgask/items/d984f7f4d94cc39d8e3c)：内部でインスタンスを生成せずに引数として受け取る
+    2. 受け取るオブジェクトにインタフェースを定義してインタフェースに依存させる
+    3. インタフェースを受け取り側に含める → ダックタイピングをする
 
 ## GoF のデザインパターン
 
