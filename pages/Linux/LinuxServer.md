@@ -92,3 +92,32 @@ dd if=$(メディア名) of=$(出力先).iso bs=1M
 # 書き込み
 dd if=$(対象ファイル).iso of=$(メディア名) bs=1M
 ```
+
+## service 登録
+
+- [systemdによるサービス作成（Ubuntu起動時処理）](https://qiita.com/bd8z/items/35c2b059819fd64e44b3)
+
+`/etc/systemd/system/bootstrap.service` に次。
+
+```ini
+[Unit]
+Description=bootstrap service
+After=network.target
+
+[Service]
+User=ubuntu
+ExecStart=/bin/sh /home/ubuntu/start.sh
+Restart=no
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
+```
+
+有効化。
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl start my_server
+sudo systemctl status my_server.service
+```
