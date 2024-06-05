@@ -101,12 +101,12 @@ dd if=$(対象ファイル).iso of=$(メディア名) bs=1M
 
 ```ini
 [Unit]
-Description=bootstrap service
+Description=my server
 After=network.target
 
 [Service]
 User=ubuntu
-ExecStart=/bin/sh /home/ubuntu/start.sh
+ExecStart=/bin/bash /home/ubuntu/start.sh
 Restart=no
 Type=simple
 
