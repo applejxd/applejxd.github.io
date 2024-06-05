@@ -97,7 +97,7 @@ dd if=$(対象ファイル).iso of=$(メディア名) bs=1M
 
 - [systemdによるサービス作成（Ubuntu起動時処理）](https://qiita.com/bd8z/items/35c2b059819fd64e44b3)
 
-`/etc/systemd/system/bootstrap.service` に次。
+`/etc/systemd/system/my_server.service` に次。
 
 ```ini
 [Unit]
