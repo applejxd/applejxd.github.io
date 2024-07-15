@@ -19,6 +19,7 @@ title: トップページ
   - [Linux コマンドメモ](pages/Linux/LinuxCommand.md)
   - [SSH メモ](pages/Linux/SSH.md)
   - [シェルスクリプトメモ](pages/Linux/ShellScript.md)
+  - [Vim メモ](pages/Linux/Vim.md)
   - [HPC メモ](pages/Linux/HPC.md)
   - [VPN 設定メモ](pages/Linux/VPN.md)
 - [Git メモ](pages/Git.md)
