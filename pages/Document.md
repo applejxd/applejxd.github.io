@@ -2,6 +2,33 @@
 title: 資料作成メモ
 ---
 
+# パラグラフ・ライティング
+
+- [レポートの書き方(神戸国際大学)](https://www.kobe-kiu.ac.jp/wp-content/themes/kiu/pdf/i-01_report_guide_eco.pdf)
+- [レポートの書き方資料(中央大学)](https://www.chuo-u.ac.jp/uploads/2021/08/campuslife_learning_space_writinglab_01.pdf?1665878400064) 
+
+## フォーマット
+
+- 図の入れ方
+  - 文中で必ず参照
+  - [タイトルは表は上・図は下](https://silenceinfo.net/thesis-writing-9/)
+  - [配置は上下に寄せる](https://www.katayama.nuee.nagoya-u.ac.jp/~katayama/presentation/manuscript/form.html)
+  -  
+- [参考文献の書き方](https://www.bun.kyoto-u.ac.jp/2009gakusei-sien/researchinfo/paper_writing/ohura/references.pdf)
+
+## 文章構成
+
+- [アブストラクトの書き方](http://www.ams.eng.osaka-u.ac.jp/user/ishihara/?p=626)
+
+## その他
+
+- [大学職員のためのレポート作成指導法講座](https://kanazawa-u.repo.nii.ac.jp/records/41975)
+- [優れた研究論文の書き方](https://www.slideshare.net/kdmsnr/writing-a-paper-seven-suggestions)
+- [科学技術論文の書き方](http://www.okada-lab.org/Ronbun/)
+- [アカデミックライティングまとめ](https://crd.ndl.go.jp/reference/modules/d3ndlcrdentry/index.php?page=ref_view&ldtl=1&dtltbs=1&mcmd=25&st=update&asc=desc&ndc1=83&ndc_lk=1&id=1000203151)
+- [論文・プレゼンの表現メモ](https://www.gfd-dennou.org/arch/hiroki/homepage-old/main014.html#writing)
+- [How to prepare for seminars](https://www.ms.u-tokyo.ac.jp/~yasuyuki/sem.htm)
+
 # フリー素材
 
 - アイコン素材
@@ -27,15 +54,6 @@ title: 資料作成メモ
   - [Colordot](https://color.hailpixel.com/)
     ：ノリで色を決める
   - [日本の伝統色](https://nipponcolors.com/)
-
-## アカデミックライティング
-
-- [参考文献の書き方](https://www.bun.kyoto-u.ac.jp/2009gakusei-sien/researchinfo/paper_writing/ohura/references.pdf)
-- [優れた研究論文の書き方](https://www.slideshare.net/kdmsnr/writing-a-paper-seven-suggestions)
-- [科学技術論文の書き方](http://www.okada-lab.org/Ronbun/)
-- [アカデミックライティングまとめ](https://crd.ndl.go.jp/reference/modules/d3ndlcrdentry/index.php?page=ref_view&ldtl=1&dtltbs=1&mcmd=25&st=update&asc=desc&ndc1=83&ndc_lk=1&id=1000203151)
-- [論文・プレゼンの表現メモ](https://www.gfd-dennou.org/arch/hiroki/homepage-old/main014.html#writing)
-- [How to prepare for seminars](https://www.ms.u-tokyo.ac.jp/~yasuyuki/sem.htm)
 
 ## 日本語校正
 
