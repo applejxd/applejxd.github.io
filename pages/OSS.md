@@ -2,6 +2,10 @@
 title: OSS メモ
 ---
 
+## gitea
+
+- [QNAP & gitea](https://qiita.com/YKInoMT/items/b9b9c5d8616fd098d60a)
+
 ## セルフホスト Overleaf
 
 - Docker で環境構築
