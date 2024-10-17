@@ -2,10 +2,10 @@
 title: 資料作成メモ
 ---
 
-# パラグラフ・ライティング
+## パラグラフ・ライティング
 
 - [レポートの書き方(神戸国際大学)](https://www.kobe-kiu.ac.jp/wp-content/themes/kiu/pdf/i-01_report_guide_eco.pdf)
-- [レポートの書き方資料(中央大学)](https://www.chuo-u.ac.jp/uploads/2021/08/campuslife_learning_space_writinglab_01.pdf?1665878400064) 
+- [レポートの書き方資料(中央大学)](https://www.chuo-u.ac.jp/uploads/2021/08/campuslife_learning_space_writinglab_01.pdf?1665878400064)
 
 ## フォーマット
 
@@ -13,7 +13,6 @@ title: 資料作成メモ
   - 文中で必ず参照
   - [タイトルは表は上・図は下](https://silenceinfo.net/thesis-writing-9/)
   - [配置は上下に寄せる](https://www.katayama.nuee.nagoya-u.ac.jp/~katayama/presentation/manuscript/form.html)
-  -  
 - [参考文献の書き方](https://www.bun.kyoto-u.ac.jp/2009gakusei-sien/researchinfo/paper_writing/ohura/references.pdf)
 
 ## 文章構成
@@ -29,7 +28,7 @@ title: 資料作成メモ
 - [論文・プレゼンの表現メモ](https://www.gfd-dennou.org/arch/hiroki/homepage-old/main014.html#writing)
 - [How to prepare for seminars](https://www.ms.u-tokyo.ac.jp/~yasuyuki/sem.htm)
 
-# フリー素材
+## フリー素材
 
 - アイコン素材
   - [ICOOON MONO](https://icooon-mono.com/)：登録不要・商用利用可能

@@ -34,6 +34,7 @@ title: トップページ
 - その他
   - [M5Stack メモ](pages/M5Stack.md)
   - [IDE メモ](pages/IDE.md)
+  - [OSS メモ](pages/OSS.md)
 
 ### プログラミング
 
