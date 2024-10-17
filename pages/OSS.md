@@ -31,5 +31,18 @@ git reset --hard @
 # 起動
 bin/up
 
-# http://localhost:port/launchpad にアクセス
+# http://localhost:port/launchpad にアクセスしアカウント作成
+
+# アタッチ
+bin/shell
+
+# TeXLive 更新 (日本語対応)
+tlmgr update --self
+tlmgr install scheme-full
+exit
+
+# イメージ更新 & 起動
+docker commit sharelatex sharelatex/sharelatex:5.0.3-with-texlive-full
+echo 5.0.3-with-texlive-full > config/version
+bin/up
 ```
