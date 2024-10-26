@@ -118,6 +118,16 @@ git config --global user.email alice@example.com
   1. `$ git reflog` で HEAD 履歴確認
   2. 直前の状態に戻るなら : `$ git reset —hard HEAD@{1}`
 
+### パッチ作成
+
+```bash
+# コミットしていない変更をパッチ化
+git diff > patch.patch
+
+# 既存のコミットをパッチ化
+git format-patch -3 HEAD
+```
+
 ## Tips
 
 - [HEAD の指定](https://qiita.com/chihiro/items/d551c14cb9764454e0b9)
