@@ -46,12 +46,12 @@ git config --global user.email alice@example.com
 
 - リモートリポジトリの作成
 
-```bash
-cd /path/to/remote/repo
-git init --bare --shared
-cd /path/to/local/repo
-git remote add origin /path/to/remote/repo
-```
+  ```bash
+  cd /path/to/remote/repo
+  git init --bare --shared
+  cd /path/to/local/repo
+  git remote add origin /path/to/remote/repo
+  ```
 
 ### gitignore 設定
 
