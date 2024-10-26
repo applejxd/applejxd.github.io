@@ -12,37 +12,37 @@ title: Git メモ
 
 ### ユーザ設定
 
-- 基本
-
 ```bash
 git config --global user.name "Alice"
 git config --global user.email alice@example.com
 ```
 
-- [GitHub で匿名アドレスを使いたい場合](https://qiita.com/sta/items/982ab68e8220a81d485c)
+[GitHub で匿名アドレスを使う場合](https://qiita.com/sta/items/982ab68e8220a81d485c)
 
 ### リモートリポジトリ操作
 
+- [SSH 認証の github 設定](https://zenn.dev/keikuchen/articles/cffa31d69ecaae7e91d7)
 - リモートリポジトリの登録
-  - [SSH 認証の github 設定](https://zenn.dev/keikuchen/articles/cffa31d69ecaae7e91d7)
-  - 自分の GitHub リポジトリの設定コマンド：`git remote set-url origin github:(user_name)/(repo_name).git`
 
-```bash
-git remote add origin /url/to/remote/repo
-git push -u origin main
-```
+  ```bash
+  # 自分の GitHub リポジトリの設定コマンド
+  git remote set-url origin github:(user_name)/(repo_name).git
+
+  git remote add origin /url/to/remote/repo
+  git push -u origin main
+  ```
 
 - リモートリポジトリの変更
 
-```bash
-#  [リモートリポジトリの移動](https://qiita.com/orange5405/items/783b74667bcc69a34a52)（タグは移動できない様子）
-git clone --mirror /path/to/source/repo.git
-cd repo.git
-git push --mirror /path/to/destination
+  ```bash
+  #  [リモートリポジトリの移動](https://qiita.com/orange5405/items/783b74667bcc69a34a52)（タグは移動できない様子）
+  git clone --mirror /path/to/source/repo.git
+  cd repo.git
+  git push --mirror /path/to/destination
 
-# URL変更
-git remote set-url origin /path/to/new/url
-```
+  # URL変更
+  git remote set-url origin /path/to/new/url
+  ```
 
 - リモートリポジトリの作成
 
@@ -58,17 +58,17 @@ git remote add origin /path/to/remote/repo
 - [gitignore.io](https://www.toptal.com/developers/gitignore)
 - [追加したファイルを除外](https://tinyurl.com/yne4h7hc)
 
-```bash
-git rm --cached hoge
-```
+  ```bash
+  git rm --cached hoge
+  ```
 
 - [.gitignore でホワイトリスト](https://qiita.com/officemove/items/b0409cb1ee946edadc3e)
 
-```bash
-*
-!*/
-!/.gitignore
-```
+  ```bash
+  *
+  !*/
+  !/.gitignore
+  ```
 
 ## リポジトリ操作
 
@@ -76,17 +76,17 @@ git rm --cached hoge
 
 - リモートブランチをチェックアウト
 
-```bash
-git checkout -b develop origin/develop
-```
+  ```bash
+  git checkout -b develop origin/develop
+  ```
 
 - デフォルトブランチの変更：master → main
 
-```bash
-git branch -m master main
-git fetch origin
-git branch -u origin/main main
-```
+  ```bash
+  git branch -m master main
+  git fetch origin
+  git branch -u origin/main main
+  ```
 
 ### リセット
 
@@ -105,14 +105,14 @@ git branch -u origin/main main
 
 - [現在のブランチでの実装を別ブランチに移動](https://gist.github.com/koudaiii/526707492ebc5915596e)
 
-```bash
-# ローカルの変更を退避
-git stash
-# ブランチ変更
-git checkout another_branch
-#  ローカルの変更を戻す
-git stash apply
-```
+  ```bash
+  # ローカルの変更を退避
+  git stash
+  # ブランチ変更
+  git checkout another_branch
+  #  ローカルの変更を戻す
+  git stash apply
+  ```
 
 - [どうしようもないとき→ミッシングリンクを発見](https://qiita.com/tbaba/items/af563deac65d1b12de49)
   1. `$ git reflog` で HEAD 履歴確認
@@ -132,25 +132,25 @@ git stash apply
 - [tig](https://qiita.com/suino/items/b0dae7e00bd7165f79ea)
 - [gitflow-avh](https://danielkummer.github.io/git-flow-cheatsheet/index.ja_JP.html)
 
-```bash
-# 初期化
-git flow init
+  ```bash
+  # 初期化
+  git flow init
 
-# feature ブランチ開始
-git flow feature start test
+  # feature ブランチ開始
+  git flow feature start test
 
-# feature ブランチ終了
-git flow feature finish test
+  # feature ブランチ終了
+  git flow feature finish test
 
-# リリース開始
-git flow release start 0.1.0
+  # リリース開始
+  git flow release start 0.1.0
 
-# CHANGELOG.md 編集など
+  # CHANGELOG.md 編集など
 
-# リリース終了
-# マージのメッセージはそのまま・タグ生成時にメッセージを追加
-git flow release finish
-```
+  # リリース終了
+  # マージのメッセージはそのまま・タグ生成時にメッセージを追加
+  git flow release finish
+  ```
 
 ## その他
 
