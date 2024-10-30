@@ -19,7 +19,7 @@ git config --global user.email alice@example.com
 
 [GitHub で匿名アドレスを使う場合](https://qiita.com/sta/items/982ab68e8220a81d485c)
 
-### リモートリポジトリ操作
+### リモートリポジトリ設定
 
 - [SSH 認証の github 設定](https://zenn.dev/keikuchen/articles/cffa31d69ecaae7e91d7)
 - リモートリポジトリの登録
