@@ -74,19 +74,28 @@ git config --global user.email alice@example.com
 
 ### ブランチ操作
 
-- リモートブランチをチェックアウト
+```shell
+# リモートブランチをチェックアウト
+git checkout -b develop origin/develop
 
-  ```bash
-  git checkout -b develop origin/develop
-  ```
+# デフォルトブランチの変更：master → main
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
 
-- デフォルトブランチの変更：master → main
+# 一部まで push
+git push origin [commit_ID]:refs/heads/[branch_name]
+```
 
-  ```bash
-  git branch -m master main
-  git fetch origin
-  git branch -u origin/main main
-  ```
+### パッチ作成
+
+```bash
+# コミットしていない変更をパッチ化
+git diff > patch.patch
+
+# 既存のコミットをパッチ化
+git format-patch -3 HEAD
+```
 
 ### リセット
 
@@ -117,16 +126,6 @@ git config --global user.email alice@example.com
 - [どうしようもないとき→ミッシングリンクを発見](https://qiita.com/tbaba/items/af563deac65d1b12de49)
   1. `$ git reflog` で HEAD 履歴確認
   2. 直前の状態に戻るなら : `$ git reset —hard HEAD@{1}`
-
-### パッチ作成
-
-```bash
-# コミットしていない変更をパッチ化
-git diff > patch.patch
-
-# 既存のコミットをパッチ化
-git format-patch -3 HEAD
-```
 
 ## Tips
 
