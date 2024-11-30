@@ -20,7 +20,7 @@ git config --global user.email alice@example.com
 
 [GitHub で匿名アドレスを使う場合](https://qiita.com/sta/items/982ab68e8220a81d485c)
 
-### リモートリポジトリ操作
+### リモートリポジトリ設定
 
 - [SSH 認証の github 設定](https://zenn.dev/keikuchen/articles/cffa31d69ecaae7e91d7)
 - リモートリポジトリの登録
@@ -75,19 +75,28 @@ git config --global user.email alice@example.com
 
 ### ブランチ操作
 
-- リモートブランチをチェックアウト
+```shell
+# リモートブランチをチェックアウト
+git checkout -b develop origin/develop
 
-  ```bash
-  git checkout -b develop origin/develop
-  ```
+# デフォルトブランチの変更：master → main
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
 
-- デフォルトブランチの変更：master → main
+# 一部まで push
+git push origin [commit_ID]:refs/heads/[branch_name]
+```
 
-  ```bash
-  git branch -m master main
-  git fetch origin
-  git branch -u origin/main main
-  ```
+### パッチ作成
+
+```bash
+# コミットしていない変更をパッチ化
+git diff > patch.patch
+
+# 既存のコミットをパッチ化
+git format-patch -3 HEAD
+```
 
 ### リセット
 
