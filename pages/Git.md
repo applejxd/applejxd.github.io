@@ -7,6 +7,7 @@ title: Git メモ
 - [図解Git](https://marklodato.github.io/visual-git-guide/index-ja.html)
 - [Git Flow ブランチモデル](https://qiita.com/kaitoland/items/5c98f60e33658c4433ef)
 - [CHANGELOG の書き方](https://blog.yux3.net/entry/2017/05/04/035811)
+- [submodule の仕組みと使い方](https://www.m3tech.blog/entry/git-submodule)
 
 ## 各種設定
 
