@@ -63,7 +63,7 @@ title: WSL メモ
 6. `keyboards/keychron/q6_max` を参照
 7. `ansi_encoder` をコピーして `jis_encoder` と名称変更
 8. `jis_encoder/info.json` の `layouts` に `LAYOUT_112_jis` として 3. の出力結果をペースト
-9.  `jis_encoder/config.h` に `#define DYNAMIC_KEYMAP_LAYER_COUNT 6` などと追記してレイヤー数を増加
+9. `jis_encoder/config.h` に `#define DYNAMIC_KEYMAP_LAYER_COUNT 6` などと追記してレイヤー数を増加
 10. `jis_encoder/keymaps/via/keymap.c` の配列を `LAYOUT_112_jis` に変更。
     - キーマップは `keyboards/keychron/k10_pro` などの 100% JIS キーボードからコピーしてくる
     - メディアキーは Q6 Max では未定義のため `KC_ESC, KC_F1, ...` をコピー・貼り付けして上書き
