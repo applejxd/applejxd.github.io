@@ -30,6 +30,7 @@ title: WSL メモ
 
 1. [Keyboard Layout Editor](https://www.keyboard-layout-editor.com/#/) でレイアウト作成
    - ただし 列は 0~19 に必ず収める。最後の列は `3,13`, `3,14`, ... と3行目の余りのキーを付与。
+   - [公式の json](https://www.keychron.com/pages/firmware-and-json-files-of-the-keychron-qmk-keyboards) から配置が読み取れる
    - `Raw data` から `Download JSON` で保存
    - 別途 `Raw data` の内容をクリップボードにコピー
 2. [KLE -> QMK info.json Converter](https://qmk.fm/converter/) でフォーマット変換
@@ -65,7 +66,8 @@ title: WSL メモ
 8. `jis_encoder/info.json` の `layouts` に `LAYOUT_112_jis` として 3. の出力結果をペースト
 9. `jis_encoder/config.h` に `#define DYNAMIC_KEYMAP_LAYER_COUNT 6` などと追記してレイヤー数を増加
 10. `jis_encoder/keymaps/via/keymap.c` の配列を `LAYOUT_112_jis` に変更。
-    - キーマップは `keyboards/keychron/k10_pro` などの 100% JIS キーボードからコピーしてくる
+    - キーの順番は info.json の順番
+    - (キーマップは `keyboards/keychron/k10_pro` などの 100% JIS キーボードからコピーしてくる)
     - メディアキーは Q6 Max では未定義のため `KC_ESC, KC_F1, ...` をコピー・貼り付けして上書き
 11. `keymap.c` のレイヤ数をコピペで増やす
     - `layers` 列挙体に `FN_CX, FN_M` などとして新規レイヤーの名前を作成
