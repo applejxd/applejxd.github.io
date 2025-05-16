@@ -71,9 +71,7 @@ git config --global user.email alice@example.com
   !/.gitignore
   ```
 
-## リポジトリ操作
-
-### ブランチ操作
+## ブランチ操作
 
 ```shell
 # リモートブランチをチェックアウト
@@ -87,6 +85,26 @@ git branch -u origin/main main
 # 一部まで push
 git push origin [commit_ID]:refs/heads/[branch_name]
 ```
+
+### 全コミットを一つにまとめる
+
+```bash
+# 新しいブランチ作成・全てステージング
+git checkout --orphan new-branch
+git add -A
+
+# コミット作成
+git commit -m "Squashed commit"
+
+# ブランチ削除・置き換え
+git branch -D main
+git branch -m main
+
+#上書き
+git push origin main --force
+```
+
+## リポジトリ操作
 
 ### パッチ作成
 
