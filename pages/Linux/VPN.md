@@ -83,7 +83,7 @@ TP-Link ルータ & Ubuntu の場合は次の通り：
 7. 自宅内ネットワークのルータの設定変更
     - 上記 1. に応じてルータのアドレスとDHCPの設定変更
 
-## 設定以降
+## 設定移行
 
 - [【SoftEther VPN】サーバーのバックアップを取得する方法](https://office54.net/iot/app/softether-vpn-backup)
   - 「管理画面」→「Config 編集」から操作
