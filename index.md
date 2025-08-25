@@ -28,6 +28,7 @@ title: トップページ
 - [Windows 設定 (GitHub)](https://github.com/applejxd/windows-setup)
   - [Windows メモ](pages/Windows/Windows.md)
   - [Powershell メモ](pages/Windows/PowerShell.md)
+  - [Symlink メモ](pages/Windows/Symlink.md)
   - [WSL メモ](pages/Windows/WSL.md)
 - [Mac メモ](pages/Mac.md)
 - [Terminal 操作メモ](pages/Terminal.md)
