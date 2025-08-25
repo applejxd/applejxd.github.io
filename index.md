@@ -26,9 +26,9 @@ title: トップページ
   - [GitHub Pages メモ](pages/GitHubPages.md)
   - [GitHub Status](https://www.githubstatus.com/)
 - [Windows 設定 (GitHub)](https://github.com/applejxd/windows-setup)
-  - [Windows メモ](pages/Windows.md)
-  - [Powershell メモ](pages/PowerShell.md)
-  - [WSL メモ](pages/WSL.md)
+  - [Windows メモ](pages/Windows/Windows.md)
+  - [Powershell メモ](pages/Windows/PowerShell.md)
+  - [WSL メモ](pages/Windows/WSL.md)
 - [Mac メモ](pages/Mac.md)
 - [Terminal 操作メモ](pages/Terminal.md)
 - その他
