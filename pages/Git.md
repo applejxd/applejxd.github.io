@@ -86,7 +86,9 @@ git branch -u origin/main main
 git push origin [commit_ID]:refs/heads/[branch_name]
 ```
 
-### 全コミットを一つにまとめる
+### コミットをまとめる
+
+CLI で全コミットを一つにまとめる方法は以下。
 
 ```bash
 # 新しいブランチ作成・全てステージング
@@ -104,17 +106,35 @@ git branch -m main
 git push origin main --force
 ```
 
+一部のコミットを Squash してまとめるには
+VSCode の GitLens による Interactive Rebase が便利。
+
+1. コマンドパレットから `GitLens: Enable Interactive Rebase Editor` を事前に設定しておく。
+2. コマンドパレットから `GitLens: Git Rebase`
+3. 変更をかけないコミットのうち最も新しいコミットを親として選択。
+4. Squash 選択で統合対象のコミットを指定。
+5. コミットメッセージの編集画面が出るので変更して保存・タブを閉じて終了。
+
 ## リポジトリ操作
 
-### パッチ作成
+### 差分比較・パッチ作成
+
+CLI 操作としては以下。
 
 ```bash
 # コミットしていない変更をパッチ化
-git diff > patch.patch
-
-# 既存のコミットをパッチ化
-git format-patch -3 HEAD
+git diff > diff.patch
+# コミット(SHA)・ブランチ間の変更をパッチ化
+git ${New SHA or Branch name}..${Old SHA or Branch name} > diff.patch
 ```
+
+VSCode の GitLens を使う方法は以下。
+
+1. `GitLens Inspect`タブを開く
+2. `Search & Compare` 欄を展開
+3. `Compare References` ボタンを押下
+4. New → Old の順でコミット・ブランチを選択
+5. New に HEAD を選んでおけば Old からの部分指定 Revert が可能
 
 ### リセット
 
