@@ -17,6 +17,21 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
   - `Bypass`：何もブロックせず、警告・メッセージを非表示
 - `-Scope Process`：プロセス限定で実行ポリシーを変更（管理者権限は不要）
 
+## ポートフォワーディング
+
+```powershell
+# 設定
+# LP=待受ポート, CP=転送先ポート, IP=転送先アドレス
+netsh interface portproxy add v4tov4 listenport=LP listenaddress=0.0.0.0 connectport=CP connectaddress=IP
+
+# 一覧
+netsh interface portproxy show all
+
+# 削除
+# LP, listenaddress は設定時と同じ値を指定
+netsh interface portproxy delete v4tov4 listenport=LP listenaddress=0.0.0.0
+```
+
 ## ダウンロード
 
 ### .Net の WebClient を使う方法
