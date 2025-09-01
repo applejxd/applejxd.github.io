@@ -16,11 +16,12 @@ title: トップページ
 
 - [dotfiles (GitHub)](https://github.com/applejxd/dotfiles)
 - [Linux サーバメモ](pages/Linux/LinuxServer.md)
-  - [Linux コマンドメモ](pages/Linux/LinuxCommand.md)
+  - [Linux コマンドメモ](pages/Linux/LinuxCommand.md) 
   - [SSH メモ](pages/Linux/SSH.md)
   - [シェルスクリプトメモ](pages/Linux/ShellScript.md)
   - [Vim メモ](pages/Linux/Vim.md)
   - [HPC メモ](pages/Linux/HPC.md)
+  - [Ubuntu 設定メモ](pages/Linux/Ubuntu.md)
   - [VPN 設定メモ](pages/Linux/VPN.md)
 - [Git メモ](pages/Git.md)
   - [GitHub Pages メモ](pages/GitHubPages.md)

@@ -7,6 +7,12 @@ title: シェルスクリプトメモ
 - [シェルスクリプト入門 書き方のまとめ](http://motw.mods.jp/shellscript/tutorial.html)
 - [シェルスクリプト入門](https://web.archive.org/web/20171016064310/http://www.k4.dion.ne.jp/~mms/unix/shellscript/index.html)
 
+## Tips
+
+- パスワード認証は`sudo -v`で
+- `sed -i.bk`でバックアップを作成して編集
+- 権限制御付きコピーは cp ではなく install で 
+
 ## 置換
 
 - コマンド置換：コマンドの結果の文字列に置換
