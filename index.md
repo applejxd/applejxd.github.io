@@ -23,6 +23,7 @@ title: トップページ
   - [HPC メモ](pages/Linux/HPC.md)
   - [Ubuntu 設定メモ](pages/Linux/Ubuntu.md)
   - [VPN 設定メモ](pages/Linux/VPN.md)
+  - [ネットワークドライブマウントメモ](pages/Linux/Mount.md)
 - [Git メモ](pages/Git.md)
   - [GitHub Pages メモ](pages/GitHubPages.md)
   - [GitHub Status](https://www.githubstatus.com/)
