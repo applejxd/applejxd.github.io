@@ -28,18 +28,18 @@ sudo ufw status numbered
 # ※ tailscale0 名は環境により異なる場合あり（ip addr で確認）
 
 # SSH
-sudo ufw allow in on tailscale0 to any port 22 proto tcp     # SSH 本体（TCP）
+sudo ufw allow in on tailscale0 to any port 22 proto tcp comment 'SSH for Tailscale network'
 
 # xrdp（RDP）
-sudo ufw allow in on tailscale0 to any port 3389 proto tcp   # RDP の基本は TCP
-sudo ufw allow in on tailscale0 to any port 3389 proto udp   # 任意：UDP 最適化
+sudo ufw allow in on tailscale0 to any port 3389 proto tcp comment 'RDP TCP for remote desktop'
+sudo ufw allow in on tailscale0 to any port 3389 proto udp comment 'RDP UDP optimization'
 
 # Web（HTTP/1.1/2）
-sudo ufw allow in on tailscale0 to any port 80  proto tcp    # HTTP
-sudo ufw allow in on tailscale0 to any port 443 proto tcp    # HTTPS（HTTP/2 含む）
+sudo ufw allow in on tailscale0 to any port 80  proto tcp comment 'HTTP for web server via Tailscale'
+sudo ufw allow in on tailscale0 to any port 443 proto tcp comment 'HTTPS/HTTP2 for secure web via Tailscale'
 
 # HTTP/3（QUIC）は UDP を追加で開放する場合のみ
-sudo ufw allow in on tailscale0 to any port 443 proto udp    # 任意：HTTP/3 有効化
+sudo ufw allow in on tailscale0 to any port 443 proto udp comment 'HTTP/3 QUIC for modern web'
 
 # 反映確認
 sudo ufw status numbered
