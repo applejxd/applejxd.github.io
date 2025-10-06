@@ -41,6 +41,7 @@ title: トップページ
   - [IDE メモ](pages/IDE.md)
   - [OSS メモ](pages/OSS.md)
   - [Keychron メモ](pages/Keychron.md)
+  - [FPGA メモ](pages/FPGA.md)
 
 ### プログラミング
 
