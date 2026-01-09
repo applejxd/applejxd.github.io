@@ -23,8 +23,8 @@ title: トップページ
   - [HPC メモ](pages/Linux/HPC.md)
   - [VPN 設定メモ](pages/Linux/VPN.md)
 - [Git メモ](pages/Git.md)
-  - [GitHub Pages メモ](pages/GitHubPages.md)
-  - [GitHub Status](https://www.githubstatus.com/)
+  - [GitHub メモ](pages/GitHubPages.md)
+  - [GitHub 動作ステータス](https://www.githubstatus.com/)
 - [Windows 設定 (GitHub)](https://github.com/applejxd/windows-setup)
   - [Windows メモ](pages/Windows.md)
   - [Powershell メモ](pages/PowerShell.md)
@@ -57,6 +57,7 @@ title: トップページ
 
 ## 学習メモ
 
+- [CAD メモ](pages/CAD.md)
 - [理学メモ](pages/Science.md)
 - [資料作成メモ](pages/Document.md)
 - [英語リンク集](pages/English.md)
