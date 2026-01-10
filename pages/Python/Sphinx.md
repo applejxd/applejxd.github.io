@@ -59,8 +59,12 @@ sphinx-quickstart docs/sphinx --sep -l en `
   --extensions sphinx.ext.inheritance_diagram
 ```
 
-初期化後に [conf.py](https://github.com/applejxd/VideoConverter/blob/main/docs/sphinx/source/conf.py)
-と [index.rst](https://github.com/applejxd/VideoConverter/blob/main/docs/sphinx/source/index.rst?plain=1) を変更。
+初期化後に以下を設定：
+
+- [conf.py](https://github.com/applejxd/VideoConverter/blob/main/docs/sphinx/source/conf.py): 拡張機能の設定など
+- [index.rst](https://github.com/applejxd/VideoConverter/blob/main/docs/sphinx/source/index.rst?plain=1): 
+   `modules` など追加したいページへのリンクを貼る
+
 ビルドは以下。
 
 ```shell
