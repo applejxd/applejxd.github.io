@@ -24,29 +24,49 @@ title: Sphinx メモ
 
 ## セットアップ & ビルド
 
-- インストール
+関連ライブラリをインストール
 
-  ```shell
-  pip install sphinx
-  pip install sphinx_rtd_theme
-  ```
+```shell
+pip install sphinx sphinx_rtd_theme sphinx_mdinclude
+```
 
-- セットアップ
+Graphviz を使う場合はそれも。
 
-  ```shell
-  mkdir docs
-  # conf.py, index.rst 変更
-  sphinx-quickstart sphinx
-  # > ソースディレクトリとビルドディレクトリを分ける（y / n） [n]: n
-  ```
+```shell
+# Linux の場合
+sudo apt-get install graphviz
+# Windows の場合
+winget install Graphviz.Graphviz
+```
 
-- ビルド
+初期設定
 
-  ```shell
-  # cf. https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html
-  sphinx-apidoc -e -f -o ./sphinx .
-  sphinx-build -a ./sphinx ./docs
-  ```
+```shell
+# bash, zsh の場合
+sphinx-quickstart docs/sphinx --sep -l en --ext-autodoc --ext-viewcode
+```
+
+```shell
+# git/uv をベースにした powershell の場合の例
+sphinx-quickstart docs/sphinx --sep -l en `
+  -p $((uv version --output-format json | ConvertFrom-Json).package_name) `
+  -a $(git config --get user.name) `
+  -r $((uv version --output-format json | ConvertFrom-Json).version) `
+  --ext-autodoc --ext-viewcode `
+  --ext-githubpages `
+  --extensions sphinx_mdinclude `
+  --extensions sphinx.ext.graphviz `
+  --extensions sphinx.ext.inheritance_diagram
+```
+
+初期化後に conf.py, index.rst 変更。
+ビルドは以下。
+
+```shell
+# see https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html
+sphinx-apidoc -e -f -o ./docs/sphinx/source .
+sphinx-build -a ./docs/sphinx/source ./docs
+```
 
 ## 拡張機能
 
