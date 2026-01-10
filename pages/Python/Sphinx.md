@@ -63,9 +63,10 @@ sphinx-quickstart docs/sphinx --sep -l en `
 ビルドは以下。
 
 ```shell
+# src-layout 前提
 # see https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html
-sphinx-apidoc -e -f -o ./docs/sphinx/source .
-sphinx-build -a ./docs/sphinx/source ./docs
+sphinx-apidoc -e -f -o ./docs/sphinx/source ./src
+sphinx-build ./docs/sphinx/source ./docs/sphinx/build
 ```
 
 ## 拡張機能
