@@ -27,7 +27,7 @@ title: Sphinx メモ
 関連ライブラリをインストール
 
 ```shell
-pip install sphinx sphinx_rtd_theme sphinx_mdinclude
+pip install "sphinx>=8.2,<9" sphinx_rtd_theme sphinx_mdinclude sphinx_autobuild
 ```
 
 Graphviz を使う場合はそれも。
@@ -54,6 +54,7 @@ sphinx-quickstart docs/sphinx --sep -l en `
   -r $((uv version --output-format json | ConvertFrom-Json).version) `
   --ext-autodoc --ext-viewcode `
   --ext-githubpages `
+  --extensions sphinx.ext.apidoc `
   --extensions sphinx_mdinclude `
   --extensions sphinx.ext.graphviz `
   --extensions sphinx.ext.inheritance_diagram
@@ -62,15 +63,14 @@ sphinx-quickstart docs/sphinx --sep -l en `
 初期化後に以下を設定：
 
 - [conf.py](https://github.com/applejxd/VideoConverter/blob/main/docs/sphinx/source/conf.py): 拡張機能の設定など
-- [index.rst](https://github.com/applejxd/VideoConverter/blob/main/docs/sphinx/source/index.rst?plain=1): 
-   `modules` など追加したいページへのリンクを貼る
+- [index.rst](https://github.com/applejxd/VideoConverter/blob/main/docs/sphinx/source/index.rst?plain=1): `modules` など追加したいページへのリンクを貼る
+- [Makefile](https://github.com/applejxd/VideoConverter/blob/main/Makefile): ビルド設定
 
-ビルドは以下。
+ビルドは [sphinx-build](https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html)。
+上記の `conf.py` の通り設定しておけば `sphinx-apidoc` は不要。
 
 ```shell
-# src-layout 前提
-# see https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html
-sphinx-apidoc -e -f -o ./docs/sphinx/source ./src
+# see 
 sphinx-build ./docs/sphinx/source ./docs/sphinx/build
 ```
 
