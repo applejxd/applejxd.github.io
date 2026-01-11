@@ -2,29 +2,10 @@
 title: Sphinx メモ
 ---
 
-## 使用方法
-
-- サンプル
-  - [conf.py](https://github.com/applejxd/slam-practice/blob/master/python/sphinx/conf.py)
-  - [トップページ](https://raw.githubusercontent.com/applejxd/slam-practice/master/python/sphinx/index.rst)
-  - [README.md](https://raw.githubusercontent.com/applejxd/slam-practice/master/python/sphinx/link_readme.rst)
-  - [ビルドスクリプト](https://github.com/applejxd/slam-practice/blob/master/python/build_docs.ps1)
-
-- [sphinx-apidoc](https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html)：公式マニュアル
-- [Sphinx Themes Gallery](https://sphinx-themes.org/)
-- [Sphinxの使い方](https://qiita.com/futakuchi0117/items/4d3997c1ca1323259844)：入門記事
-- [sphinxでpythonのクラスや関数のドキュメントを自動生成する](https://joppot.info/2018/03/30/4156)
-
-- [Markdown から作成](https://github.com/omnilib/sphinx-mdinclude)
-  1. `pip install sphinx-mdinclude`
-  2. conf.py の extension に sphinx_mdinclude を追加
-  3. [対応する rst ファイルを作成](https://stackoverflow.com/questions/46278683/include-my-markdown-readme-into-sphinx)
-  4. 必要に応じて index.rst などに上記3.のリンクを作成
-- [PDFファイル作成](https://sphinx-users.jp/cookbook/pdf/index.html)
-
 ## セットアップ & ビルド
 
-関連ライブラリをインストール
+関連ライブラリをインストール。
+`sphinx_rtd_theme` と `sphinx` のバージョン互換性に注意。
 
 ```shell
 pip install "sphinx>=8.2,<9" sphinx_rtd_theme sphinx_mdinclude sphinx_autobuild
@@ -60,7 +41,7 @@ sphinx-quickstart docs/sphinx --sep -l en `
   --extensions sphinx.ext.inheritance_diagram
 ```
 
-初期化後に以下を設定：
+初期化後に以下を設定。リンク先には例。：
 
 - [conf.py](https://github.com/applejxd/VideoConverter/blob/main/docs/sphinx/source/conf.py): 拡張機能の設定など
 - [index.rst](https://github.com/applejxd/VideoConverter/blob/main/docs/sphinx/source/index.rst?plain=1): `modules` など追加したいページへのリンクを貼る
@@ -108,14 +89,15 @@ class Hoge:
 ## Tips
 
 - docstring からのドキュメント自動生成には sphinx.ext.autodoc が必要なため注意
+- 現在は `conf.py` の `sys.path` 変更は不要。
+  `sphinx-apidoc`/`sphinx-build` の引数でソースのパスを適切に設定。
 - Module 化していない場合に \_\_init\_\_.py を作っていると不具合が生じるため注意
-- conf.py の Path setup は conf.py からの .py ファイルへの相対パスを指定
 
-  ```python
-  import os
-  import sys
-  sys.path.insert(0, os.path.abspath('../'))
-  ```
+- [Markdown から作成](https://github.com/omnilib/sphinx-mdinclude)
+  1. `pip install sphinx-mdinclude`
+  2. conf.py の extension に sphinx_mdinclude を追加
+  3. [対応する rst ファイルを作成](https://stackoverflow.com/questions/46278683/include-my-markdown-readme-into-sphinx)
+  4. 必要に応じて index.rst などに 上記3. のリンクを作成
 
 ## トラブルシューティング
 
@@ -125,3 +107,11 @@ class Hoge:
   - 使用しているライブラリは sphinx build をする環境にインストール
   - パス名に "-" は厳禁。うまく認識しない。
 - LaTeX のビルドは LuaTex の場合は日本語の改行がおかしくなる。XeTeX 推奨。
+
+## 各種リンク
+
+- [sphinx-apidoc](https://www.sphinx-doc.org/ja/master/man/sphinx-apidoc.html)：公式マニュアル
+- [Sphinx Themes Gallery](https://sphinx-themes.org/)
+- [Sphinxの使い方](https://qiita.com/futakuchi0117/items/4d3997c1ca1323259844)：入門記事
+- [sphinxでpythonのクラスや関数のドキュメントを自動生成する](https://joppot.info/2018/03/30/4156)
+- [PDFファイル作成](https://sphinx-users.jp/cookbook/pdf/index.html)
