@@ -73,6 +73,8 @@ git config --global user.email alice@example.com
 
 ## ブランチ操作
 
+基本は以下。
+
 ```shell
 # リモートブランチをチェックアウト
 git checkout -b develop origin/develop
@@ -84,6 +86,14 @@ git branch -u origin/main main
 
 # 一部まで push
 git push origin [commit_ID]:refs/heads/[branch_name]
+```
+
+内容を選別して merge する場合はこれ。
+
+```shell
+git merge --no-commit --no-ff ${branch_name}
+git reset . # 一旦すべて unstage
+# 内容を確認しながら一つずつ git add していく
 ```
 
 ### コミットをまとめる
