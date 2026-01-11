@@ -21,23 +21,27 @@ title: GitHub メモ
 
 ### 自動生成ドキュメントのサイト化
 
-これはほぼブランチスタイル（`gh-pages` ブランチ内など）でデプロイ。
+自動生成ドキュメントは [Sphinx](./Python/Sphinx.md) などで生成しておく。
+Sphinx の場合は `sphinx.ext.githubpages` の設定を忘れずに。
+
+デプロイスタイルはほぼブランチスタイル（`gh-pages` ブランチ内など）。
 `gh-pages` は orphan ランチとして用意するため worktree を使用。
+まずはローカル側で以下を準備する。
 
-1. "Settings > GitHub Pages > Source" に進む
-2. "master/docs" で Save
-3. README.md にリンク設置
-    - Doxygen：(固有アドレス)/html/annotated.html
-    - Sphinx:(固有アドレス)/index.html
+```bash
+git worktree add --orphan -b gh-pages ../my_repo.worktrees/gh-pages
+cp -r ./docs/sphinx/build/* ../my_repo.worktrees/gh-pages
+cd ../my_repo.worktrees/gh-pages
+git add ./*
+git commit -m "first commit"
+git push -u origin gh-pages
+```
 
-Sphinx の場合は次の操作が必要：
+その後 GitHub 側でこの設定。
 
-- doc/.nojekyll の空ファイル生成
-- index.html に次を追加
-
-    ```html
-    <base href="(固有アドレス)" charset="utf-8/>
-    ```
+1. リポジトリから `Settings > Pages` に進む
+2. `Source` で `Deploy from a bramnch` が、`Branch` で `gh-pages` が指定されていることを確認
+3. 画面をリロードすれば上部にリンクが記載
 
 ### 参考：構文
 
