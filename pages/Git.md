@@ -11,7 +11,7 @@ title: Git メモ
 
 ## 各種設定
 
-### ユーザ設定
+### 初期ユーザ設定
 
 ```bash
 git config --global user.name "Alice"

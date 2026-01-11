@@ -2,6 +2,62 @@
 title: GitHub メモ
 ---
 
+## SSH を使った pull/push
+
+[SSH.md](./Linux/SSH.md) を参考に SSH 鍵を作成し GitHub に登録する。
+次に `.ssh/config` へ github の SSH 接続について追記。
+
+```config
+Host github
+  HostName github.com
+  User git  # これは固定値
+  IdentityFile ~/.ssh/github
+```
+
+この上で次のように clone する。
+@ マーク以降は `.ssh/config` に設定している Host 名を使う。
+
+```shell
+git clone git@github:applejxd/dotfiles.git
+```
+
+## ダミーアドレスの設定
+
+まずは基本設定を済ませる。
+
+1. `Settings -> Emails -> Keep my email addresses private` を ON。
+2. その欄に記載されているダミーアドレスをメモ
+
+その上でローカルの git 設定を更新。
+Global に変換するだけなら [Git.md](./Git.md) を参照。
+
+特定のフォルダ以下のリポジトリのみ適用するなら、次を `.gitconfig` に記載。
+`ghq` と組み合わせると楽。
+
+```ini
+# ~/.gitconfig
+[includeIf "gitdir:~/src/github.com/"]
+  path = ~/.config/git/github
+```
+
+```ini
+[usr]
+  name = My Name
+  email = dummy_address@users.noreply.github.com 
+```
+
+更に既存リポジトリの名称・アドレスを変更するのであれば以下。
+
+```shell
+pip install git-filter-repos
+# 括弧付きで宣言
+echo "New Name <new@example.com> Old Name <old@example.com>" > .mailmap
+git filter-repo --mailmap .mailmap
+git push --force --all
+git push --force --tags
+rm .mailmap
+```
+
 ## GitHub Pages
 
 ### Markdown のサイト化
@@ -43,7 +99,9 @@ git push -u origin gh-pages
 2. `Source` で `Deploy from a bramnch` が、`Branch` で `gh-pages` が指定されていることを確認
 3. 画面をリロードすれば上部にリンクが記載
 
-### 参考：構文
+### 参考リンク
+
+GitHub pages の構文についてはここ。
 
 - Markdown
   - [コードブロックとシンタックスハイライト](https://docs.github.com/ja/github/writing-on-github/creating-and-highlighting-code-blocks)
@@ -51,13 +109,13 @@ git push -u origin gh-pages
   - [テンプレート作成のための変数](http://jekyllrb-ja.github.io/docs/variables/)
   - [テンプレート用言語 Liquid](https://shopify.github.io/liquid/)
 
-### 参考：ライブラリ
+Web ライブラリについてはここ。
 
 - CDN関連
   - [Google Hosted Libraries](https://developers.google.com/speed/libraries)
   - [MathJax](http://docs.mathjax.org/en/latest/web/start.html)
 
-### 参考：リンク集
+その他リンク集
 
 - [Markdown で作って公開](http://yoshikyoto.github.io/text/git/gh_pages_md.html)
 - [ユーザーページとプロジェクトページ](https://qiita.com/mesh1nek0x0/items/ab5f4557d1fc3a7c5ce3)
