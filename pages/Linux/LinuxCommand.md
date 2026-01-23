@@ -210,7 +210,10 @@ nkf -w before.dat > after.dat
 
 ## その他
 
+
 ```shell
+# シンボリックリンク
+ln -s ./real_data_path ./alias_path
 # os 確認
 neofetch
 ```
