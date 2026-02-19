@@ -27,7 +27,7 @@ title: トップページ
     - [VPN 設定メモ](pages/Linux/VPN.md)
     - [UFW 設定メモ](pages/Linux/UFW.md)
 - [Git メモ](pages/Git.md)
-  - [GitHub メモ](pages/GitHubPages.md)
+  - [GitHub メモ](pages/GitHub.md)
   - [GitHub 動作ステータス](https://www.githubstatus.com/)
 - [Windows 設定 (GitHub)](https://github.com/applejxd/windows-setup)
   - [Windows メモ](pages/Windows/Windows.md)
