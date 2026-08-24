@@ -12,11 +12,18 @@ title: トップページ
   
 - [Github Gist](https://gist.github.com/applejxd)
 
+### 公開サイト
+{% assign external_pages = site.data.external_pages %}{% if external_pages and external_pages.size > 0 %}
+{% for page in external_pages %}- [{{ page.name }}]({{ page.url }}){% if page.description != "" %} - {{ page.description }}{% endif %}
+{% endfor %}{% else %}
+（公開中の GitHub Pages はありません）
+{% endif %}
+
 ### 環境構築
 
 - [dotfiles (GitHub)](https://github.com/applejxd/dotfiles)
 - [Linux サーバメモ](pages/Linux/LinuxServer.md)
-  - [Linux コマンドメモ](pages/Linux/LinuxCommand.md) 
+  - [Linux コマンドメモ](pages/Linux/LinuxCommand.md)
   - [シェルスクリプトメモ](pages/Linux/ShellScript.md)
   - [Vim メモ](pages/Linux/Vim.md)
   - [HPC メモ](pages/Linux/HPC.md)

@@ -32,3 +32,6 @@ _site/
 .jekyll-metadata
 .bundle/
 vendor/
+
+# script/gen-external-pages.sh がビルド時に生成する
+_data/external_pages.yml
