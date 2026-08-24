@@ -7,10 +7,8 @@ title: トップページ
 
 ### 公開コード
 
-- [Github Repositries](https://github.com/applejxd?tab=repositories)
-  - [Google Colaboratory (GitHub)](https://github.com/applejxd/colaboratory)
-  
-- [Github Gist](https://gist.github.com/applejxd)
+- [GitHub Repositories](https://github.com/applejxd?tab=repositories)
+- [GitHub Gist](https://gist.github.com/applejxd)
 
 ### 公開サイト
 {% assign external_pages = site.data.external_pages %}{% if external_pages and external_pages.size > 0 %}
@@ -44,6 +42,7 @@ title: トップページ
 - [Mac メモ](pages/Mac.md)
 - [Terminal 操作メモ](pages/Terminal.md)
 - その他
+  - [開発環境メモ](pages/Preferences.md)
   - [M5Stack メモ](pages/M5Stack.md)
   - [IDE メモ](pages/IDE.md)
   - [OSS メモ](pages/OSS.md)

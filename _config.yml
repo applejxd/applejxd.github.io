@@ -2,7 +2,6 @@ theme: jekyll-theme-slate
 lang: ja-JP
 title: "@applejxd"
 description: "雑記帳"
-google_analytics: UA-177799401-1
 
 # サイトに公開しないファイル。
 # exclude は Jekyll の既定値を上書きするため、既定分もあわせて列挙する。
