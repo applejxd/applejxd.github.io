@@ -7,16 +7,21 @@ title: トップページ
 
 ### 公開コード
 
-- [Github Repositries](https://github.com/applejxd?tab=repositories)
-  - [Google Colaboratory (GitHub)](https://github.com/applejxd/colaboratory)
-  
-- [Github Gist](https://gist.github.com/applejxd)
+- [GitHub Repositories](https://github.com/applejxd?tab=repositories)
+- [GitHub Gist](https://gist.github.com/applejxd)
+
+### 公開サイト
+{% assign external_pages = site.data.external_pages %}{% if external_pages and external_pages.size > 0 %}
+{% for page in external_pages %}- [{{ page.name }}]({{ page.url }}){% if page.description != "" %} - {{ page.description }}{% endif %}
+{% endfor %}{% else %}
+（公開中の GitHub Pages はありません）
+{% endif %}
 
 ### 環境構築
 
 - [dotfiles (GitHub)](https://github.com/applejxd/dotfiles)
 - [Linux サーバメモ](pages/Linux/LinuxServer.md)
-  - [Linux コマンドメモ](pages/Linux/LinuxCommand.md) 
+  - [Linux コマンドメモ](pages/Linux/LinuxCommand.md)
   - [シェルスクリプトメモ](pages/Linux/ShellScript.md)
   - [Vim メモ](pages/Linux/Vim.md)
   - [HPC メモ](pages/Linux/HPC.md)
@@ -27,7 +32,7 @@ title: トップページ
     - [VPN 設定メモ](pages/Linux/VPN.md)
     - [UFW 設定メモ](pages/Linux/UFW.md)
 - [Git メモ](pages/Git.md)
-  - [GitHub メモ](pages/GitHubPages.md)
+  - [GitHub メモ](pages/GitHub.md)
   - [GitHub 動作ステータス](https://www.githubstatus.com/)
 - [Windows 設定 (GitHub)](https://github.com/applejxd/windows-setup)
   - [Windows メモ](pages/Windows/Windows.md)
@@ -37,6 +42,7 @@ title: トップページ
 - [Mac メモ](pages/Mac.md)
 - [Terminal 操作メモ](pages/Terminal.md)
 - その他
+  - [開発環境メモ](pages/Preferences.md)
   - [M5Stack メモ](pages/M5Stack.md)
   - [IDE メモ](pages/IDE.md)
   - [OSS メモ](pages/OSS.md)

@@ -25,3 +25,13 @@
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,obsidian
+
+### Jekyll ###
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+
+# script/gen-external-pages.sh がビルド時に生成する
+_data/external_pages.yml
